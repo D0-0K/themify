@@ -1,0 +1,213 @@
+# ===== =    = ===== ==   == ===== ===== =   =
+#   =   ====== ===   = === =   =   ===   =====
+#   =   =    = ===== =  =  = ===== =       =
+# 
+#           Themify - version 1.0
+#               Dook  2023
+#                CC-BY-SA
+# 
+# CJK fonts, larger fonts and more available at
+# ( >)  https://github.com/D0-0K/themify  (< )
+#
+#  If you've enjoyed this theme, please consider
+#   leaving a small tip as thanks (links above) 
+#-----------------------------------------------#
+%Fl(3,22-LeagueSpartan-Bold.fnt)
+%Fl(4,18-LeagueSpartan-Medium.fnt)
+#--- Icons ---#
+%xl(BatteryIcon,BatteryStatus.bmp,36,0,12)
+%xl(ChargingIcon,ChargeStatus.bmp,36,0,11)
+%xl(SleepIcon,SleepStatus.bmp,18,0,2)
+%xl(lock,LockStatus.bmp,2)
+%xl(QuickLock,QuickLock.bmp)
+%xl(shuffle,ShuffleStatus.bmp,0,1)
+%xl(repeat,RepeatStatus.bmp,4)
+%xl(lossless,LosslessIcon.bmp)
+%xl(load,LoadStatus.bmp,4)
+#--- Background Elements ---#
+%xl(LockStatusBackground,statuspill.bmp,253,167)
+%xl(statusextra,HomeExtraStatusPill.bmp,236,200,3)
+%xl(LeftRounded,StatusOverlayLeft.bmp,0,25)
+%xl(RightRounded,StatusOverlayRight.bmp,310,25)
+%xl(QuickRightRounded,QuickOverlayRight.bmp,222,25)
+%xl(TLoverlay,HomeAlbumOverlay01.bmp)
+%xl(BLoverlay,HomeAlbumOverlay02.bmp,0,84)
+%xl(TRoverlay,HomeAlbumOverlay03.bmp,84,10)
+%xl(BRoverlay,HomeAlbumOverlay04.bmp,84,84)
+%xl(Lockscreen,Lockscreen.bmp)
+%xl(Quickscreen,QuickBackground.bmp,64,82)
+%xl(QuickBatBorder,QuickBatBorder.bmp,245,7)
+%xl(QuickSlideBack,QuickSlideBack.bmp)
+%xl(Brightness,BrightnessIcon.bmp,249,213)
+%xl(Sound,SoundIcon.bmp,289,213)
+%xl(MusicIcon,Music.bmp,1,39)
+#--- Other ---#
+%xl(HourHands,Hours.bmp,12)
+%xl(MinuteHands,Minutes.bmp,6)
+%xl(USBIcon,usb.bmp,42,27)
+#------------ Background Layer ------------#
+%V(0,0,-,-,-)%VB
+%?if(%cs, =, 1)<%?mh<%xd(Lockscreen)|>|>
+%?if(%cs, =, 21)<%xd(Lockscreen)|>
+#--- Draw top bar ---#
+%?mh<|%dr(0,0,-,4)>
+%?mh<|%dr(0,4,11,16)>
+%?mh<|%dr(27,4,5,16)>
+%?mh<|%dr(32,4,55,1)>
+%?mh<|%dr(87,4,177,16)>
+%?mh<|%dr(276,4,6,16)>
+%?mh<|%dr(294,4,6,16)>
+%?mh<|%dr(314,4,6,16)>
+%?mh<|%dr(0,20,-,5)>
+%xd(LeftRounded)
+%?if(%cs, =, 10)<%xd(QuickRightRounded)|%xd(RightRounded)>
+#--- Draw vertical Bar & Player Stuff ---#
+%?if(%cs, =, 1)<%?mh<|%?mp<|%dr(182,160,5,32)>>>
+#--- Quickscreen Backdrop ---#
+%?if(%cs, =, 10)<%xd(Quickscreen)>
+%?if(%cs, =, 10)<%dr(232,0,88,240)>
+%?if(%cs, =, 10)<%xd(QuickBatBorder)>
+%?if(%cs, =, 10)<%St(246,43,20,158,QuickSlide.bmp,backdrop,QuickSlideBack,setting,brightness)%xd(Brightness)>
+%?if(%cs, =, 10)<%pv(286,43,20,158,QuickSlide.bmp,backdrop,QuickSlideBack)%xd(Sound)>
+#---- Extra Status Bar Background ----#
+#Show the right background depending on how many icons are active.
+# Background: if only 1 icon is active
+%?if(%cs, =, 1)<%?mh<|%?mp<|%?and(%if(%ps, =, 1),%if(%mm, =, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%xd(statusextra,3)>>>|>
+%?if(%cs, =, 1)<%?mh<|%?mp<|%?and(%if(%ps, !=, 1),%if(%mm, >, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%xd(statusextra,3)>>>|>
+%?if(%cs, =, 1)<%?mh<|%?mp<|%?and(%if(%ps, !=, 1),%if(%mm, =, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13)))<%xd(statusextra,3)>>>|>
+# Background: if 2 icons active
+%?if(%cs, =, 1)<%?mh<|%?mp<|%?and(%if(%ps, !=, 1),%if(%mm, >, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13)))<%xd(statusextra,2)>>>|>
+%?if(%cs, =, 1)<%?mh<|%?mp<|%?and(%if(%ps, =, 1),%if(%mm, =, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13)))<%xd(statusextra,2)>>>|>
+%?if(%cs, =, 1)<%?mh<|%?mp<|%?and(%if(%ps, =, 1),%if(%mm, >, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%xd(statusextra,2)>>>|>
+# Background: if all 3 icons active
+%?if(%cs, =, 1)<%?mh<|%?mp<|%?and(%if(%ps, =, 1),%if(%mm, >, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13)))<%xd(statusextra,1)>>>|>
+#
+#------------ Foreground Layer ------------#
+%V(0,0,-,-,-)
+#--- Screen Logic ---#
+%?if(%cs, =, 1)<%?mh<|%?mp<%VI(FullWidth)|%VI(HalfWidth)>%Vd(ScrollReminder)>|%VI(FullWidth)>
+%?if(%cs, =, 1)<%?mh<%Vd(LockStatusBar)|%Vd(TopBar)%Vd(TopBarIcons)>|%?if(%cs, !=, 21)<%Vd(TopBar)%?if(%cs, !=, 10)<%Vd(TopBarIcons)>|>>
+%?if(%cs, =, 1)<%?mh<%?mp<|%Vd(MiniPlayer)>|%?mp<|%Vd(MiniPlayer)%Vd(PlayerStatus)>>|>
+%?if(%cs, =, 1)<%?mh<%Vd(Lockscreen)%Vd(LockscreenClock)|>|>
+%?if(%cs, =, 10)<%VI(Quickscreen)%Vd(Quickscreen)>
+%?if(%cs, =, 21)<%VI(USB)%Vd(Lockscreen)%Vd(LockscreenClock)%Vd(MiniPlayer)%Vd(LockStatusBar)>
+#
+%Vi(HalfWidth,5,33,170,200,-)
+%Vi(FullWidth,5,33,-5,-,-)
+%Vi(Quickscreen,0,25,232,215,-)
+%Vi(USB,0,0,1,1,-)
+%?Lt<|>
+#
+%Vl(ScrollReminder,5,33,170,200,3)
+
+
+        
+  
+  
+   Scroll  To  Start
+#
+#--- Clock Logic ---#
+%Vl(TopBar,32,5,55,15,3)%Vb(-)%Vf(-)%Vs(invert)
+%cH:%cM
+#---- Extra Status Bar Icons ----#
+#Display Icons in the right spots depending on how many icons are turned on.
+#Pos 1
+%Vl(PlayerStatus,289,207,17,16,-)
+%?and(%if(%ps, =, 1),%or(%if(%mm, =, 1),%if(%mm, >, 1)),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%xd(shuffle,%ps)>
+%?and(%if(%ps, =, 1),%or(%if(%mm, =, 1),%if(%mm, >, 1)),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13)))<%xd(shuffle,%ps)>
+%?and(%if(%ps, !=, 1),%if(%mm, >, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%xd(repeat,%mm,-1)>
+%?and(%if(%ps, !=, 1),%if(%mm, =, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13)))<%xd(lossless)>
+#
+#Pos 2
+%Vl(PlayerStatus,267,207,17,16,-)
+%?and(%if(%ps, =, 1),%if(%mm, >, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13)))<%xd(repeat,%mm)>
+%?and(%if(%ps, =, 1),%if(%mm, >, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%xd(repeat,%mm,-1)>
+%?and(%or(%and(%if(%ps, !=, 1),%if(%mm, >, 1)),%and(%if(%ps, =, 1),%if(%mm, =, 1))),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13)))<%xd(lossless)>
+#
+#Pos 3
+%Vl(PlayerStatus,244,207,16,16,-)
+%?and(%if(%ps, =, 1),%if(%mm, >, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13)))<%xd(lossless)>
+#
+#--- Music Text ---#
+%Vl(PlayerStatus,190,160,128,18,3)
+%s%al%it
+%Vl(PlayerStatus,190,178,128,18,4)
+%s%al%ia
+#
+#--- Status and Player Icons ---#
+%Vl(TopBarIcons,264,4,50,16,-)
+%xd(lock,%mh)
+%xd(SleepIcon,%bs)
+%?bp<%xd(ChargingIcon,%bl)|%xd(BatteryIcon,%bl)>
+#
+%Vl(TopBar,11,4,16,16,-)
+%?lh<%t(0.1)%xd(load,1);%t(0.1)%xd(load,2);%t(0.3)%xd(load,4);%t(0.1)%xd(load,3);%t(0.1)%xd(load,2)|%xd(load,1)>
+#
+#------------ Quickscreen Layer ------------#
+%Vl(Quickscreen,213,30,12,14,-)
+%xd(QuickLock,%mh)
+#
+%Vl(Quickscreen,218,13,50,16,-)
+%?bp<%xd(ChargingIcon,%bl)|%xd(BatteryIcon,%bl)>
+#
+%Vl(Quickscreen,268,15,34,14,4)%Vb(-)%Vf(-)%Vs(invert)
+%?or(%if(%bl, <, 22),%if(%bl, =, 31),%if(%bl, =, 41),%if(%bl, =, 51),%if(%bl, =, 61),%if(%bl, =, 71),%if(%bl, =, 81),%if(%bl, =, 91))<%ac|%al>%?if(%bl, =, 100)<CGD|%bl%%>
+#
+%Vl(Quickscreen,246,43,60,158,-)
+%St(0,0,20,158,QuickSlide.bmp, setting, brightness)
+%pv(40,0,20,158,QuickSlide.bmp)
+#
+#------------ Lockscreen Layer ------------#
+%Vl(Lockscreen,0,0,-,-,-)
+%xd(LockStatusBackground)
+#
+#--- Various Background Drawing ---#
+%Vl(MiniPlayer,190,71,10,48,-)%VB
+%dr(0,0,-,-)
+%Vl(MiniPlayer,200,45,26,100,-)%VB
+%dr(0,0,-,-)
+%Vl(MiniPlayer,226,35,-,120,-)%VB
+%dr(0,0,-,-)
+%?if(%cs, !=, 21)<%?C<|%xd(MusicIcon)>>
+%Vl(LockStatusBar,267,167,-,30,-)%VB
+%dr(8,7,7,16)%dr(27,7,6,16)%dr(47,7,6,16)
+%Vl(LockStatusBar,267,167,-,30,-)
+%dr(0,0,53,7)%dr(0,23,53,7)
+#
+#--- Album Art and Corner Overlays ---#
+%Vl(MiniPlayer,190,35,-,120,-)
+%?if(%cs, =, 21)<%xd(USBIcon)|%Cl(10,10,100,100)%Cd>
+%xd(TLoverlay)%xd(TRoverlay)
+%xd(BLoverlay)%xd(BRoverlay)
+#
+#--- Lockscreen Status Icons ---#
+%Vl(LockStatusBar,264,174,-,16,-)
+%xd(SleepIcon,%bs)
+%?bp<%xd(ChargingIcon,%bl)|%xd(BatteryIcon,%bl)>
+#
+%Vl(LockStatusBar,259,174,16,16,-)
+%?lh<%t(0.1)%xd(load,1);%t(0.1)%xd(load,2);%t(0.3)%xd(load,4);%t(0.1)%xd(load,3);%t(0.1)%xd(load,2)|%xd(load,1)>
+#
+#--- Lockscreen Clock ---#
+%Vl(LockscreenClock,15,40,160,160,-)
+%xd(HourHands,%cl)
+#
+%Vl(LockscreenClock,89,40,86,86,-)
+%?and(%if(%cM, >=, 0),%if(%cM, <, 5))<%xd(MinuteHands,1)>
+%?and(%if(%cM, >=, 5),%if(%cM, <, 10))<%xd(MinuteHands,2)>
+%?and(%if(%cM, >=, 10),%if(%cM, <, 15))<%xd(MinuteHands,3)>
+%?and(%if(%cM, >=, 15),%if(%cM, <, 20))<%xd(MinuteHands,4)>
+%Vl(LockscreenClock,89,114,86,86,-)
+%?and(%if(%cM, >=, 20),%if(%cM, <, 25))<%xd(MinuteHands,5)>
+%?and(%if(%cM, >=, 25),%if(%cM, <, 30))<%xd(MinuteHands,6)>
+%?and(%if(%cM, >=, 30),%if(%cM, <, 35))<%xd(MinuteHands,1)>
+%Vl(LockscreenClock,52,104,86,86,-)
+%?and(%if(%cM, >=, 35),%if(%cM, <, 40))<%xd(MinuteHands,2)>
+%Vl(LockscreenClock,25,77,86,86,-)
+%?and(%if(%cM, >=, 40),%if(%cM, <, 45))<%xd(MinuteHands,3)>
+%Vl(LockscreenClock,15,40,86,86,-)
+%?and(%if(%cM, >=, 45),%if(%cM, <, 50))<%xd(MinuteHands,4)>
+%Vl(LockscreenClock,25,77,86,86,-)
+%?and(%if(%cM, >=, 50),%if(%cM, <, 55))<%xd(MinuteHands,5)>
+%Vl(LockscreenClock,52,50,86,86,-)
+%?and(%if(%cM, >=, 55),%if(%cM, <, 60))<%xd(MinuteHands,6)>
