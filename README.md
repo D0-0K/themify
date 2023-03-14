@@ -8,9 +8,7 @@ Themify is an advanced, user-customisable theme for Rockbox. Every on-screen ele
 
  - CJK Supporting fonts and larger fonts can be found in the **releases** section.  
  - Releases with settings for smooth scrolling text 
- - A pack of extra wallpapers seen below can be purchased [here]()
- 
- <iframe src="https://itch.io/embed/1968733?linkback=true&amp;border_width=2" width="554" height="169" frameborder="0"><a href="https://d00k.itch.io/themifywallpaperpack">Themify - Wallpaper Pack by Dook</a></iframe>
+ - A pack of extra wallpapers seen below can be purchased [here](https://d00k.itch.io/themifywallpaperpack)
 
 ![Image of Lockscreen options](Images/Wallpapers.png)
 
