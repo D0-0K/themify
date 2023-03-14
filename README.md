@@ -8,9 +8,9 @@ Themify is an advanced, user-customisable theme for Rockbox. Every on-screen ele
 
  - CJK Supporting fonts and larger fonts can be found in the **releases** section.  
  - Releases with settings for smooth scrolling text 
- - A pack of extra wallpapers seen below can be purchased [here](https://d00k.itch.io/themifywallpaperpack)
+ - A pack of Extra Wallpapers seen below can be purchased [here](https://d00k.itch.io/themifywallpaperpack).
 
-![Image of Lockscreen options](Images/Hi_Res/WallpapersStyles.png)
+![Image of Lockscreen options](Images/Hi-Res/WallpapersStyles.png)
 
 ## Features
 
@@ -19,7 +19,7 @@ Themify is an advanced, user-customisable theme for Rockbox. Every on-screen ele
 - Custom Lockscreen when the hold switch is on in the home screen. Lockscreen features a large analog clock and album art.
 - Custom Quickscreen, with detailed battery status as well as sliders for brightness and volume.
 
-For more information about the technical side of Themify, check out [this blog post]().
+For more information about the technical side of Themify, check out [this blog post](https://d00k.net/journal/inside_themify/).
 
 ## Notes for Users
 
