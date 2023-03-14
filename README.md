@@ -10,7 +10,7 @@ Themify is an advanced, user-customisable theme for Rockbox. Every on-screen ele
  - Releases with settings for smooth scrolling text 
  - A pack of extra wallpapers seen below can be purchased [here](https://d00k.itch.io/themifywallpaperpack)
 
-![Image of Lockscreen options](Images/Wallpapers.png)
+![Image of Lockscreen options](Images/Hi_Res/WallpapersStyles.png)
 
 ## Features
 
