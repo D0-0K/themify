@@ -9,8 +9,7 @@
 # CJK fonts, larger fonts and more available at
 # ( >)  https://github.com/D0-0K/themify  (< )
 #
-#  If you've enjoyed this theme, please consider
-#   leaving a small tip as thanks (links above) 
+#         Thanks for using Themify! 
 #-----------------------------------------------#
 %wd
 %Fl(3,22-LeagueSpartan-Bold.fnt)
@@ -62,7 +61,7 @@
 %?and(%if(%ps, =, 1),%if(%mm, =, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%xd(statusextra,3)>
 %?and(%if(%ps, !=, 1),%if(%mm, >, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%xd(statusextra,3)>
 %?and(%if(%ps, !=, 1),%if(%mm, =, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13)))<%xd(statusextra,3)>
-
+#
 #Background: if only 2 icons active
 %?and(%if(%ps, !=, 1),%if(%mm, >, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13)))<%xd(statusextra,2)>
 %?and(%if(%ps, =, 1),%if(%mm, =, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11),%if(%fc, =, 13)))<%xd(statusextra,2)>

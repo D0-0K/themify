@@ -9,8 +9,7 @@
 # CJK fonts, larger fonts and more available at
 # ( >)  https://github.com/D0-0K/themify  (< )
 #
-#  If you've enjoyed this theme, please consider
-#   leaving a small tip as thanks (links above) 
+#         Thanks for using Themify! 
 #-----------------------------------------------#
 %Fl(3,22-LeagueSpartan-Bold.fnt)
 %Fl(4,18-LeagueSpartan-Medium.fnt)
@@ -87,10 +86,12 @@
 #--- Screen Logic ---#
 %?if(%cs, =, 1)<%?mh<|%?mp<%VI(FullWidth)|%VI(HalfWidth)>%Vd(ScrollReminder)>|%VI(FullWidth)>
 %?if(%cs, =, 1)<%?mh<%Vd(LockStatusBar)|%Vd(TopBar)%Vd(TopBarIcons)>|%?if(%cs, !=, 21)<%Vd(TopBar)%?if(%cs, !=, 10)<%Vd(TopBarIcons)>|>>
-%?if(%cs, =, 1)<%?mh<%?mp<|%Vd(MiniPlayer)>|%?mp<|%Vd(MiniPlayer)%Vd(PlayerStatus)>>|>
-%?if(%cs, =, 1)<%?mh<%Vd(Lockscreen)%Vd(LockscreenClock)|>|>
+%?if(%cs, =, 1)<%?mh<%?if(%pc, =, 1)<%?mp<|%Vd(MiniPlayer)>|%?mp<|%Vd(MiniPlayer)>>|%?mp<|%Vd(MiniPlayer)%Vd(PlayerStatus)>>|>
+%?if(%cs, =, 1)<%?mh<%Vd(Lockscreen)>>
+#When song changes, refresh the lockscreen to avoid glitches#
+%?if(%cs, =, 1)<%?mh<%?if(%pc, =, 1)<%Vd(LockRefresh)>>>
 %?if(%cs, =, 10)<%VI(Quickscreen)%Vd(Quickscreen)>
-%?if(%cs, =, 21)<%VI(USB)%Vd(Lockscreen)%Vd(LockscreenClock)%Vd(MiniPlayer)%Vd(LockStatusBar)>
+%?if(%cs, =, 21)<%VI(USB)%Vd(Lockscreen)%Vd(MiniPlayer)%Vd(LockStatusBar)>
 #
 %Vi(HalfWidth,5,33,170,200,-)
 %Vi(FullWidth,5,33,-5,-,-)
@@ -160,6 +161,7 @@
 #------------ Lockscreen Layer ------------#
 %Vl(Lockscreen,0,0,-,-,-)
 %xd(LockStatusBackground)
+%Vl(LockRefresh,5,33,170,200,-)
 #
 #--- Various Background Drawing ---#
 %Vl(MiniPlayer,190,71,10,48,-)%VB
@@ -189,25 +191,25 @@
 %?lh<%t(0.1)%xd(load,1);%t(0.1)%xd(load,2);%t(0.3)%xd(load,4);%t(0.1)%xd(load,3);%t(0.1)%xd(load,2)|%xd(load,1)>
 #
 #--- Lockscreen Clock ---#
-%Vl(LockscreenClock,15,40,160,160,-)
+%Vl(Lockscreen,15,40,160,160,-)
 %xd(HourHands,%cl)
 #
-%Vl(LockscreenClock,89,40,86,86,-)
+%Vl(Lockscreen,89,40,86,86,-)
 %?and(%if(%cM, >=, 0),%if(%cM, <, 5))<%xd(MinuteHands,1)>
 %?and(%if(%cM, >=, 5),%if(%cM, <, 10))<%xd(MinuteHands,2)>
 %?and(%if(%cM, >=, 10),%if(%cM, <, 15))<%xd(MinuteHands,3)>
 %?and(%if(%cM, >=, 15),%if(%cM, <, 20))<%xd(MinuteHands,4)>
-%Vl(LockscreenClock,89,114,86,86,-)
+%Vl(Lockscreen,89,114,86,86,-)
 %?and(%if(%cM, >=, 20),%if(%cM, <, 25))<%xd(MinuteHands,5)>
 %?and(%if(%cM, >=, 25),%if(%cM, <, 30))<%xd(MinuteHands,6)>
 %?and(%if(%cM, >=, 30),%if(%cM, <, 35))<%xd(MinuteHands,1)>
-%Vl(LockscreenClock,52,104,86,86,-)
+%Vl(Lockscreen,52,104,86,86,-)
 %?and(%if(%cM, >=, 35),%if(%cM, <, 40))<%xd(MinuteHands,2)>
-%Vl(LockscreenClock,25,77,86,86,-)
+%Vl(Lockscreen,25,77,86,86,-)
 %?and(%if(%cM, >=, 40),%if(%cM, <, 45))<%xd(MinuteHands,3)>
-%Vl(LockscreenClock,15,40,86,86,-)
+%Vl(Lockscreen,15,40,86,86,-)
 %?and(%if(%cM, >=, 45),%if(%cM, <, 50))<%xd(MinuteHands,4)>
-%Vl(LockscreenClock,25,77,86,86,-)
+%Vl(Lockscreen,25,77,86,86,-)
 %?and(%if(%cM, >=, 50),%if(%cM, <, 55))<%xd(MinuteHands,5)>
-%Vl(LockscreenClock,52,50,86,86,-)
+%Vl(Lockscreen,52,50,86,86,-)
 %?and(%if(%cM, >=, 55),%if(%cM, <, 60))<%xd(MinuteHands,6)>
