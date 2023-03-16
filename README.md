@@ -21,6 +21,18 @@ Themify is an advanced, user-customisable theme for Rockbox. Every on-screen ele
 
 For more information about the technical side of Themify, check out [this blog post](https://d00k.net/journal/inside_themify/).
 
+## Experimental User Configs
+
+Version 1.1 features an experimental user config feature for changing the behaviour of the Artist label in the player and miniplayer. This uses the unused "Status Bar" setting in rockbox to let users choose their preference of Album title + Artist, or either on their own as seen below
+
+**Themify Player Secondary Info Line Config**: Settings > Theme Settings > Status-/ Scrollbar > Status Bar.
+
+| Status Bar Value | Result in Player |
+| ----------- | -----------|
+| off | Artist Name only |
+| top | Album Title only |
+| bottom | Artist Name & Album Title cycled every 6 seconds |
+
 ## Notes for Users
 
 Minor flashes of UI elements are to be expected when using this theme. This is due to the logic needed to operate the Lockscreen feature. Please keep this in mind when using Themify.
