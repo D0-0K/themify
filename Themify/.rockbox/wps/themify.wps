@@ -2,7 +2,7 @@
 #   =   ====== ===   = === =   =   ===   =====
 #   =   =    = ===== =  =  = ===== =       =
 # 
-#           Themify - version 1.1
+#           Themify - version 1.2
 #               Dook  2023
 #                CC-BY-SA
 # 
@@ -117,7 +117,7 @@
 %al%ss(12, 26, %it)
 #
 %V(173,103,145,16,4)
-%?if(%St(statusbar), =,off)<%s%al%ia>%?if(%St(statusbar), =,top)<%s%al%id>%?if(%St(statusbar), =,bottom)<%s%al%t(6)%ia;%t(6)%id;%t(0)>
+%?if(%St(statusbar), =,off)<%s%al%ia>%?if(%St(statusbar), =,top)<%s%al%id>%?if(%St(statusbar), =,bottom)<%s%al%t(6)%ia;%s%al%t(6)%id;%t(0)>
 #
 #---- Playlist info ----#
 %?if(%pp, >=, 20)<%Vd(playdual)|%Vd(playsingle)>

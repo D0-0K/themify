@@ -2,7 +2,7 @@
 #   =   ====== ===   = === =   =   ===   =====
 #   =   =    = ===== =  =  = ===== =       =
 # 
-#           Themify - version 1.0
+#           Themify - version 1.2
 #               Dook  2023
 #                CC-BY-SA
 # 
@@ -133,7 +133,7 @@
 %Vl(PlayerStatus,190,160,128,18,3)
 %s%al%it
 %Vl(PlayerStatus,190,178,128,18,4)
-%s%al%ia
+%?if(%St(statusbar), =,off)<%s%al%ia>%?if(%St(statusbar), =,top)<%s%al%id>%?if(%St(statusbar), =,bottom)<%s%al%t(6)%ia;%s%al%t(6)%id;%t(0)>
 #
 #--- Status and Player Icons ---#
 %Vl(TopBarIcons,264,4,50,16,-)
