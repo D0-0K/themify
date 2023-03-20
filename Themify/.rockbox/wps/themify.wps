@@ -2,7 +2,7 @@
 #   =   ====== ===   = === =   =   ===   =====
 #   =   =    = ===== =  =  = ===== =       =
 # 
-#           Themify - version 1.2
+#           Themify - version 1.3
 #               Dook  2023
 #                CC-BY-SA
 # 
@@ -106,10 +106,10 @@
 #
 #---- Player Info ----#
 #If Title is less than 28 chars, display in double line or single line mode
-%?if(%ss(0, 26, %it), =, %it)<%?if(%ss(0, 14, %it), =, %it)<%Vd(titlesingle)|%Vd(nobreak)>|%Vd(titlesingle)>
+%?it<%?if(%ss(0, 26, %it), =, %it)<%?if(%ss(0, 14, %it), =, %it)<%Vd(titlesingle)|%Vd(nobreak)>|%Vd(titlesingle)>|%Vd(titlesingle)>
 #
 %Vl(titlesingle,173,82,145,18,3)
-%s%al%it
+%s%al%?it<%it|%fn>
 #
 %Vl(nobreak,173,59,145,18,3)
 %al%ss(0, 12, %it)
