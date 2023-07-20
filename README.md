@@ -33,6 +33,16 @@ Version 1.1 features an experimental user config feature for changing the behavi
 | top | Album Title only |
 | bottom | Artist Name & Album Title cycled every 6 seconds |
 
+## Project Plan
+
+Version 2.0 of Themify will be a major update to move the theme towards a more mature state of completion. The main goal of the next update will be to anti-alias the entire UI, getting rid of the jagged edges. There's also some more features planned:
+
+- Choosing between digital and analog clocks on the Lockscreen.
+- Better Language support for dates, time etc.
+- Better respect for rockbox settings for time.
+- Custom UI screens for the User Configs, including adding more configs.
+- Redesign the Quickscreen.
+
 ## Notes for Users
 
 Minor flashes of UI elements are to be expected when using this theme. This is due to the logic needed to operate the Lockscreen feature. Please keep this in mind when using Themify.
