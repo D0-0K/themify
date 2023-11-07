@@ -2,7 +2,7 @@
 #   =   ====== ===   = === =   =   ===   =====
 #   =   =    = ===== =  =  = ===== =       =
 # 
-#           Themify - version 1.3
+#           Themify - version 1.4
 #               Dook  2023
 #                CC-BY-SA
 # 
@@ -89,7 +89,7 @@
 %?if(%cs, =, 1)<%?mh<%?if(%pc, =, 1)<%?mp<|%Vd(MiniPlayer)>|%?mp<|%Vd(MiniPlayer)>>|%?mp<|%Vd(MiniPlayer)%Vd(PlayerStatus)>>|>
 %?if(%cs, =, 1)<%?mh<%Vd(Lockscreen)>>
 #When song changes, refresh the lockscreen to avoid glitches#
-%?if(%cs, =, 1)<%?mh<%?if(%pc, =, 1)<%Vd(LockRefresh)>>>
+%?if(%cs, =, 1)<%?mh<%?pS(0.5)<%Vd(LockRefresh)>>>
 %?if(%cs, =, 10)<%VI(Quickscreen)%Vd(Quickscreen)>
 %?if(%cs, =, 21)<%VI(USB)%Vd(Lockscreen)%Vd(MiniPlayer)%Vd(LockStatusBar)>
 #
