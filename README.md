@@ -33,6 +33,21 @@ Version 1.1 features an experimental user config feature for changing the behavi
 | top | Album Title only |
 | bottom | Artist Name & Album Title cycled every 6 seconds |
 
+## Themify 2 Dev Builds
+
+An ambitious and technically challenging remake of Themify, Themify 2 will be the ultimate version of the customisable UI for Rockbox iPods. Due to the difficult nature of the goals, development is expected to take quite some time. For this reason, development builds will available over time for users to test and provide feedback on the user experience, bugs and report crashes to help aid in the completion of this project. Thanks to anyone who seeks to help.
+
+[Download the latest Dev Build](https://github.com/D0-0K/themify/releases/download/development/Themify_2_dev_build_1.zip)
+
+| Features | Current State |
+| ----------- | -----------|
+| Music Player | 90% Complete |
+| Main Menus | ~15% Complete |
+| Lockscreen | Logic Started |
+| Status Bar | Un-implemented |
+| Quickscreen | Un-implemented |
+| Miniplayers | Un-implemented |
+
 ## Project Plan
 
 Version 2.0 of Themify will be a major update to move the theme towards a more mature state of completion. The main goal of the next update will be to anti-alias the entire UI, getting rid of the jagged edges. There's also some more features planned:
