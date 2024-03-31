@@ -1,0 +1,136 @@
+# ===== =    = ===== ==   == ===== ===== =   =
+#   =   ====== ===   = === =   =   ===   =====
+#   =   =    = ===== =  =  = ===== =       =
+# 
+#           Themify 2 - dev build 2
+#               Dook  2024
+#                CC-BY-SA
+#
+#         Thanks for using Themify! 
+#-----------------------------------------------#
+%Fl(3,22-LeagueSpartan-Bold.fnt)
+%Fl(4,18-LeagueSpartan-Medium.fnt)
+%Fl(5,16-LeagueSpartan-SemiBold.fnt)
+%Fl(6,10-Large_UI.fnt,8)
+%Fl(9,1-Cantarell-Regular.fnt,11)
+%Fl(10,10-Menu_Char.fnt)
+%Fl(11,7-14x13_Menu_Icons.fnt,16)
+%Fl(12,7-14x13_Icons.fnt,16)
+#--- Icons ---#
+%xl(scrollbar_bg,scrollbar_full.bmp)
+%xl(scrollbar_flush,scrollbar_full_flush.bmp)
+%xl(scrollbar_sub_bg,scrollbar_sub.bmp)
+%xl(scrollbar_sub_flush,scrollbar_sub_flush.bmp)
+%xl(left,left.bmp)
+%xl(right,right.bmp)
+%xl(yoke,scrollyoke.bmp)
+%xl(lockscreen,Lockscreen.bmp)
+%xl(battery_level,battery_level.bmp,23)
+%xl(battery_icon_bg,battery_bg.bmp,2)
+%xl(battery_bg,bat_bg_1.bmp)
+%xl(battery_perc_bg,battery_perc_bg.bmp)
+#--- Background Elements ---#
+%xl(one,StatusOverlayLeft.bmp)
+%xl(two,StatusOverlayRight.bmp)
+%xl(iconcurrent,iconcurrent.bmp,0,6)
+%xl(icon,icon.bmp,0,6)
+#------------ Background Layer ------------#
+%V(0,0,-,-,-)%VB
+%?mh<%?if(%cs, =, 1)<%xd(lockscreen)>|%?if(%cs, =, 1)<%dr(200,25,-,-)>%dr(0,0,-,6)%dr(0,6,11,13)%dr(25,6,6,13)%dr(160,6,123,13)%dr(313,6,7,13)%dr(0,19,-,6)%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,2)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
+#
+%V(0,0,-,-,-)
+#
+%?if(%cs, =, 1)<%?mh<%Vd(miniplayer)|%Vd(miniplayer)>>
+#
+%?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%VI(main_half_vp)%Lb(main_half,182,26)%Vd(scrollbar_half)>>
+#
+%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%VI(sub_vp)%Lb(no_icons,302,26)%Vd(sub_menu)%Vd(scrollbar_sub)>
+#
+%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 16))<%VI(main_vp)%Lb(main,302,26)%Vd(scrollbar_full)>
+#
+#
+#--- Clock Logic ---#
+#fallback top bar drawing function for after the lockscreen is turned off.
+%?if(%cs, =, 1)<%?mh<|%Vd(TopBar)%Vd(Battery_Normal)%Vd(TopBarIcons)>|%Vd(TopBar)%Vd(Battery_Normal)%Vd(TopBarIcons)>
+#%?if(%cs, =, 1)<%?mh<|%Vd(TopBar)%?if(%bl,>=,50)<%Vd(Battery_Normal)|%Vd(Battery_Low)>%Vd(TopBarIcons)>|%Vd(TopBar)%?if(%bl,>=,50)<%Vd(Battery_Normal)|%Vd(Battery_Low)>%Vd(TopBarIcons)>
+#
+%Vl(TopBar,0,0,-,25,-)%dr(0,0,-,6)%dr(0,6,11,13)%dr(25,6,6,13)%dr(160,6,123,13)%dr(313,6,7,13)%dr(0,19,-,6)
+#
+%Vl(TopBar,31,5,129,14,3)%Vb(-)%Vf(-)%Vs(invert)%cH:%cM
+#
+#use the %?mh to flush the icons, text doesn't seem to play well when stuff is redrawn below it.
+#Battery level is drawn in both foreground and background so it renders. Probably %Vs(invert) shenanigans
+#battery background called last to prevent rendering issues.
+%Vl(Battery_Normal,283,6,30,14,12)%VB%Vb(-)%Vf(-)%Vs(invert)%?mh<EFG|EFG>
+%Vl(Battery_Normal,283,6,30,14,12)%Vb(-)%Vf(-)%Vs(invert)%?mh<EFG|EFG>
+%Vl(Battery_Normal,285,8,24,9,5)%ac%bl
+#
+
+%Vl(Battery_Low,288,6,25,14,12)%VB%xd(battery_bg)
+%Vl(Battery_Low,288,6,25,14,12)%xd(battery_bg)
+%Vl(Battery_Low,283,6,5,14,12)%VB%Vb(-)%Vf(-)%Vs(invert)%?mh<H|H>
+%Vl(Battery_Low,283,6,5,14,12)%Vb(-)%Vf(-)%Vs(invert)%?mh<H|H>
+%Vl(Battery_Low,288,8,18,9,4)%VB%xd(battery_perc_bg)
+%Vl(Battery_Low,288,6,25,14,12)%xd(battery_icon_bg,1)
+%Vl(Battery_Low,288,8,18,9,4)%ac%bl
+#
+%Vl(TopBar,11,5,14,14,12)%Vb(-)%Vf(-)%Vs(invert)
+%?lh<%t(0.1)0;%t(0.1)1;%t(0.1)2;%t(0.1)3;%t(0.1)2;%t(0.1)1|0>
+#
+%Vi(-,3,28,302,-,-)
+%Vi(USB,0,0,1,1,9)
+%Vi(main_vp,3,28,302,-,-)
+%Vi(sub_vp,3,55,302,-,-)
+%Vi(main_half_vp,3,28,182,-,-)
+#
+#always place text last in these as it will not scroll otherwise
+%Vl(main,0,0,10,26,10)%?Lc<A>
+%Vl(main,7,0,20,26,11)%?Lc<%Vs(invert)>3
+%Vl(main,292,0,10,26,10)%?Lc<B>
+%Vl(main,27,0,265,26,-)%?Lc<%Vs(invert)>%s%LT
+#
+#
+%Vl(main_half,0,0,10,26,10)%?Lc<A>
+%Vl(main_half,7,0,20,26,11)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
+%Vl(main_half,172,0,10,26,10)%?Lc<B>
+%Vl(main_half,27,0,145,26,-)%?Lc<%Vs(invert)>%s%LT
+#
+%Vl(no_icons,0,0,10,26,10)%?Lc<A>
+%Vl(no_icons,292,0,10,26,10)%?Lc<B>
+%Vl(no_icons,9,0,283,26,-)%?Lc<%Vs(invert)>%s%LT
+#
+%Vl(no_icons_half,172,0,10,26,-)%?Lc<%xd(right)>
+%Vl(no_icons_half,0,0,172,26,-)%?Lc<%Vs(invert)%xd(left)>  %s%LT
+#
+%Vl(sub_menu,33,27,280,18,3)%Vb(-)%Vf(-)%Vs(invert)%s%Lt
+#
+#Draw rounded corners on the menus. Draw on foreground and background to prevent some minor clipping from the menu items.
+%Vl(scrollbar_full,0,25,-,12,12)J%arK
+%Vl(scrollbar_full,0,25,-,12,12)%VBJ%arK
+#
+%Vl(scrollbar_half,0,25,200,12,12)J%arK
+%Vl(scrollbar_half,0,25,200,12,12)%VBJ%arK
+#
+%Vl(scrollbar_sub,0,52,-,12,12)J%arK
+%Vl(scrollbar_sub,0,52,-,12,12)%VBJ%arK
+#
+#
+#Use the %?LB here, if you do it while calling the viewport instead, it bugs drawing out for some reason.
+%Vl(scrollbar_full,310,30,5,207,-)%?LB<%VB%xd(scrollbar_bg)>
+%Vl(scrollbar_full,310,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,yoke)|%xd(scrollbar_flush)>
+#
+%Vl(scrollbar_half,190,30,5,207,-)%?LB<%VB%xd(scrollbar_bg)>
+%Vl(scrollbar_half,190,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,yoke)>
+%Vl(scrollbar_half,190,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,yoke)|%xd(scrollbar_flush)>
+#
+%Vl(scrollbar_sub,310,57,5,178,-)%?LB<%VB%xd(scrollbar_sub_bg)>
+%Vl(scrollbar_sub,310,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,yoke)>
+%Vl(scrollbar_sub,310,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,yoke)|%xd(scrollbar_sub_flush)>
+#
+%Vl(b,0,0,1,1,-)
+%Vl(flush,0,0,-,-,-)
+#
+%Vl(miniplayer,205,25,110,210,-)%VB%dr(0,0,-,-)%?mp<|%Cl(-51,0,210,210,c,t)%Cd>
+#
+%Vl(miniplayer,205,25,110,210,-)#the blank viewport here wipes the foreground layer to reveal the background layer below.
+#
