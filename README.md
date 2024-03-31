@@ -37,7 +37,7 @@ Version 1.1 features an experimental user config feature for changing the behavi
 
 An ambitious and technically challenging remake of Themify, Themify 2 will be the ultimate version of the customisable UI for Rockbox iPods. Due to the difficult nature of the goals, development is expected to take quite some time. For this reason, development builds will available over time for users to test and provide feedback on the user experience, bugs and report crashes to help aid in the completion of this project. Thanks to anyone who seeks to help.
 
-[Download the latest Dev Build](https://github.com/D0-0K/themify/releases/download/development/Themify_2_dev_build_2.zip)
+[Download the latest Dev Build](https://github.com/D0-0K/themify/releases/tag/v.2.0-dev.2)
 
 | Features | Current State |
 | ----------- | -----------|
