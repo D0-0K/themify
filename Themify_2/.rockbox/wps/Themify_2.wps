@@ -11,10 +11,10 @@
 %wd
 %Fl(2,22-LeagueSpartan-Bold.fnt)
 %Fl(3,18-LeagueSpartan-Medium.fnt)
-%Fl(4,16-Player_Icons.fnt,132)
+%Fl(4,16-Player_Icons.fnt)
 %Fl(5,16-LeagueSpartan-SemiBold.fnt)
-%Fl(6,10-Large_UI.fnt,8)
-%Fl(12,7-14x13_Icons.fnt,16)
+%Fl(6,10-Large_UI.fnt)
+%Fl(12,7-14x13_Icons.fnt)
 #
 %xl(playbackground,playbackdrop.bmp,192,140)
 %xl(sliderback,playersliderback.bmp)
@@ -26,12 +26,11 @@
 %xl(shadow_corner_top,shadow_corner_top.bmp,144,16)
 %xl(shadow_corner_bottom,shadow_corner_bottom.bmp,144,199)
 %xl(shadow_bottom,shadow_bottom.bmp,0,221)
-#%xl(shadow_right,shadow_right.bmp,166,16)
 %xl(slidercutout,slidercutoutend.bmp)
 %xl(transparentslidercutout,transparentoverlay.bmp)
 %xl(sub_status_backdrop,sub_status_backdrop.bmp,16,0,3)
 %xl(sub_status_backdrop_long,sub_status_backdrop_long.bmp,3)
-%xl(battery_level,battery_level.bmp,23)
+%xl(battery_level,Battery_Level.bmp,23)
 #
 #Need to flush the background and foreground, or the previous screen's background remains for some reason.
 %V(0,0,-,-,-)%VB
@@ -67,7 +66,8 @@
 %al%ss(12, 26, %it)
 #
 %V(180,104,-8,16,3)
-%?if(%St(statusbar), =,off)<%s%al%ia>%?if(%St(statusbar), =,top)<%s%al%id>%?if(%St(statusbar), =,bottom)<%s%al%t(6)%ia;%s%al%t(6)%id;%t(0)>
+%d(1)
+#%?if(%St(statusbar), =,off)<%s%al%ia>%?if(%St(statusbar), =,top)<%s%al%id>%?if(%St(statusbar), =,bottom)<%s%al%t(6)%ia;%s%al%t(6)%id;%t(0)>
 #
 #
 #Don't display volume if fastwarding etc.

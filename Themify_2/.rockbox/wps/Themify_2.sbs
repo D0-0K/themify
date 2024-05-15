@@ -10,37 +10,32 @@
 #-----------------------------------------------#
 %Fl(3,22-LeagueSpartan-Bold.fnt)
 %Fl(4,18-LeagueSpartan-Medium.fnt)
-%Fl(5,16-LeagueSpartan-SemiBold.fnt)
-%Fl(6,10-Large_UI.fnt,8)
-%Fl(9,1-Cantarell-Regular.fnt,11)
+%Fl(5,16-LeagueSpartan-SemiBold.fnt)#battery icon font
+%Fl(6,10-Large_UI.fnt)
 %Fl(10,10-Menu_Char.fnt)
-%Fl(11,7-14x13_Menu_Icons.fnt,16)
-%Fl(12,7-14x13_Icons.fnt,16)
+%Fl(11,7-14x13_Menu_Icons.fnt)
+%Fl(12,7-14x13_Icons.fnt)
 #--- Icons ---#
-%xl(scrollbar_bg,scrollbar_full.bmp)
 %xl(scrollbar_flush,scrollbar_full_flush.bmp)
 %xl(scrollbar_sub_bg,scrollbar_sub.bmp)
 %xl(scrollbar_sub_flush,scrollbar_sub_flush.bmp)
-%xl(left,left.bmp)
-%xl(right,right.bmp)
 %xl(yoke,scrollyoke.bmp)
+%xl(Battery_Level,Battery_Level.bmp,23)
 %xl(lockscreen,Lockscreen.bmp)
-%xl(battery_level,battery_level.bmp,23)
-%xl(battery_icon_bg,battery_bg.bmp,2)
-%xl(battery_bg,bat_bg_1.bmp)
-%xl(battery_perc_bg,battery_perc_bg.bmp)
-#--- Background Elements ---#
-%xl(one,StatusOverlayLeft.bmp)
-%xl(two,StatusOverlayRight.bmp)
-%xl(iconcurrent,iconcurrent.bmp,0,6)
-%xl(icon,icon.bmp,0,6)
+%xl(PlayStatus_Widget,PlayStatus_Widget.bmp)
+%xl(Calendar_Widget,Calendar_Widget.bmp)
+%xl(Colour_Widget,Colour_Widget.bmp)
+%xl(Battery_Widget,Battery_Widget.bmp)
+%xl(Battery_Widget_Slider,Battery_Widget_Slider_Front.bmp)
 #------------ Background Layer ------------#
+# Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
-%?mh<%?if(%cs, =, 1)<%xd(lockscreen)>|%?if(%cs, =, 1)<%dr(200,25,-,-)>%dr(0,0,-,6)%dr(0,6,11,13)%dr(25,6,6,13)%dr(160,6,123,13)%dr(313,6,7,13)%dr(0,19,-,6)%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,2)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
+%?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)%x(scrollbar_half,scrollbar_full.bmp,190,30)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,2)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
 #
 %V(0,0,-,-,-)
 #
-%?if(%cs, =, 1)<%?mh<%Vd(miniplayer)|%Vd(miniplayer)>>
+#
+%?if(%cs, =, 1)<%?mh<%?mp<|%Vd(miniplayer)>|%?mp<%Vd(Widgets)%?ps<%Vd(Shuffle_Widget)>%?if(%mm, >, 1)<%Vd(Repeat_Widget)>|%Vd(miniplayer)>>>
 #
 %?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%VI(main_half_vp)%Lb(main_half,182,26)%Vd(scrollbar_half)>>
 #
@@ -51,34 +46,30 @@
 #
 #--- Clock Logic ---#
 #fallback top bar drawing function for after the lockscreen is turned off.
-%?if(%cs, =, 1)<%?mh<|%Vd(TopBar)%Vd(Battery_Normal)%Vd(TopBarIcons)>|%Vd(TopBar)%Vd(Battery_Normal)%Vd(TopBarIcons)>
-#%?if(%cs, =, 1)<%?mh<|%Vd(TopBar)%?if(%bl,>=,50)<%Vd(Battery_Normal)|%Vd(Battery_Low)>%Vd(TopBarIcons)>|%Vd(TopBar)%?if(%bl,>=,50)<%Vd(Battery_Normal)|%Vd(Battery_Low)>%Vd(TopBarIcons)>
+%?if(%cs, =, 1)<%?mh<%?St(battery display)<%Vd(lockscreen_battery_numeric)|%Vd(lockscreen_battery_graphical)>%?bs<%Vd(lockscreen_status_long)|%Vd(lockscreen_status_short)>|%Vd(TopBar)%?St(battery display)<%Vd(Battery_Numeric)|%Vd(Battery_Graphical)>>|%Vd(TopBar)%?St(battery display)<%Vd(Battery_Numeric)|%Vd(Battery_Graphical)>>
+#
 #
 %Vl(TopBar,0,0,-,25,-)%dr(0,0,-,6)%dr(0,6,11,13)%dr(25,6,6,13)%dr(160,6,123,13)%dr(313,6,7,13)%dr(0,19,-,6)
 #
-%Vl(TopBar,31,5,129,14,3)%Vb(-)%Vf(-)%Vs(invert)%cH:%cM
+#Manually set the number for %cl hour on 12-hour time. The %cl tag puts a space at the start and throws off the positioning of the time.
+%Vl(TopBar,31,5,129,17,3)%Vb(-)%Vf(-)%Vs(invert)%?cf<%cH:%cM|%?cl<1|2|3|4|5|6|7|8|9|10|11|12>:%cM%cp>
 #
 #use the %?mh to flush the icons, text doesn't seem to play well when stuff is redrawn below it.
 #Battery level is drawn in both foreground and background so it renders. Probably %Vs(invert) shenanigans
 #battery background called last to prevent rendering issues.
-%Vl(Battery_Normal,283,6,30,14,12)%VB%Vb(-)%Vf(-)%Vs(invert)%?mh<EFG|EFG>
-%Vl(Battery_Normal,283,6,30,14,12)%Vb(-)%Vf(-)%Vs(invert)%?mh<EFG|EFG>
-%Vl(Battery_Normal,285,8,24,9,5)%ac%bl
+%Vl(Battery_Numeric,283,6,30,14,12)%Vb(-)%Vf(-)%Vs(invert)%?mh<EFG|EFG>
+%Vl(Battery_Numeric,285,8,24,9,5)%ac%bl
 #
-
-%Vl(Battery_Low,288,6,25,14,12)%VB%xd(battery_bg)
-%Vl(Battery_Low,288,6,25,14,12)%xd(battery_bg)
-%Vl(Battery_Low,283,6,5,14,12)%VB%Vb(-)%Vf(-)%Vs(invert)%?mh<H|H>
-%Vl(Battery_Low,283,6,5,14,12)%Vb(-)%Vf(-)%Vs(invert)%?mh<H|H>
-%Vl(Battery_Low,288,8,18,9,4)%VB%xd(battery_perc_bg)
-%Vl(Battery_Low,288,6,25,14,12)%xd(battery_icon_bg,1)
-%Vl(Battery_Low,288,8,18,9,4)%ac%bl
+%Vl(Battery_Graphical,283,6,30,14,12)%Vs(invert)%?mh<LMG|LMG>
+%Vl(Battery_Graphical,286,9,22,7,5)%xd(Battery_Level,%bl)
+#
+%Vl(TopBar,263,6,14,13,12)%Vb(-)%Vf(-)%Vs(invert)%ac%?bs<H|%?mh<D|%dr(0,0,-,-)>>
+%Vl(TopBar,244,6,14,13,12)%Vb(-)%Vf(-)%Vs(invert)%ac%?bs<%?mh<D|%dr(0,0,-,-)>|%dr(0,0,-,-)>
 #
 %Vl(TopBar,11,5,14,14,12)%Vb(-)%Vf(-)%Vs(invert)
 %?lh<%t(0.1)0;%t(0.1)1;%t(0.1)2;%t(0.1)3;%t(0.1)2;%t(0.1)1|0>
 #
 %Vi(-,3,28,302,-,-)
-%Vi(USB,0,0,1,1,9)
 %Vi(main_vp,3,28,302,-,-)
 %Vi(sub_vp,3,55,302,-,-)
 %Vi(main_half_vp,3,28,182,-,-)
@@ -99,8 +90,8 @@
 %Vl(no_icons,292,0,10,26,10)%?Lc<B>
 %Vl(no_icons,9,0,283,26,-)%?Lc<%Vs(invert)>%s%LT
 #
-%Vl(no_icons_half,172,0,10,26,-)%?Lc<%xd(right)>
-%Vl(no_icons_half,0,0,172,26,-)%?Lc<%Vs(invert)%xd(left)>  %s%LT
+%Vl(no_icons_half,172,0,10,26,10)%?Lc<B>
+%Vl(no_icons_half,0,0,172,26,10)%?Lc<%Vs(invert)A>  %s%LT
 #
 %Vl(sub_menu,33,27,280,18,3)%Vb(-)%Vf(-)%Vs(invert)%s%Lt
 #
@@ -109,17 +100,15 @@
 %Vl(scrollbar_full,0,25,-,12,12)%VBJ%arK
 #
 %Vl(scrollbar_half,0,25,200,12,12)J%arK
-%Vl(scrollbar_half,0,25,200,12,12)%VBJ%arK
 #
 %Vl(scrollbar_sub,0,52,-,12,12)J%arK
 %Vl(scrollbar_sub,0,52,-,12,12)%VBJ%arK
 #
 #
 #Use the %?LB here, if you do it while calling the viewport instead, it bugs drawing out for some reason.
-%Vl(scrollbar_full,310,30,5,207,-)%?LB<%VB%xd(scrollbar_bg)>
+%Vl(scrollbar_full,310,30,5,207,-)%?LB<%VB%x(scrollbar_bg,scrollbar_full.bmp)>
 %Vl(scrollbar_full,310,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,yoke)|%xd(scrollbar_flush)>
 #
-%Vl(scrollbar_half,190,30,5,207,-)%?LB<%VB%xd(scrollbar_bg)>
 %Vl(scrollbar_half,190,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,yoke)>
 %Vl(scrollbar_half,190,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,yoke)|%xd(scrollbar_flush)>
 #
@@ -130,7 +119,87 @@
 %Vl(b,0,0,1,1,-)
 %Vl(flush,0,0,-,-,-)
 #
-%Vl(miniplayer,205,25,110,210,-)%VB%dr(0,0,-,-)%?mp<|%Cl(-51,0,210,210,c,t)%Cd>
+%Vl(miniplayer,205,25,111,211,-)%VB%dr(0,0,-,-)%?mp<|%Cl(-51,0,211,211,c,t)%Cd>
 #
-%Vl(miniplayer,205,25,110,210,-)#the blank viewport here wipes the foreground layer to reveal the background layer below.
+%Vl(miniplayer,205,25,111,211,-)
+%Vl(miniplayer,205,25,111,10,12)%?mh<|a%arb>
+#%Vl(miniplayer,306,25,10,10,12)%?mh<|b>
+%Vl(miniplayer,205,226,111,10,12)%?mh<|c%ard>
 #
+#
+#Widget Background
+%Vl(Widgets,205,30,47,62,-)%VB%xd(PlayStatus_Widget)
+#Shuffle Button
+#Button Rounded Corners
+%Vl(Shuffle_Widget,207,32,43,26,12)%VB%Vs(invert)a%arb
+%Vl(Shuffle_Widget,207,48,43,10,12)%VB%Vs(invert)c%ard
+#Button's Shuffle Icon
+%Vl(Shuffle_Widget,221,38,14,13,12)%VB%Vb(-)%Vf(-)%Vs(invert)B
+# Repeat Button
+%Vl(Repeat_Widget,207,62,43,26,12)%VB%Vs(invert)a%arb
+%Vl(Repeat_Widget,207,78,43,10,12)%VB%Vs(invert)c%ard
+%Vl(Repeat_Widget,221,68,14,13,12)%VB%Vb(-)%Vf(-)%Vs(invert)C
+#Flush the drawing system in the foreground layer to show the background layer.
+%Vl(Widgets,205,30,47,62,-)
+#Rounded corners for the widget
+%Vl(Widgets,205,30,47,10,12)a%arb
+%Vl(Widgets,205,82,47,10,12)c%ard
+#
+#Calendar Widget
+%Vl(Widgets,257,32,58,60,5)%VB%xd(Calendar_Widget)
+%Vl(Widgets,266,28,4,4,12)%VB%Vs(invert)I
+%Vl(Widgets,278,28,4,4,12)%VB%Vs(invert)I
+%Vl(Widgets,290,28,4,4,12)%VB%Vs(invert)I
+%Vl(Widgets,302,28,4,4,12)%VB%Vs(invert)I
+%Vl(Widgets,257,28,58,64,-)
+%Vl(Widgets,257,32,58,10,12)a%arb
+%Vl(Widgets,257,82,58,10,12)c%ard
+%Vl(Widgets,263,36,46,14,4)%ac%cb
+#
+#Battery Widget
+%Vl(Widgets,205,97,110,64,-)%VB%xd(Battery_Widget)
+%Vl(Widgets,215,105,90,17,3)%VB%Sx(Battery)
+%Vl(Widgets,205,97,110,64,-)%bl(9,49,92,5,Battery_Widget_Slider.bmp,slider,Battery_Widget_Slider)
+%Vl(Widgets,215,124,90,15,4)%?bc<%?if(%bl,>=,98)<charged|%t(.5)charging.;%t(.5)charging..;%t(.5)charging...;>|%bt>
+%Vl(Widgets,205,97,110,10,12)a%arb
+%Vl(Widgets,205,151,110,10,12)c%ard
+#
+#Colour Widget
+%Vl(Widgets,205,166,110,69,-)%VB%xd(Colour_Widget)
+%Vl(Widgets,216,173,88,24,-)%VB%dr(0,0,-,-)
+%Vl(Widgets,212,177,96,16,-)%VB%dr(0,0,-,-)
+%Vl(Widgets,218,178,84,14,3)%VB%ar%Vs(invert)%St(foreground color)
+%Vl(Widgets,218,207,84,14,3)%VB%ar%St(background color)
+%Vl(Widgets,205,166,110,69,-)
+%Vl(Widgets,205,166,110,10,12)a%arb
+%Vl(Widgets,205,225,110,10,12)c%ard
+%Vl(Widgets,212,173,96,4,12)e%arf#Foreground colour's rounded corners
+%Vl(Widgets,212,193,96,4,12)h%arg
+#
+# Lockscreen Stuff
+#
+%Vl(lockscreen_battery_numeric,283,16,30,14,12)%VB%Vb(-)%Vf(-)%Vs(invert)EFG
+%Vl(lockscreen_battery_numeric,283,16,30,14,12)%Vb(-)%Vf(-)%Vs(invert)EFG
+#
+%Vl(lockscreen_battery_graphical,283,16,30,14,12)%VB%Vs(invert)LMG
+%Vl(lockscreen_battery_graphical,283,16,30,14,12)%Vs(invert)LMG
+%Vl(lockscreen_battery_graphical,286,19,22,7,5)%VB%xd(Battery_Level,%bl)
+#
+%Vl(lockscreen_status_short,260,8,10,29,6)a
+%Vl(lockscreen_status_short,269,8,-,29,-)%dr(0,0,-,8)%dr(0,21,-,8)%dr(0,8,14,13)%dr(44,8,-,13)
+#
+%Vl(lockscreen_status_short,266,15,14,14,12)%Vb(-)%Vf(-)%Vs(invert)
+%?lh<%t(0.1)0;%t(0.1)1;%t(0.1)2;%t(0.1)3;%t(0.1)2;%t(0.1)1|0>
+#
+# Display a longer floating statusbar if sleep enabled
+%Vl(lockscreen_status_long,240,8,10,29,6)a
+%Vl(lockscreen_status_long,249,8,-,29,-)%dr(0,0,-,8)%dr(0,21,-,8)%dr(0,8,34,13)%dr(64,8,-,13)
+#
+%Vl(lockscreen_status_long,246,15,14,14,12)%Vb(-)%Vf(-)%Vs(invert)
+%?lh<%t(0.1)0;%t(0.1)1;%t(0.1)2;%t(0.1)3;%t(0.1)2;%t(0.1)1|0>
+#
+%Vl(lockscreen_status_long,262,16,13,14,12)%VB%Vs(invert)H
+%Vl(lockscreen_status_long,262,16,13,14,12)%Vs(invert)H
+#
+%Vl(lockscreen_battery_numeric,284,18,26,9,5)%ac%bl
+%Vl(lockscreen_battery_graphical,286,19,22,7,5)%xd(Battery_Level,%bl)
