@@ -12,6 +12,7 @@
 %Fl(4,18-LeagueSpartan-Medium.fnt)
 %Fl(5,16-LeagueSpartan-SemiBold.fnt)#battery icon font
 %Fl(6,10-Large_UI.fnt)
+%Fl(7,1-Blank_Font.fnt)
 %Fl(10,10-Menu_Char.fnt)
 %Fl(11,7-14x13_Menu_Icons.fnt)
 %Fl(12,7-14x13_Icons.fnt)
@@ -27,10 +28,18 @@
 %xl(Colour_Widget,Colour_Widget.bmp)
 %xl(Battery_Widget,Battery_Widget.bmp)
 %xl(Battery_Widget_Slider,Battery_Widget_Slider_Front.bmp)
+%xl(Quickscreen_Button,Quickscreen_Button.bmp)
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
 %?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)%x(scrollbar_half,scrollbar_full.bmp,190,30)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,2)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
+%?if(%cs, =, 10)<%dr(0,0,-,112)>
+#
+# Quickscreen
+%Vl(Quickscreen,8,120,148,52,-)%VB%xd(Quickscreen_Button)
+%Vl(Quickscreen,164,120,148,52,-)%VB%xd(Quickscreen_Button)
+%Vl(Quickscreen,8,180,148,52,-)%VB%xd(Quickscreen_Button)
+%Vl(Quickscreen,164,180,148,52,-)%VB%xd(Quickscreen_Button)
 #
 %V(0,0,-,-,-)
 #
@@ -39,14 +48,16 @@
 #
 %?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%VI(main_half_vp)%Lb(main_half,182,26)%Vd(scrollbar_half)>>
 #
+%?if(%cs, =, 10)<%VI(quickscreen)%Vd(Quickscreen)>
+#
 %?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%VI(sub_vp)%Lb(no_icons,302,26)%Vd(sub_menu)%Vd(scrollbar_sub)>
 #
-%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 16))<%VI(main_vp)%Lb(main,302,26)%Vd(scrollbar_full)>
+%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 10),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 16))<%VI(main_vp)%Lb(main,302,26)%Vd(scrollbar_full)>
 #
 #
 #--- Clock Logic ---#
 #fallback top bar drawing function for after the lockscreen is turned off.
-%?if(%cs, =, 1)<%?mh<%?St(battery display)<%Vd(lockscreen_battery_numeric)|%Vd(lockscreen_battery_graphical)>%?bs<%Vd(lockscreen_status_long)|%Vd(lockscreen_status_short)>|%Vd(TopBar)%?St(battery display)<%Vd(Battery_Numeric)|%Vd(Battery_Graphical)>>|%Vd(TopBar)%?St(battery display)<%Vd(Battery_Numeric)|%Vd(Battery_Graphical)>>
+%?if(%cs, =, 1)<%?mh<%?St(battery display)<%Vd(lockscreen_battery_numeric)|%Vd(lockscreen_battery_graphical)>%?bs<%Vd(lockscreen_status_long)|%Vd(lockscreen_status_short)>|%Vd(TopBar)%?St(battery display)<%Vd(Battery_Numeric)|%Vd(Battery_Graphical)>>|%?if(%cs, !=, 10)<%Vd(TopBar)%?St(battery display)<%Vd(Battery_Numeric)|%Vd(Battery_Graphical)>>>
 #
 #
 %Vl(TopBar,0,0,-,25,-)%dr(0,0,-,6)%dr(0,6,11,13)%dr(25,6,6,13)%dr(160,6,123,13)%dr(313,6,7,13)%dr(0,19,-,6)
@@ -73,6 +84,7 @@
 %Vi(main_vp,3,28,302,-,-)
 %Vi(sub_vp,3,55,302,-,-)
 %Vi(main_half_vp,3,28,182,-,-)
+%Vi(quickscreen,-30,0,30,30,7)
 #
 #always place text last in these as it will not scroll otherwise
 %Vl(main,0,0,10,26,10)%?Lc<A>
@@ -203,3 +215,6 @@
 #
 %Vl(lockscreen_battery_numeric,284,18,26,9,5)%ac%bl
 %Vl(lockscreen_battery_graphical,286,19,22,7,5)%xd(Battery_Level,%bl)
+#
+# Quickscreen
+%Vl(Quickscreen,46,127,100,16,3)Shuffle

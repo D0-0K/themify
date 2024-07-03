@@ -22,10 +22,8 @@
 %xl(AlbumPlaceholder,no_album_art.bmp)
 %xl(player_status,player_status.bmp,194,145,4)
 %xl(player_status_background,player_status_background.bmp,248,145)
-%xl(shadow_top,shadow_top.bmp,0,11)
-%xl(shadow_corner_top,shadow_corner_top.bmp,144,16)
-%xl(shadow_corner_bottom,shadow_corner_bottom.bmp,144,199)
-%xl(shadow_bottom,shadow_bottom.bmp,0,221)
+%xl(corner_underlay_top,corner_underlay_top.bmp,144,16)
+%xl(corner_underlay_bottom,corner_underlay_bottom.bmp,144,199)
 %xl(slidercutout,slidercutoutend.bmp)
 %xl(transparentslidercutout,transparentoverlay.bmp)
 %xl(sub_status_backdrop,sub_status_backdrop.bmp,16,0,3)
@@ -34,8 +32,8 @@
 #
 #Need to flush the background and foreground, or the previous screen's background remains for some reason.
 %V(0,0,-,-,-)%VB
-%dr(0,16,166,205)%xd(shadow_top)%xd(shadow_corner_top)%xd(shadow_corner_bottom)%xd(shadow_bottom)%?if(%mp,<=,3)< %?mv(1)<%?and(%if(%pv, <=, -27),%if(%pv, >, -60))<%xd(player_status,4)|%xd(player_status,3)>|%?mp<%xd(player_status,1)|%xd(player_status,2)|%xd(player_status,1)>>|%xd(player_status,1)>
-%xd(player_status_background)%pb(17,196,127,5,slidercutout.bmp,backdrop,slidercutback,slider,slidercutout)
+%dr(0,16,166,205)%xd(corner_underlay_top)%xd(corner_underlay_bottom)%?if(%mp,<=,3)< %?mv(1)<%?and(%if(%pv, <=, -27),%if(%pv, >, -60))<%xd(player_status,4)|%xd(player_status,3)>|%?mp<%xd(player_status,1)|%xd(player_status,2)|%xd(player_status,1)>>|%xd(player_status,1)>
+%xd(player_status_background)%?if(%px,>=,1)<%pb(17,196,127,5,slidercutout.bmp,backdrop,slidercutback,slider,slidercutout)>
 #
 #---- Sub-Status Bar Background ----#
 #Show the right background depending on how many icons are on.
@@ -66,7 +64,7 @@
 %al%ss(12, 26, %it)
 #
 %V(180,104,-8,16,3)
-%d(1)
+%px
 #%?if(%St(statusbar), =,off)<%s%al%ia>%?if(%St(statusbar), =,top)<%s%al%id>%?if(%St(statusbar), =,bottom)<%s%al%t(6)%ia;%s%al%t(6)%id;%t(0)>
 #
 #
@@ -127,8 +125,9 @@
 #Icon Slot 3
 %Vl(long_status,181,22,14,14,12)%?and(%if(%ps, =, 1),%if(%mm, >, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<A>
 #
+%?if(%px,>=,1)<%Vd(progress)>
 #Song Position
-%V(17,196,127,5,-)
+%Vl(progress,17,196,127,5,-)
 %pb(0,0,127,5,playersliderfront.bmp,backdrop,sliderback,slider,transparentslidercutout)
 #
 %?if(%pe, >=, 100)<%Vd(playlist_pos_triple)|%Vd(playlist_pos_single)>
