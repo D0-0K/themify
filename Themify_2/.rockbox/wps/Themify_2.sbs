@@ -217,4 +217,6 @@
 %Vl(lockscreen_battery_graphical,286,19,22,7,5)%xd(Battery_Level,%bl)
 #
 # Quickscreen
+%Vl(Quickscreen,0,112,24,24,6)f
+%Vl(Quickscreen,-24,112,24,24,6)g
 %Vl(Quickscreen,46,127,100,16,3)Shuffle
