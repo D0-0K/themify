@@ -29,11 +29,12 @@
 %xl(Battery_Widget,Battery_Widget.bmp)
 %xl(Battery_Widget_Slider,Battery_Widget_Slider_Front.bmp)
 %xl(Quickscreen_Button,Quickscreen_Button.bmp)
+%xl(Quickscreen_Hold_Background,Quickscreen_Hold_Background.bmp)
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
 %?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)%x(scrollbar_half,scrollbar_full.bmp,190,30)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,2)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
-%?if(%cs, =, 10)<%dr(0,0,8,112)%dr(8,0,-,8)%dr(100,8,8,28)%dr(208,8,112,28)%dr(8,36,-,8)%dr(312,44,8,60)%dr(8,70,304,8)%dr(8,104,-,8)>
+%?if(%cs, =, 10)<%dr(0,0,8,112)%dr(8,0,-,8)%dr(100,8,-,28)%dr(8,36,-,8)%dr(312,44,8,60)%dr(8,70,304,8)%dr(8,104,-,8)>
 #
 # Quickscreen
 %Vl(Quickscreen,8,120,148,52,-)%VB%xd(Quickscreen_Button)
@@ -43,12 +44,11 @@
 #
 %V(0,0,-,-,-)
 #
-#
 %?if(%cs, =, 1)<%?mh<%?mp<|%Vd(miniplayer)>|%?mp<%Vd(Widgets)%?ps<%Vd(Shuffle_Widget)>%?if(%mm, >, 1)<%Vd(Repeat_Widget)>|%Vd(miniplayer)>>>
 #
 %?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%VI(main_half_vp)%Lb(main_half,182,26)%Vd(scrollbar_half)>>
 #
-%?if(%cs, =, 10)<%VI(quickscreen)%Vd(Quickscreen)>
+%?if(%cs, =, 10)<%VI(quickscreen)%Vd(Quickscreen)%?bs<|%?mh<%Vd(Quickscreen_Hold_1)|%Vd(Quickscreen_Hold_1_Off)>>>
 #
 %?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%VI(sub_vp)%Lb(no_icons,302,26)%Vd(sub_menu)%Vd(scrollbar_sub)>
 #
@@ -215,7 +215,7 @@
 #
 %Vl(lockscreen_battery_numeric,284,18,26,9,5)%ac%bl
 %Vl(lockscreen_battery_graphical,286,19,22,7,5)%xd(Battery_Level,%bl)
-#
+#1
 # Quickscreen Stuff
 %Vl(Quickscreen,0,112,24,24,6)f
 %Vl(Quickscreen,-24,112,24,24,6)g
@@ -231,3 +231,12 @@
 # Down Button
 %Vl(Quickscreen,200,190,100,18,3)Brightness
 %Vl(Quickscreen,200,209,100,16,4)100%%
+#
+%Vl(Quickscreen_Hold_1_Off,108,8,28,28,-)%dr(0,0,-,-)
+#
+%Vl(Quickscreen_Hold_1,108,8,28,28,-)%VB%xd(Quickscreen_Hold_Background)
+%Vl(Quickscreen_Hold_1,108,8,28,28,-)
+%Vl(Quickscreen_Hold_1,108,8,28,28,6)hij
+%Vl(Quickscreen_Hold_1,115,15,13,14,12)%Vs(invert)D
+#
+%Vl(Quickscreen,8,8,92,28,6)hiiiiiiiiij
