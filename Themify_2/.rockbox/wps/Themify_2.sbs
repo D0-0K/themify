@@ -240,3 +240,6 @@
 %Vl(Quickscreen_Hold_1,115,15,13,14,12)%Vs(invert)D
 #
 %Vl(Quickscreen,8,8,92,28,6)hiiiiiiiiij
+%Vl(Quickscreen,17,15,30,14,12)%Vs(invert)%?mh<LMG|LMG>
+%Vl(Quickscreen,20,18,22,7,5)%xd(Battery_Level,%bl)
+%Vl(Quickscreen,55,14,40,16,3)%Vs(invert)%bl%%
