@@ -232,6 +232,7 @@
 %Vl(Quickscreen,200,190,100,18,3)Brightness
 %Vl(Quickscreen,200,209,100,16,4)100%%
 #
+# Hold Status when no Sleep Status
 %Vl(Quickscreen_Hold_1_Off,108,8,28,28,-)%dr(0,0,-,-)
 #
 %Vl(Quickscreen_Hold_1,108,8,28,28,-)%VB%xd(Quickscreen_Hold_Background)
@@ -239,6 +240,7 @@
 %Vl(Quickscreen_Hold_1,108,8,28,28,6)hij
 %Vl(Quickscreen_Hold_1,115,15,13,14,12)%Vs(invert)D
 #
+# Battery Status
 %Vl(Quickscreen,8,8,92,28,6)hiiiiiiiiij
 %Vl(Quickscreen,17,15,30,14,12)%Vs(invert)%?mh<LMG|LMG>
 %Vl(Quickscreen,20,18,22,7,5)%xd(Battery_Level,%bl)
