@@ -5,4 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: ./checkwps ../Themify_2/.rockbox/wps/Themify_2.sbs ../Themify_2/.rockbox/wps/Themify_2.wps
+      - name: Build and Deploy Script
+      working-directory: ${{ github.workspace }}/PROJECT_FOLDER
+      run: bash ./publish-script.sh

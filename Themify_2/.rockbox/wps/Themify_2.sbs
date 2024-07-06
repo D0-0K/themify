@@ -30,6 +30,8 @@
 %xl(Battery_Widget_Slider,Battery_Widget_Slider_Front.bmp)
 %xl(Quickscreen_Button,Quickscreen_Button.bmp)
 %xl(Quickscreen_Hold_Background,Quickscreen_Hold_Background.bmp)
+%xl(Quickscreen_Sleep_Small_Background,Quickscreen_Sleep_Small_Background.bmp)
+%xl(Quickscreen_Sleep_Big_Background,Quickscreen_Sleep_Big_Background.bmp)
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
@@ -48,7 +50,9 @@
 #
 %?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%VI(main_half_vp)%Lb(main_half,182,26)%Vd(scrollbar_half)>>
 #
-%?if(%cs, =, 10)<%VI(quickscreen)%Vd(Quickscreen)%?bs<|%?mh<%Vd(Quickscreen_Hold_1)|%Vd(Quickscreen_Hold_1_Off)>>>
+# Quickscreen Logic
+# This looks like I'm insane, but effectively there are 3 states for the status bar on the Quickscreen: No Sleep Shutoff, Sleep Shutoff with < 10 mins left and Sleep Shutoff with > 10 mins left. The Hold icon stays right at all times as it is a temporary marker and should remains consistant for the user. Hence this.
+%?if(%cs, =, 10)<%VI(quickscreen)%Vd(Quickscreen)%?bs<%?if(%ss(0, 2, %bs, number), >, 9)<%Vd(Quickscreen_Sleep_2)%?mh<%Vd(Quickscreen_Hold_3)|%Vd(Quickscreen_Hold_3_Off)>|%Vd(Quickscreen_Sleep_1)%?mh<%Vd(Quickscreen_Hold_2)|%Vd(Quickscreen_Hold_2_Off)>>|%?mh<%Vd(Quickscreen_Hold_1)|%Vd(Quickscreen_Hold_1_Off)>>>
 #
 %?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%VI(sub_vp)%Lb(no_icons,302,26)%Vd(sub_menu)%Vd(scrollbar_sub)>
 #
@@ -234,9 +238,7 @@
 #
 # Hold Status when no Sleep Status
 %Vl(Quickscreen_Hold_1_Off,108,8,28,28,-)%dr(0,0,-,-)
-#
 %Vl(Quickscreen_Hold_1,108,8,28,28,-)%VB%xd(Quickscreen_Hold_Background)
-%Vl(Quickscreen_Hold_1,108,8,28,28,-)
 %Vl(Quickscreen_Hold_1,108,8,28,28,6)hij
 %Vl(Quickscreen_Hold_1,115,15,13,14,12)%Vs(invert)D
 #
@@ -245,3 +247,27 @@
 %Vl(Quickscreen,17,15,30,14,12)%Vs(invert)%?mh<LMG|LMG>
 %Vl(Quickscreen,20,18,22,7,5)%xd(Battery_Level,%bl)
 %Vl(Quickscreen,55,14,40,16,3)%Vs(invert)%bl%%
+#
+# Sleep Status less than 10 mins
+# Hold Status
+%Vl(Quickscreen_Hold_2_Off,184,8,28,28,-)%dr(0,0,-,-)
+%Vl(Quickscreen_Hold_2,184,8,28,28,-)%VB%xd(Quickscreen_Hold_Background)
+%Vl(Quickscreen_Hold_2,184,8,28,28,6)hij
+%Vl(Quickscreen_Hold_2,191,15,13,14,12)%Vs(invert)D
+#
+%Vl(Quickscreen_Sleep_1,108,8,68,28,-)%VB%xd(Quickscreen_Sleep_Small_Background)
+%Vl(Quickscreen_Sleep_1,108,8,68,28,6)hiiiiiij
+%Vl(Quickscreen_Sleep_1,114,15,13,14,12)%Vs(invert)H
+%Vl(Quickscreen_Sleep_1,130,14,38,16,3)%Vs(invert)%ac%ss(0,4,%bs)
+#
+# Sleep Status 10 mins or more
+# Hold Status
+%Vl(Quickscreen_Hold_3_Off,192,8,28,28,-)%dr(0,0,-,-)
+%Vl(Quickscreen_Hold_3,192,8,28,28,-)%VB%xd(Quickscreen_Hold_Background)
+%Vl(Quickscreen_Hold_3,192,8,28,28,6)hij
+%Vl(Quickscreen_Hold_3,199,15,13,14,12)%Vs(invert)D
+#
+%Vl(Quickscreen_Sleep_2,108,8,76,28,-)%VB%xd(Quickscreen_Sleep_Big_Background)
+%Vl(Quickscreen_Sleep_2,108,8,76,28,6)hiiiiiiij
+%Vl(Quickscreen_Sleep_2,114,15,13,14,12)%Vs(invert)H
+%Vl(Quickscreen_Sleep_2,130,14,49,16,3)%Vs(invert)%ac%ss(0,5,%bs)
