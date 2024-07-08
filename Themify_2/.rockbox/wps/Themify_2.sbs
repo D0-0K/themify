@@ -32,11 +32,15 @@
 %xl(Quickscreen_Hold_Background,Quickscreen_Hold_Background.bmp)
 %xl(Quickscreen_Sleep_Small_Background,Quickscreen_Sleep_Small_Background.bmp)
 %xl(Quickscreen_Sleep_Big_Background,Quickscreen_Sleep_Big_Background.bmp)
+%xl(Quickscreen_Slider_Back,Quickscreen_Slider_Back.bmp)
+%xl(Quickscreen_Slider_End,Quickscreen_Slider_End.bmp)
+%xl(Quickscreen_Cutout_Back,Quickscreen_Cutout_Back.bmp)
+%xl(Quickscreen_Cutout_End,Quickscreen_Cutout_End.bmp)
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
 %?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)%x(scrollbar_half,scrollbar_full.bmp,190,30)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,2)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
-%?if(%cs, =, 10)<%dr(0,0,8,112)%dr(8,0,-,8)%dr(100,8,-,28)%dr(8,36,-,8)%dr(312,44,8,60)%dr(8,70,304,8)%dr(8,104,-,8)>
+%?if(%cs, =, 10)<%dr(0,0,8,112)%dr(8,0,-,8)%dr(100,8,-,28)%dr(8,36,-,8)%dr(312,44,8,61)%dr(8,71,304,7)%dr(8,105,-,7)>
 #
 # Quickscreen
 %Vl(Quickscreen,8,120,148,52,-)%VB%xd(Quickscreen_Button)
@@ -219,8 +223,20 @@
 #
 %Vl(lockscreen_battery_numeric,284,18,26,9,5)%ac%bl
 %Vl(lockscreen_battery_graphical,286,19,22,7,5)%xd(Battery_Level,%bl)
-#1
+#
 # Quickscreen Stuff
+#
+# Volume Slider
+%Vl(Quickscreen,8,78,13,27,-)%x(eeeeeee,Quickscreen_Slider_Start.bmp)
+%Vl(Quickscreen,21,78,13,27,-)%VB%?if(%St(brightness),=,1)<%xd(Quickscreen_Slider_End)>
+%Vl(Quickscreen,23,44,289,27,-)%VB%pv(0,0,289,27,Quickscreen_Cutout_Front.bmp,backdrop,Quickscreen_Cutout_Back,slider,Quickscreen_Cutout_End)
+%Vl(Quickscreen,23,44,289,27,-)%pv(0,0,289,27,Quickscreen_Slider_Front.bmp,backdrop,Quickscreen_Slider_Back,slider,Quickscreen_Slider_End)
+# Brightness Slider
+%Vl(Quickscreen,29,78,283,27,-)%VB%?if(%St(brightness),>,1)<%St(0,0,283,27,Quickscreen_Cutout_Front.bmp,backdrop,Quickscreen_Cutout_Back,slider,Quickscreen_Cutout_End,setting,brightness)>
+%Vl(Quickscreen,29,78,283,27,-)%?if(%St(brightness),>,1)<%St(0,0,283,27,Quickscreen_Slider_Front.bmp,backdrop,Quickscreen_Slider_Back,slider,Quickscreen_Slider_End,setting,brightness)>
+#
+%Vl(Quickscreen,15,85,14,13,12)D
+#
 %Vl(Quickscreen,0,112,24,24,6)f
 %Vl(Quickscreen,-24,112,24,24,6)g
 # Left Button
@@ -246,7 +262,7 @@
 %Vl(Quickscreen,8,8,92,28,6)hiiiiiiiiij
 %Vl(Quickscreen,17,15,30,14,12)%Vs(invert)%?mh<LMG|LMG>
 %Vl(Quickscreen,20,18,22,7,5)%xd(Battery_Level,%bl)
-%Vl(Quickscreen,55,14,40,16,3)%Vs(invert)%bl%%
+%Vl(Quickscreen,55,14,40,16,3)%Vs(invert)%bl%%#fix this at 100%
 #
 # Sleep Status less than 10 mins
 # Hold Status
