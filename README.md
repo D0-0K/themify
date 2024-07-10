@@ -41,11 +41,11 @@ An ambitious and technically challenging remake of Themify, Themify 2 will be th
 
 | Features | Current State |
 | ----------- | -----------|
-| Music Player | 90% Complete |
+| Music Player | 92% Complete |
 | Main Menus | 85% Complete |
 | Lockscreen | 75% Complete |
 | Status Bar | 100% Complete |
-| Quickscreen | Un-implemented |
+| Quickscreen | 50% |
 | Miniplayers | 90% Complete |
 | Icon Set | 15% Complete |
 

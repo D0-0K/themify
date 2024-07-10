@@ -24,7 +24,6 @@
 %xl(corner_underlay_bottom,corner_underlay_bottom.bmp,144,199)
 %xl(sub_status_backdrop,sub_status_backdrop.bmp,16,0,3)
 %xl(sub_status_backdrop_long,sub_status_backdrop_long.bmp,3)
-%xl(battery_level,Battery_Level.bmp,23)
 #Slider Images
 %xl(Slider_Backdrop,Player_Slider_Backdrop.bmp)
 %xl(Slider_End,Player_Slider_End.bmp)
@@ -69,6 +68,7 @@
 %V(180,104,-8,16,3)
 %?if(%St(statusbar), =,off)<%s%al%ia>%?if(%St(statusbar), =,top)<%s%al%id>%?if(%St(statusbar), =,bottom)<%s%al%t(6)%ia;%s%al%t(6)%id;%t(0)>
 #
+%?St(battery display)<%Vd(Battery_Numeric)|%Vd(Battery_Graphical)>
 #
 #Don't display volume if fastwarding etc.
 %?if(%mp,<=,3)<%?mv(1)<%Vd(volume)|%Vd(player_status)>|%Vd(player_status)>
@@ -79,6 +79,7 @@
 #
 #
 %V(0,22,160,160,-)%VB%dr(0,0,-,-)%Cl(0,0,160,160)%Cd%?C<|%xd(AlbumPlaceholder)>
+#
 #
 #This section draws the rounded corners of the album art with fonts
 %V(0,22,160,160,-)
@@ -102,11 +103,13 @@
 %?lh<%t(0.1)0;%t(0.1)1;%t(0.1)2;%t(0.1)3;%t(0.1)2;%t(0.1)1|0>
 #
 %Vl(long_status,262,22,13,14,12)%Vs(invert)%?mh<D|>
-#use the %?mh to flush the icons, text doesn't seem to play well when stuff is redrawn below it.
-#%V(283,22,30,14,12)%Vs(invert)%?mh<EFG|EFG>
-#%V(286,25,22,7,-)%xd(battery_level,%bl)
-%V(283,22,30,14,12)%Vb(-)%Vf(-)%Vs(invert)%?mh<EFG|EFG>
-%V(285,24,24,9,5)%ac%bl
+#
+%Vl(Battery_Numeric,283,22,30,14,12)%Vb(-)%Vf(-)%Vs(invert)%?mh<EFG|EFG>
+%Vl(Battery_Numeric,285,24,24,9,5)%ac%bl
+#
+%Vl(Battery_Graphical,283,22,30,14,12)%Vs(invert)%?mh<LMG|LMG>
+%Vl(Battery_Graphical,286,25,22,7,5)%xl(Battery_Level,Battery_Level.bmp,23)%xd(Battery_Level,%bl)
+#
 #
 #The sub-status backdrop needs to be refreshed
 %?mh<%Vd(toggle)|%Vd(toggle)>
