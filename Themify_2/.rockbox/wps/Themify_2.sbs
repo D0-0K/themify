@@ -240,17 +240,17 @@
 %Vl(Quickscreen,0,112,24,24,6)f
 %Vl(Quickscreen,-24,112,24,24,6)g
 # Left Button
-%Vl(Quickscreen,45,130,100,18,3)Shuffle
-%Vl(Quickscreen,45,149,100,16,4)On
+%Vl(Quickscreen,45,130,100,18,3)%QL
+%Vl(Quickscreen,45,149,100,16,4)%Ql
 # Up Button
-%Vl(Quickscreen,200,130,100,18,3)Brightness
-%Vl(Quickscreen,200,149,100,16,4)100%%
+%Vl(Quickscreen,200,130,100,18,3)%QT
+%Vl(Quickscreen,200,149,100,16,4)%Qt
 # Right Button
-%Vl(Quickscreen,45,190,100,18,3)Repeat
-%Vl(Quickscreen,45,209,100,16,4)Off
+%Vl(Quickscreen,45,190,100,18,3)%QR
+%Vl(Quickscreen,45,209,100,16,4)%Qr
 # Down Button
-%Vl(Quickscreen,200,190,100,18,3)Brightness
-%Vl(Quickscreen,200,209,100,16,4)100%%
+%Vl(Quickscreen,200,190,100,18,3)%QB
+%Vl(Quickscreen,200,209,100,16,4)%Qb
 #
 # Hold Status when no Sleep Status
 %Vl(Quickscreen_Hold_1_Off,108,8,28,28,-)%dr(0,0,-,-)
