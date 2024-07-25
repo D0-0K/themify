@@ -56,7 +56,7 @@
 #
 # Quickscreen Logic
 # This looks like I'm insane, but effectively there are 3 states for the status bar on the Quickscreen: No Sleep Shutoff, Sleep Shutoff with < 10 mins left and Sleep Shutoff with > 10 mins left. The Hold icon stays right at all times as it is a temporary marker and should remains consistant for the user. Hence this.
-%?if(%cs, =, 10)<%VI(quickscreen)%Vd(Quickscreen)%?bs<%?if(%ss(0, 2, %bs, number), >, 9)<%Vd(Quickscreen_Sleep_2)%?mh<%Vd(Quickscreen_Hold_3)|%Vd(Quickscreen_Hold_3_Off)>|%Vd(Quickscreen_Sleep_1)%?mh<%Vd(Quickscreen_Hold_2)|%Vd(Quickscreen_Hold_2_Off)>>|%?mh<%Vd(Quickscreen_Hold_1)|%Vd(Quickscreen_Hold_1_Off)>>%?or(%if(%Qb,=,0),%if(%Qb,=,No),%if(%Qb,=,Off),%if(%Qb,=,ERR))<|%Vd(Quickitem_Bottom)>%?or(%if(%Qr,=,0),%if(%Qr,=,No),%if(%Qr,=,Off),%if(%Qr,=,ERR))<|%Vd(Quickitem_Right)>>
+%?if(%cs, =, 10)<%VI(quickscreen)%Vd(Quickscreen)%?bs<%?if(%ss(0, 2, %bs, number), >, 9)<%Vd(Quickscreen_Sleep_2)%?mh<%Vd(Quickscreen_Hold_3)|%Vd(Quickscreen_Hold_3_Off)>|%Vd(Quickscreen_Sleep_1)%?mh<%Vd(Quickscreen_Hold_2)|%Vd(Quickscreen_Hold_2_Off)>>|%?mh<%Vd(Quickscreen_Hold_1)|%Vd(Quickscreen_Hold_1_Off)>>%?or(%if(%Ql,=,0),%if(%Ql,=,No),%if(%Ql,=,Off),%if(%Ql,=,ERR))<|%Vd(Quickitem_Left)>%?or(%if(%Qt,=,0),%if(%Qt,=,No),%if(%Qt,=,Off),%if(%Qt,=,ERR))<|%Vd(Quickitem_Top)>%?or(%if(%Qb,=,0),%if(%Qb,=,No),%if(%Qb,=,Off),%if(%Qb,=,ERR))<|%Vd(Quickitem_Bottom)>%?or(%if(%Qr,=,0),%if(%Qr,=,No),%if(%Qr,=,Off),%if(%Qr,=,ERR))<|%Vd(Quickitem_Right)>>
 #
 #
 %?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%VI(sub_vp)%Lb(no_icons,302,26)%Vd(sub_menu)%Vd(scrollbar_sub)>
@@ -240,25 +240,33 @@
 %Vl(Quickscreen,0,112,24,24,6)f
 %Vl(Quickscreen,-24,112,24,24,6)g
 # Left Button
-%Vl(Quickscreen,45,129,100,18,3)%QL
-%Vl(Quickscreen,45,149,100,16,4)%Ql
+%Vl(Quickitem_Left,10,122,144,14,12)ij%ark
+%Vl(Quickitem_Left,10,154,144,14,12)lm%arn
+%Vl(Quickitem_Left,10,136,144,18,-)%dr(0,0,5,-)%dr(130,0,14,18)
+%Vl(Quickitem_Left,38,122,102,46,-)%dr(0,0,-,-)
+%Vl(Quickscreen,45,129,100,18,3)%?or(%if(%Ql,=,0),%if(%Ql,=,No),%if(%Ql,=,Off),%if(%Ql,=,ERR))<|%Vs(invert)>%?if(%QL,=,ERR)<|%s%QL>
+%Vl(Quickscreen,45,149,100,15,4)%?or(%if(%Ql,=,0),%if(%Ql,=,No),%if(%Ql,=,Off),%if(%Ql,=,ERR))<|%Vs(invert)>%?if(%Ql,=,ERR)<|%s%Ql>
 # Top Button
-%Vl(Quickscreen,200,129,100,18,3)%QT
-%Vl(Quickscreen,200,149,100,16,4)%Qt
+%Vl(Quickitem_Top,166,122,144,14,12)ij%ark
+%Vl(Quickitem_Top,166,154,144,14,12)lm%arn
+%Vl(Quickitem_Top,166,136,144,18,-)%dr(0,0,5,-)%dr(130,0,14,18)
+%Vl(Quickitem_Top,194,122,102,46,-)%dr(0,0,-,-)
+%Vl(Quickscreen,200,129,100,18,3)%?or(%if(%Qt,=,0),%if(%Qt,=,No),%if(%Qt,=,Off),%if(%Qt,=,ERR))<|%Vs(invert)>%?if(%QT,=,ERR)<|%s%QT>
+%Vl(Quickscreen,200,149,100,15,4)%?or(%if(%Qt,=,0),%if(%Qt,=,No),%if(%Qt,=,Off),%if(%Qt,=,ERR))<|%Vs(invert)>%?if(%Qt,=,ERR)<|%s%Qt>
 # Right Button
 %Vl(Quickitem_Right,10,182,144,14,12)ij%ark
 %Vl(Quickitem_Right,10,214,144,14,12)lm%arn
-%Vl(Quickitem_Right,10,196,144,18,12)%dr(0,0,5,-)%dr(130,0,14,18)
-%Vl(Quickitem_Right,38,182,102,46,12)%dr(0,0,-,-)
-%Vl(Quickscreen,45,189,100,18,3)%?or(%if(%Qr,=,0),%if(%Qr,=,No),%if(%Qr,=,Off),%if(%Qr,=,ERR))<|%Vs(invert)>%?if(%QR,=,ERR)<|%QR>
-%Vl(Quickscreen,45,209,100,15,4)%?or(%if(%Qr,=,0),%if(%Qr,=,No),%if(%Qr,=,Off),%if(%Qr,=,ERR))<|%Vs(invert)>%?if(%Qr,=,ERR)<|%Qr>
+%Vl(Quickitem_Right,10,196,144,18,-)%dr(0,0,5,-)%dr(130,0,14,18)
+%Vl(Quickitem_Right,38,182,102,46,-)%dr(0,0,-,-)
+%Vl(Quickscreen,45,189,100,18,3)%?or(%if(%Qr,=,0),%if(%Qr,=,No),%if(%Qr,=,Off),%if(%Qr,=,ERR))<|%Vs(invert)>%?if(%QR,=,ERR)<|%s%QR>
+%Vl(Quickscreen,45,209,100,15,4)%?or(%if(%Qr,=,0),%if(%Qr,=,No),%if(%Qr,=,Off),%if(%Qr,=,ERR))<|%Vs(invert)>%?if(%Qr,=,ERR)<|%s%Qr>
 # Bottom Button
 %Vl(Quickitem_Bottom,166,182,144,14,12)ij%ark
 %Vl(Quickitem_Bottom,166,214,144,14,12)lm%arn
-%Vl(Quickitem_Bottom,166,196,144,18,12)%dr(0,0,5,-)%dr(130,0,14,18)
-%Vl(Quickitem_Bottom,194,182,102,46,12)%dr(0,0,-,-)
-%Vl(Quickscreen,200,189,100,18,3)%?or(%if(%Qb,=,0),%if(%Qb,=,No),%if(%Qb,=,Off),%if(%Qb,=,ERR))<|%Vs(invert)>%?if(%QB,=,ERR)<|%QB>
-%Vl(Quickscreen,200,209,100,15,4)%?or(%if(%Qb,=,0),%if(%Qb,=,No),%if(%Qb,=,Off),%if(%Qb,=,ERR))<|%Vs(invert)>%?if(%Qb,=,ERR)<|%Qb>
+%Vl(Quickitem_Bottom,166,196,144,18,-)%dr(0,0,5,-)%dr(130,0,14,18)
+%Vl(Quickitem_Bottom,194,182,102,46,-)%dr(0,0,-,-)
+%Vl(Quickscreen,200,189,100,18,3)%?or(%if(%Qb,=,0),%if(%Qb,=,No),%if(%Qb,=,Off),%if(%Qb,=,ERR))<|%Vs(invert)>%?if(%QB,=,ERR)<|%s%QB>
+%Vl(Quickscreen,200,209,100,15,4)%?or(%if(%Qb,=,0),%if(%Qb,=,No),%if(%Qb,=,Off),%if(%Qb,=,ERR))<|%Vs(invert)>%?if(%Qb,=,ERR)<|%s%Qb>
 #
 # Hold Status when no Sleep Status
 %Vl(Quickscreen_Hold_1_Off,108,8,28,28,-)%dr(0,0,-,-)
