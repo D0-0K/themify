@@ -21,18 +21,6 @@ Themify is an advanced, user-customisable theme for Rockbox. Every on-screen ele
 
 For more information about the technical side of Themify, check out [this blog post](https://d00k.net/journal/inside_themify/).
 
-## Experimental User Configs
-
-Version 1.1 features an experimental user config feature for changing the behaviour of the Artist label in the player and miniplayer. This uses the unused "Status Bar" setting in rockbox to let users choose their preference of Album title + Artist, or either on their own as seen below
-
-**Themify Player Secondary Info Line Config**: Settings > Theme Settings > Status-/ Scrollbar > Status Bar.
-
-| Status Bar Value | Result in Player |
-| ----------- | -----------|
-| off | Artist Name only |
-| top | Album Title only |
-| bottom | Artist Name & Album Title cycled every 6 seconds |
-
 ## Themify 2 Dev Builds
 
 An ambitious and technically challenging remake of Themify, Themify 2 will be the ultimate version of the customisable UI for Rockbox iPods. Due to the difficult nature of the goals, development is expected to take quite some time. For this reason, development builds will available over time for users to test and provide feedback on the user experience, bugs and report crashes to help aid in the completion of this project. Thanks to anyone who seeks to help.
@@ -41,23 +29,13 @@ An ambitious and technically challenging remake of Themify, Themify 2 will be th
 
 | Features | Current State |
 | ----------- | -----------|
-| Music Player | 92% Complete |
+| Music Player | 90% Complete |
 | Main Menus | 85% Complete |
 | Lockscreen | 75% Complete |
-| Status Bar | 100% Complete |
-| Quickscreen | 50% |
-| Miniplayers | 90% Complete |
+| Status Bar | 95% Complete |
+| Quickscreen | 80% Complete |
+| Miniplayers | 85% Complete |
 | Icon Set | 15% Complete |
-
-## Project Plan
-
-Version 2.0 of Themify will be a major update to move the theme towards a more mature state of completion. The main goal of the next update will be to anti-alias the entire UI, getting rid of the jagged edges. There's also some more features planned:
-
-- Choosing between digital and analog clocks on the Lockscreen.
-- Better Language support for dates, time etc.
-- Better respect for rockbox settings for time.
-- Custom UI screens for the User Configs, including adding more configs.
-- Redesign the Quickscreen.
 
 ## Notes for Users
 

@@ -36,6 +36,7 @@
 %xl(Quickscreen_Slider_End,Quickscreen_Slider_End.bmp)
 %xl(Quickscreen_Cutout_Back,Quickscreen_Cutout_Back.bmp)
 %xl(Quickscreen_Cutout_End,Quickscreen_Cutout_End.bmp)
+%xl(Volume_Icon_Mid,Volume_Icon_Mid.bmp)
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
@@ -227,9 +228,12 @@
 # Quickscreen Stuff
 #
 # Volume Slider
-%Vl(Quickscreen,8,44,13,27,6)%Vs(invert)%?mh<k|k>
-%Vl(Quickscreen,30,44,283,27,-)%VB%pv(0,0,283,27,Quickscreen_Cutout_Front.bmp,backdrop,Quickscreen_Cutout_Back,slider,Quickscreen_Cutout_End)
-%Vl(Quickscreen,30,44,283,27,-)%pv(0,0,283,27,Quickscreen_Slider_Front.bmp,backdrop,Quickscreen_Slider_Back,slider,Quickscreen_Slider_End)
+%Vl(Quickscreen,8,44,13,27,6)%t(0.1)%Vs(invert)k;%t(0.1)%Vs(invert)k
+%Vl(Quickscreen,31,44,282,27,-)%VB%pv(0,0,282,27,Quickscreen_Cutout_Front.bmp,backdrop,Quickscreen_Cutout_Back,slider,Quickscreen_Cutout_End)
+%Vl(Quickscreen,31,44,282,27,-)%pv(0,0,282,27,Quickscreen_Slider_Front.bmp,backdrop,Quickscreen_Slider_Back,slider,Quickscreen_Slider_End)
+# Volume Icon
+%Vl(Quickscreen,27,52,4,12,-)%VB%t(0.1)%?and(%if(%pv, <=, -30),%if(%pv, >, -60))<%xd(Volume_Icon_Mid)>;%t(0.1)%?and(%if(%pv, <=, -30),%if(%pv, >, -60))<%xd(Volume_Icon_Mid)>
+%Vl(Quickscreen,9,51,25,13,12)%t(0.1)O%?if(%pv, =, -90)<P>%?and(%if(%pv, <=, -30),%if(%pv, >, -90))<Q>%?if(%pv, >, -30)<R>;%t(0.1)O%?if(%pv, =, -90)<P>%?and(%if(%pv, <=, -30),%if(%pv, >, -90))<Q>%?if(%pv, >, -30)<R>
 #
 # Brightness Slider
 %Vl(Quickscreen,8,78,13,27,6)%Vs(invert)k
