@@ -227,13 +227,14 @@
 # Quickscreen Stuff
 #
 # Volume Slider
-%Vl(Quickscreen,8,78,13,27,-)%x(eeeeeee,Quickscreen_Slider_Start.bmp)
-%Vl(Quickscreen,21,78,13,27,-)%VB%?if(%St(brightness),=,1)<%xd(Quickscreen_Slider_End)>
-%Vl(Quickscreen,23,44,289,27,-)%VB%pv(0,0,289,27,Quickscreen_Cutout_Front.bmp,backdrop,Quickscreen_Cutout_Back,slider,Quickscreen_Cutout_End)
-%Vl(Quickscreen,23,44,289,27,-)%pv(0,0,289,27,Quickscreen_Slider_Front.bmp,backdrop,Quickscreen_Slider_Back,slider,Quickscreen_Slider_End)
+%Vl(Quickscreen,8,44,13,27,6)%Vs(invert)k
+%Vl(Quickscreen,30,44,283,27,-)%VB%pv(0,0,283,27,Quickscreen_Cutout_Front.bmp,backdrop,Quickscreen_Cutout_Back,slider,Quickscreen_Cutout_End)
+%Vl(Quickscreen,30,44,283,27,-)%pv(0,0,283,27,Quickscreen_Slider_Front.bmp,backdrop,Quickscreen_Slider_Back,slider,Quickscreen_Slider_End)
+#
 # Brightness Slider
-%Vl(Quickscreen,30,78,283,27,-)%VB%?if(%St(brightness),>,1)<%St(0,0,283,27,Quickscreen_Cutout_Front.bmp,backdrop,Quickscreen_Cutout_Back,slider,Quickscreen_Cutout_End,setting,brightness)>
-%Vl(Quickscreen,30,78,283,27,-)%?if(%St(brightness),>,1)<%St(0,0,283,27,Quickscreen_Slider_Front.bmp,backdrop,Quickscreen_Slider_Back,slider,Quickscreen_Slider_End,setting,brightness)>
+%Vl(Quickscreen,8,78,13,27,6)%Vs(invert)k
+%Vl(Quickscreen,30,78,283,27,-)%VB%St(0,0,283,27,Quickscreen_Cutout_Front.bmp,backdrop,Quickscreen_Cutout_Back,slider,Quickscreen_Cutout_End,setting,brightness)
+%Vl(Quickscreen,30,78,283,27,-)%St(0,0,283,27,Quickscreen_Slider_Front.bmp,backdrop,Quickscreen_Slider_Back,slider,Quickscreen_Slider_End,setting,brightness)
 # Brightness Icon
 %Vl(Quickscreen,16,85,14,13,12)N
 #
