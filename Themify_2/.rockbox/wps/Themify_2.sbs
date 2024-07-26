@@ -227,7 +227,7 @@
 # Quickscreen Stuff
 #
 # Volume Slider
-%Vl(Quickscreen,8,44,13,27,6)%Vs(invert)k
+%Vl(Quickscreen,8,44,13,27,6)%Vs(invert)%?mh<k|k>
 %Vl(Quickscreen,30,44,283,27,-)%VB%pv(0,0,283,27,Quickscreen_Cutout_Front.bmp,backdrop,Quickscreen_Cutout_Back,slider,Quickscreen_Cutout_End)
 %Vl(Quickscreen,30,44,283,27,-)%pv(0,0,283,27,Quickscreen_Slider_Front.bmp,backdrop,Quickscreen_Slider_Back,slider,Quickscreen_Slider_End)
 #
