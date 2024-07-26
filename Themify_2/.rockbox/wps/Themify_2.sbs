@@ -249,6 +249,7 @@
 %Vl(Quickitem_Left,10,154,144,14,12)lm%arn
 %Vl(Quickitem_Left,10,136,144,18,-)%dr(0,0,5,-)%dr(130,0,14,18)
 %Vl(Quickitem_Left,38,122,102,46,-)%dr(0,0,-,-)
+%Vl(Quickscreen,22,147,7,11,12)%?if(%Qb,=,ERR)<|%t(0.1)7;%t(0.1)7>
 %Vl(Quickscreen,45,129,100,18,3)%?or(%if(%Ql,=,0),%if(%Ql,=,No),%if(%Ql,=,Off),%if(%Ql,=,ERR))<|%Vs(invert)>%?if(%QL,=,ERR)<|%s%QL>
 %Vl(Quickscreen,45,149,100,15,4)%?or(%if(%Ql,=,0),%if(%Ql,=,No),%if(%Ql,=,Off),%if(%Ql,=,ERR))<|%Vs(invert)>%?if(%Ql,=,ERR)<|%s%Ql>
 # Top Button
@@ -256,6 +257,7 @@
 %Vl(Quickitem_Top,166,154,144,14,12)lm%arn
 %Vl(Quickitem_Top,166,136,144,18,-)%dr(0,0,5,-)%dr(130,0,14,18)
 %Vl(Quickitem_Top,194,122,102,46,-)%dr(0,0,-,-)
+%Vl(Quickscreen,177,149,11,7,12)%?if(%Qb,=,ERR)<|%t(0.1)4;%t(0.1)4>
 %Vl(Quickscreen,200,129,100,18,3)%?or(%if(%Qt,=,0),%if(%Qt,=,No),%if(%Qt,=,Off),%if(%Qt,=,ERR))<|%Vs(invert)>%?if(%QT,=,ERR)<|%s%QT>
 %Vl(Quickscreen,200,149,100,15,4)%?or(%if(%Qt,=,0),%if(%Qt,=,No),%if(%Qt,=,Off),%if(%Qt,=,ERR))<|%Vs(invert)>%?if(%Qt,=,ERR)<|%s%Qt>
 # Right Button
@@ -263,6 +265,7 @@
 %Vl(Quickitem_Right,10,214,144,14,12)lm%arn
 %Vl(Quickitem_Right,10,196,144,18,-)%dr(0,0,5,-)%dr(130,0,14,18)
 %Vl(Quickitem_Right,38,182,102,46,-)%dr(0,0,-,-)
+%Vl(Quickscreen,23,207,7,11,12)%?if(%Qb,=,ERR)<|%t(0.1)5;%t(0.1)5>
 %Vl(Quickscreen,45,189,100,18,3)%?or(%if(%Qr,=,0),%if(%Qr,=,No),%if(%Qr,=,Off),%if(%Qr,=,ERR))<|%Vs(invert)>%?if(%QR,=,ERR)<|%s%QR>
 %Vl(Quickscreen,45,209,100,15,4)%?or(%if(%Qr,=,0),%if(%Qr,=,No),%if(%Qr,=,Off),%if(%Qr,=,ERR))<|%Vs(invert)>%?if(%Qr,=,ERR)<|%s%Qr>
 # Bottom Button
@@ -270,6 +273,7 @@
 %Vl(Quickitem_Bottom,166,214,144,14,12)lm%arn
 %Vl(Quickitem_Bottom,166,196,144,18,-)%dr(0,0,5,-)%dr(130,0,14,18)
 %Vl(Quickitem_Bottom,194,182,102,46,-)%dr(0,0,-,-)
+%Vl(Quickscreen,177,210,11,7,12)%?if(%Qb,=,ERR)<|%t(0.1)6;%t(0.1)6>
 %Vl(Quickscreen,200,189,100,18,3)%?or(%if(%Qb,=,0),%if(%Qb,=,No),%if(%Qb,=,Off),%if(%Qb,=,ERR))<|%Vs(invert)>%?if(%QB,=,ERR)<|%s%QB>
 %Vl(Quickscreen,200,209,100,15,4)%?or(%if(%Qb,=,0),%if(%Qb,=,No),%if(%Qb,=,Off),%if(%Qb,=,ERR))<|%Vs(invert)>%?if(%Qb,=,ERR)<|%s%Qb>
 #
