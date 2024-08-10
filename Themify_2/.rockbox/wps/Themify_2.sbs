@@ -278,13 +278,13 @@
 %Vl(Quickscreen,200,209,100,15,4)%?or(%if(%Qb,=,0),%if(%Qb,=,No),%if(%Qb,=,Off),%if(%Qb,=,ERR))<|%Vs(invert)>%?if(%Qb,=,ERR)<|%s%Qb>
 #
 # Hold Status when no Sleep Status
-%Vl(Quickscreen_Hold_1_Off,108,8,28,28,-)%dr(0,0,-,-)
-%Vl(Quickscreen_Hold_1,108,8,28,28,-)%VB%xd(Quickscreen_Hold_Background)
-%Vl(Quickscreen_Hold_1,108,8,28,28,6)hij
+#%Vl(Quickscreen_Hold_1_Off,108,8,28,28,-)%dr(0,0,-,-)
+#%Vl(Quickscreen_Hold_1,108,8,28,28,-)%VB%xd(Quickscreen_Hold_Background)
+#%Vl(Quickscreen_Hold_1,108,8,28,28,6)hij
 %Vl(Quickscreen_Hold_1,115,15,13,14,12)%Vs(invert)D
 #
 # Battery Status
-%Vl(Quickscreen,8,8,92,28,6)hiiiiiiiiij
+%Vl(Quickscreen,8,8,92,28,6)%dr(0,0,-,-)
 %Vl(Quickscreen,17,15,30,14,12)%Vs(invert)%?mh<LMG|LMG>
 %Vl(Quickscreen,20,18,22,7,5)%xd(Battery_Level,%bl)
 %Vl(Quickscreen,55,14,40,16,3)%Vs(invert)%bl%%#fix this at 100%
@@ -292,12 +292,12 @@
 # Sleep Status less than 10 mins
 # Hold Status
 %Vl(Quickscreen_Hold_2_Off,184,8,28,28,-)%dr(0,0,-,-)
-%Vl(Quickscreen_Hold_2,184,8,28,28,-)%VB%xd(Quickscreen_Hold_Background)
-%Vl(Quickscreen_Hold_2,184,8,28,28,6)hij
+#%Vl(Quickscreen_Hold_2,184,8,28,28,-)%VB%xd(Quickscreen_Hold_Background)
+#%Vl(Quickscreen_Hold_2,184,8,28,28,6)hij
 %Vl(Quickscreen_Hold_2,191,15,13,14,12)%Vs(invert)D
 #
-%Vl(Quickscreen_Sleep_1,108,8,68,28,-)%VB%xd(Quickscreen_Sleep_Small_Background)
-%Vl(Quickscreen_Sleep_1,108,8,68,28,6)hiiiiiij
+#%Vl(Quickscreen_Sleep_1,108,8,68,28,-)%VB%xd(Quickscreen_Sleep_Small_Background)
+#%Vl(Quickscreen_Sleep_1,108,8,68,28,6)hiiiiiij
 %Vl(Quickscreen_Sleep_1,114,15,13,14,12)%Vs(invert)H
 %Vl(Quickscreen_Sleep_1,130,14,38,16,3)%Vs(invert)%ac%ss(0,4,%bs)
 #
