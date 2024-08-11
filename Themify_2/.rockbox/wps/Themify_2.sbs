@@ -23,7 +23,8 @@
 %xl(yoke,scrollyoke.bmp)
 %xl(Battery_Level,Battery_Level.bmp,23)
 %xl(lockscreen,Lockscreen.bmp)
-%xl(PlayStatus_Widget,PlayStatus_Widget.bmp)
+%xl(PlayStatus_Widget_W,PlayStatus_Widget_W.bmp)
+%xl(PlayStatus_Widget_B,PlayStatus_Widget_B.bmp)
 %xl(Calendar_Widget,Calendar_Widget.bmp)
 %xl(Colour_Widget,Colour_Widget.bmp)
 %xl(Battery_Widget,Battery_Widget.bmp)
@@ -149,7 +150,7 @@
 #
 #
 #Widget Background
-%Vl(Widgets,205,30,47,62,-)%VB%xd(PlayStatus_Widget)
+%Vl(Widgets,205,30,47,62,-)%VB%?or(%and(%if(%ss(0,1,%St(foreground color)),>=,1),%if(%ss(0,1,%St(foreground color)),<,9)),%and(%if(%ss(2,1,%St(foreground color)),>=,1),%if(%ss(2,1,%St(foreground color)),<,9)),%and(%if(%ss(4,1,%St(foreground color)),>,=1),%if(%ss(4,1,%St(foreground color)),<,9)))<%xd(PlayStatus_Widget_B)|%xd(PlayStatus_Widget_W)>
 #Shuffle Button
 #Button Rounded Corners
 %Vl(Shuffle_Widget,207,32,43,26,12)%VB%Vs(invert)a%arb
