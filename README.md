@@ -33,7 +33,7 @@ An ambitious and technically challenging remake of Themify, Themify 2 will be th
 | Main Menus | 85% Complete |
 | Lockscreen | 75% Complete |
 | Status Bar | 95% Complete |
-| Quickscreen | 80% Complete |
+| Quickscreen | 75% Complete |
 | Miniplayers | 85% Complete |
 | Icon Set | 50% Complete |
 
