@@ -151,7 +151,7 @@
 %Vl(miniplayer,205,226,111,10,12)%?mh<|c%ard>
 #
 #Widget Background
-%Vl(Widgets,205,30,47,62,-)%VB%?or(%if(%ss(0,1,%St(foreground color),number),<,a),%if(%ss(2,1,%St(foreground color),number),<,a),%if(%ss(4,1,%St(foreground color),number),<,a))<%xd(PlayStatus_Widget,1)|%xd(PlayStatus_Widget,2)>
+%Vl(Widgets,205,30,47,62,-)%VB%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(PlayStatus_Widget,2)|%xd(PlayStatus_Widget,1)>
 #
 #Shuffle Button
 #Button Rounded Corners
@@ -170,7 +170,8 @@
 %Vl(Widgets,205,82,47,10,12)c%ard
 #
 #Calendar Widget
-%Vl(Widgets,257,32,58,60,5)%VB%?or(%if(%ss(0,1,%St(foreground color),number),<,a),%if(%ss(2,1,%St(foreground color),number),<,a),%if(%ss(4,1,%St(foreground color),number),<,a))<%xd(Calendar_Widget,1)|%xd(Calendar_Widget,2)>
+%Vl(Widgets,257,32,58,60,5)%VB%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Calendar_Widget,2)|%xd(Calendar_Widget,1)>
+#
 %Vl(Widgets,266,28,4,4,12)%VB%Vs(invert)I
 %Vl(Widgets,278,28,4,4,12)%VB%Vs(invert)I
 %Vl(Widgets,290,28,4,4,12)%VB%Vs(invert)I
@@ -181,7 +182,7 @@
 %Vl(Widgets,263,36,46,14,4)%ac%cb
 #
 #Battery Widget
-%Vl(Widgets,205,97,110,64,-)%VB%?or(%if(%ss(0,1,%St(foreground color),number),<,a),%if(%ss(2,1,%St(foreground color),number),<,a),%if(%ss(4,1,%St(foreground color),number),<,a))<%xd(Battery_Widget,1)|%xd(Battery_Widget,2)>
+%Vl(Widgets,205,97,110,64,-)%VB%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Battery_Widget,2)|%xd(Battery_Widget,1)>
 %Vl(Widgets,215,105,90,17,3)%VB%Sx(Battery)
 %Vl(Widgets,205,97,110,64,-)%bl(9,49,92,5,Battery_Widget_Slider.bmp,slider,Battery_Widget_Slider)
 %Vl(Widgets,215,124,90,15,4)%?bc<%?if(%bl,>=,98)<charged|%t(.5)charging.;%t(.5)charging..;%t(.5)charging...;>|%bt>
@@ -189,7 +190,7 @@
 %Vl(Widgets,205,151,110,10,12)c%ard
 #
 #Colour Widget
-%Vl(Widgets,205,166,110,69,-)%VB%?or(%if(%ss(0,1,%St(foreground color),number),<,a),%if(%ss(2,1,%St(foreground color),number),<,a),%if(%ss(4,1,%St(foreground color),number),<,a))<%xd(Colour_Widget,1)|%xd(Colour_Widget,2)>
+%Vl(Widgets,205,166,110,69,-)%VB%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Colour_Widget,2)|%xd(Colour_Widget,1)>
 %Vl(Widgets,216,173,88,24,-)%VB%dr(0,0,-,-)
 %Vl(Widgets,212,177,96,16,-)%VB%dr(0,0,-,-)
 %Vl(Widgets,218,178,84,14,3)%VB%ar%Vs(invert)%St(foreground color)
