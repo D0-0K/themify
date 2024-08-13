@@ -17,12 +17,15 @@
 %Fl(11,7-14x13_Menu_Icons.fnt)
 %Fl(12,7-14x13_Icons.fnt)
 #--- Icons ---#
-%xl(scrollbar_flush,scrollbar_full_flush.bmp)
-%xl(scrollbar_sub_bg,scrollbar_sub.bmp)
-%xl(scrollbar_sub_flush,scrollbar_sub_flush.bmp)
-%xl(yoke,scrollyoke.bmp)
 %xl(Battery_Level,Battery_Level.bmp,23)
 %xl(lockscreen,Lockscreen.bmp)
+#--- Scrollbar Images ---#
+%xl(Scrollbar_Track_Default,Scrollbar_Track_Default.bmp,2)
+%xl(Scrollbar_Track_Home,Scrollbar_Track_Home.bmp,190,30,2)
+%xl(Scrollbar_Track_Sub,Scrollbar_Track_Sub.bmp,2)
+%xl(Scrollbar_Tall_Flush,Scrollbar_Tall_Flush.bmp)
+%xl(Scrollbar_Short_Flush,Scrollbar_Short_Flush.bmp)
+%xl(Thumb,Scrollbar_Thumb.bmp)
 #--- Homescreen Widgets ---#
 # For the Widget backdrops, the first image in the array
 # is always the black version while the second is white.
@@ -43,7 +46,7 @@
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
-%?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)%x(scrollbar_half,scrollbar_full.bmp,190,30)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,2)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
+%?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Scrollbar_Track_Home,2)|%xd(Scrollbar_Track_Home,1)>>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,2)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
 %?if(%cs, =, 10)<%dr(0,0,8,112)%dr(8,0,-,8)%dr(100,8,-,28)%dr(8,36,-,8)%dr(312,44,8,61)%dr(8,71,304,7)%dr(8,105,-,7)>
 #
 # Quickscreen
@@ -56,16 +59,16 @@
 #
 %?if(%cs, =, 1)<%?mh<%?mp<|%Vd(miniplayer)>|%?mp<%Vd(Widgets)%?ps<%Vd(Shuffle_Widget)>%?if(%mm, >, 1)<%Vd(Repeat_Widget)>|%Vd(miniplayer)>>>
 #
-%?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%VI(main_half_vp)%Lb(main_half,182,26)%Vd(scrollbar_half)>>
+%?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%VI(main_half_vp)%Lb(main_half,182,26)%Vd(Scrollbar_Home)>>
 #
 # Quickscreen Logic
 # This looks like I'm insane, but effectively there are 3 states for the status bar on the Quickscreen: No Sleep Shutoff, Sleep Shutoff with < 10 mins left and Sleep Shutoff with > 10 mins left. The Hold icon stays right at all times as it is a temporary marker and should remains consistant for the user. Hence this.
 %?if(%cs, =, 10)<%VI(quickscreen)%Vd(Quickscreen)%?bs<%?if(%ss(0, 2, %bs, number), >, 9)<%Vd(Quickscreen_Sleep_2)%?mh<%Vd(Quickscreen_Hold_3)|%Vd(Quickscreen_Hold_3_Off)>|%Vd(Quickscreen_Sleep_1)%?mh<%Vd(Quickscreen_Hold_2)|%Vd(Quickscreen_Hold_2_Off)>>|%?mh<%Vd(Quickscreen_Hold_1)|%Vd(Quickscreen_Hold_1_Off)>>%?or(%if(%Ql,=,0),%if(%Ql,=,No),%if(%Ql,=,Off),%if(%Ql,=,ERR))<|%Vd(Quickitem_Left)>%?or(%if(%Qt,=,0),%if(%Qt,=,No),%if(%Qt,=,Off),%if(%Qt,=,ERR))<|%Vd(Quickitem_Top)>%?or(%if(%Qb,=,0),%if(%Qb,=,No),%if(%Qb,=,Off),%if(%Qb,=,ERR))<|%Vd(Quickitem_Bottom)>%?or(%if(%Qr,=,0),%if(%Qr,=,No),%if(%Qr,=,Off),%if(%Qr,=,ERR))<|%Vd(Quickitem_Right)>>
 #
 #
-%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%VI(sub_vp)%Lb(no_icons,302,26)%Vd(sub_menu)%Vd(scrollbar_sub)>
+%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%VI(sub_vp)%Lb(no_icons,302,26)%Vd(sub_menu)%Vd(Scrollbar_Sub)>
 #
-%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 10),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 16))<%VI(main_vp)%Lb(main,302,26)%Vd(scrollbar_full)>
+%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 10),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 16))<%VI(main_vp)%Lb(main,302,26)%Vd(Scrollbar_Default)>
 #
 #
 #--- Clock Logic ---#
@@ -121,25 +124,28 @@
 %Vl(sub_menu,33,27,280,18,3)%Vb(-)%Vf(-)%Vs(invert)%s%Lt
 #
 #Draw rounded corners on the menus. Draw on foreground and background to prevent some minor clipping from the menu items.
-%Vl(scrollbar_full,0,25,-,12,12)J%arK
-%Vl(scrollbar_full,0,25,-,12,12)%VBJ%arK
+%Vl(Scrollbar_Default,0,25,-,12,12)J%arK
+%Vl(Scrollbar_Default,0,25,-,12,12)%VBJ%arK
 #
-%Vl(scrollbar_half,0,25,200,12,12)J%arK
+%Vl(Scrollbar_Home,0,25,200,12,12)J%arK
 #
-%Vl(scrollbar_sub,0,52,-,12,12)J%arK
-%Vl(scrollbar_sub,0,52,-,12,12)%VBJ%arK
+%Vl(Scrollbar_Sub,0,52,-,12,12)J%arK
+%Vl(Scrollbar_Sub,0,52,-,12,12)%VBJ%arK
 #
+#--- Scroll Engine ---#
+# Logic controlling the scrollbars. "Flush" images are used to flush the
+# display when un-rendering the scrollbars. 
 #
 #Use the %?LB here, if you do it while calling the viewport instead, it bugs drawing out for some reason.
-%Vl(scrollbar_full,310,30,5,207,-)%?LB<%VB%x(scrollbar_bg,scrollbar_full.bmp)>
-%Vl(scrollbar_full,310,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,yoke)|%xd(scrollbar_flush)>
+%Vl(Scrollbar_Default,310,30,5,207,-)%VB%?LB<%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Scrollbar_Track_Default,2)|%xd(Scrollbar_Track_Default,1)>>
+%Vl(Scrollbar_Default,310,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,Thumb)|%xd(Scrollbar_Tall_Flush)>
 #
-%Vl(scrollbar_half,190,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,yoke)>
-%Vl(scrollbar_half,190,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,yoke)|%xd(scrollbar_flush)>
+%Vl(Scrollbar_Home,190,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,Thumb)>
+%Vl(Scrollbar_Home,190,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,Thumb)|%xd(Scrollbar_Tall_Flush)>
 #
-%Vl(scrollbar_sub,310,57,5,178,-)%?LB<%VB%xd(scrollbar_sub_bg)>
-%Vl(scrollbar_sub,310,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,yoke)>
-%Vl(scrollbar_sub,310,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,yoke)|%xd(scrollbar_sub_flush)>
+%Vl(Scrollbar_Sub,310,57,5,178,-)%VB%?LB<%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Scrollbar_Track_Sub,2)|%xd(Scrollbar_Track_Sub,1)>>
+%Vl(Scrollbar_Sub,310,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,Thumb)>
+%Vl(Scrollbar_Sub,310,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,Thumb)|%xd(Scrollbar_Short_Flush)>
 #
 %Vl(b,0,0,1,1,-)
 %Vl(flush,0,0,-,-,-)
