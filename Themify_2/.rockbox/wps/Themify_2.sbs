@@ -253,8 +253,14 @@
 # Brightness Icon
 %Vl(Quickscreen,16,92,14,13,12)%Vs(invert)N
 #
-%Vl(Quickscreen,0,42,24,24,6)f
+# Rounded Top corners
+#
+%Vl(Quickscreen,0,42,8,24,6)%t(0.1)f;%t(0.1)f
+%Vl(Quickscreen,0,42,24,8,6)f
 %Vl(Quickscreen,-24,42,24,24,6)g
+%Vl(Quickscreen,-24,42,24,24,6)%VBg
+#%Vl(Quickscreen,-8,42,8,24,6)%t(0.1)g;%t(0.1)g
+#%Vl(Quickscreen,-24,42,24,8,6)g
 # Left Button
 %Vl(Quickitem_Left,10,122,144,14,12)ij%ark
 %Vl(Quickitem_Left,10,154,144,14,12)lm%arn
