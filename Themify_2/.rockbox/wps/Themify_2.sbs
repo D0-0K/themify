@@ -40,14 +40,13 @@
 %xl(Quickscreen_Sleep_Big_Background,Quickscreen_Sleep_Big_Background.bmp)
 %xl(Quickscreen_Slider_Back,Quickscreen_Slider_Back.bmp)
 %xl(Quickscreen_Slider_End,Quickscreen_Slider_End.bmp)
-%xl(Quickscreen_Cutout_Back,Quickscreen_Cutout_Back.bmp)
 %xl(Quickscreen_Cutout_End,Quickscreen_Cutout_End.bmp)
-%xl(Volume_Icon_Mid,Volume_Icon_Mid.bmp)
+%xl(Volume_Icon_Mid,Volume_Icon_Mid.bmp,2)
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
 %?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Scrollbar_Track_Home,2)|%xd(Scrollbar_Track_Home,1)>>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,2)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
-%?if(%cs, =, 10)<%dr(0,0,8,112)%dr(8,0,-,8)%dr(100,8,-,28)%dr(8,36,-,8)%dr(312,44,8,61)%dr(8,71,304,7)%dr(8,105,-,7)>
+%?if(%cs, =, 10)<%dr(21,49,10,7)%dr(21,69,10,7)%dr(21,84,9,7)%dr(21,104,9,7)>
 #
 # Quickscreen
 %Vl(Quickscreen,8,120,148,52,-)%VB%?or(%if(%Ql,=,0),%if(%Ql,=,No),%if(%Ql,=,Off))<%xd(Quickscreen_Button,1)|%?if(%Ql,=,ERR)<%xd(Quickscreen_Button,3)|%xd(Quickscreen_Button,2)>>
@@ -238,22 +237,24 @@
 # Quickscreen Stuff
 #
 # Volume Slider
-%Vl(Quickscreen,8,44,13,27,6)%t(0.1)%Vs(invert)k;%t(0.1)%Vs(invert)k
-%Vl(Quickscreen,31,44,282,27,-)%VB%pv(0,0,282,27,Quickscreen_Cutout_Front.bmp,backdrop,Quickscreen_Cutout_Back,slider,Quickscreen_Cutout_End)
-%Vl(Quickscreen,31,44,282,27,-)%pv(0,0,282,27,Quickscreen_Slider_Front.bmp,backdrop,Quickscreen_Slider_Back,slider,Quickscreen_Slider_End)
+%Vl(Quickscreen,8,49,23,27,6)%t(0.1)k;%t(0.1)k
+%Vl(Quickscreen,31,49,282,27,-)%VB%pv(0,0,282,27,noborder,notouch,slider,Quickscreen_Cutout_End)
+%Vl(Quickscreen,31,49,282,27,-)%pv(0,0,282,27,Quickscreen_Slider_Front.bmp,notouch,backdrop,Quickscreen_Slider_Back,slider,Quickscreen_Slider_End)
 # Volume Icon
-%Vl(Quickscreen,27,52,4,12,-)%VB%t(0.1)%?and(%if(%pv, <=, -30),%if(%pv, >, -60))<%xd(Volume_Icon_Mid)>;%t(0.1)%?and(%if(%pv, <=, -30),%if(%pv, >, -60))<%xd(Volume_Icon_Mid)>
-%Vl(Quickscreen,9,51,25,13,12)%t(0.1)O%?if(%pv, =, -90)<P>%?and(%if(%pv, <=, -30),%if(%pv, >, -90))<Q>%?if(%pv, >, -30)<R>;%t(0.1)O%?if(%pv, =, -90)<P>%?and(%if(%pv, <=, -30),%if(%pv, >, -90))<Q>%?if(%pv, >, -30)<R>
+%Vl(Quickscreen,27,57,4,12,-)%VB%t(0.1)%?and(%if(%pv, <=, -30),%if(%pv, >, -60))<%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Volume_Icon_Mid,2)|%xd(Volume_Icon_Mid,1)>>;%t(0.1)%?and(%if(%pv, <=, -30),%if(%pv, >, -60))<%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Volume_Icon_Mid,2)|%xd(Volume_Icon_Mid,1)>>
+
+
+%Vl(Quickscreen,9,56,25,13,12)%t(0.1)%Vs(invert)O%?if(%pv, =, -90)<P>%?and(%if(%pv, <=, -30),%if(%pv, >, -60))<R>%?and(%if(%pv, <=, -60),%if(%pv, >, -90))<Q>%?if(%pv, >, -30)<R>;%t(0.1)%Vs(invert)O%?if(%pv, =, -90)<P>%?and(%if(%pv, <=, -30),%if(%pv, >, -60))<R>%?and(%if(%pv, <=, -60),%if(%pv, >, -90))<Q>%?if(%pv, >, -30)<R>
 #
 # Brightness Slider
-%Vl(Quickscreen,8,78,13,27,6)%Vs(invert)k
-%Vl(Quickscreen,30,78,283,27,-)%VB%St(0,0,283,27,Quickscreen_Cutout_Front.bmp,backdrop,Quickscreen_Cutout_Back,slider,Quickscreen_Cutout_End,setting,brightness)
-%Vl(Quickscreen,30,78,283,27,-)%St(0,0,283,27,Quickscreen_Slider_Front.bmp,backdrop,Quickscreen_Slider_Back,slider,Quickscreen_Slider_End,setting,brightness)
+%Vl(Quickscreen,8,84,13,27,6)k
+%Vl(Quickscreen,30,84,283,27,-)%VB%St(0,0,283,27,noborder,notouch,slider,Quickscreen_Cutout_End,setting,brightness)
+%Vl(Quickscreen,30,84,283,27,-)%St(0,0,283,27,Quickscreen_Slider_Front.bmp,notouch,backdrop,Quickscreen_Slider_Back,slider,Quickscreen_Slider_End,setting,brightness)
 # Brightness Icon
-%Vl(Quickscreen,16,85,14,13,12)N
+%Vl(Quickscreen,16,91,14,13,12)%Vs(invert)N
 #
-%Vl(Quickscreen,0,112,24,24,6)f
-%Vl(Quickscreen,-24,112,24,24,6)g
+%Vl(Quickscreen,0,42,24,24,6)f
+%Vl(Quickscreen,-24,42,24,24,6)g
 # Left Button
 %Vl(Quickitem_Left,10,122,144,14,12)ij%ark
 %Vl(Quickitem_Left,10,154,144,14,12)lm%arn
