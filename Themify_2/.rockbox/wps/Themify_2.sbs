@@ -254,13 +254,11 @@
 %Vl(Quickscreen,16,92,14,13,12)%Vs(invert)N
 #
 # Rounded Top corners
-#
 %Vl(Quickscreen,0,42,8,24,6)%t(0.1)f;%t(0.1)f
 %Vl(Quickscreen,0,42,24,8,6)f
 %Vl(Quickscreen,-24,42,24,24,6)g
 %Vl(Quickscreen,-24,42,24,24,6)%VBg
-#%Vl(Quickscreen,-8,42,8,24,6)%t(0.1)g;%t(0.1)g
-#%Vl(Quickscreen,-24,42,24,8,6)g
+#
 # Left Button
 %Vl(Quickitem_Left,10,122,144,14,12)ij%ark
 %Vl(Quickitem_Left,10,154,144,14,12)lm%arn
@@ -301,31 +299,13 @@
 %Vl(Quickscreen_Hold_1,115,15,13,14,12)%Vs(invert)D
 #
 # Battery Status
-%Vl(Quickscreen,8,8,92,28,6)%dr(0,0,-,-)
+%Vl(Quickscreen,0,7,285,28,6)%dr(0,0,-,-)
 %Vl(Quickscreen,17,15,30,14,12)%Vs(invert)%?mh<LMG|LMG>
 %Vl(Quickscreen,20,18,22,7,5)%xd(Battery_Level,%bl)
 %Vl(Quickscreen,55,14,40,16,3)%Vs(invert)%bl%%#fix this at 100%
-#
-# Sleep Status less than 10 mins
-# Hold Status
-%Vl(Quickscreen_Hold_2_Off,184,8,28,28,-)%dr(0,0,-,-)
-#%Vl(Quickscreen_Hold_2,184,8,28,28,-)%VB%xd(Quickscreen_Hold_Background)
-#%Vl(Quickscreen_Hold_2,184,8,28,28,6)hij
-%Vl(Quickscreen_Hold_2,191,15,13,14,12)%Vs(invert)D
 #
 #%Vl(Quickscreen_Sleep_1,108,8,68,28,-)%VB%xd(Quickscreen_Sleep_Small_Background)
 #%Vl(Quickscreen_Sleep_1,108,8,68,28,6)hiiiiiij
 %Vl(Quickscreen_Sleep_1,114,15,13,14,12)%Vs(invert)H
 %Vl(Quickscreen_Sleep_1,130,14,38,16,3)%Vs(invert)%ac%ss(0,4,%bs)
 #
-# Sleep Status 10 mins or more
-# Hold Status
-%Vl(Quickscreen_Hold_3_Off,192,8,28,28,-)%dr(0,0,-,-)
-%Vl(Quickscreen_Hold_3,192,8,28,28,-)%VB%xd(Quickscreen_Hold_Background)
-%Vl(Quickscreen_Hold_3,192,8,28,28,6)hij
-%Vl(Quickscreen_Hold_3,199,15,13,14,12)%Vs(invert)D
-#
-%Vl(Quickscreen_Sleep_2,108,8,76,28,-)%VB%xd(Quickscreen_Sleep_Big_Background)
-%Vl(Quickscreen_Sleep_2,108,8,76,28,6)hiiiiiiij
-%Vl(Quickscreen_Sleep_2,114,15,13,14,12)%Vs(invert)H
-%Vl(Quickscreen_Sleep_2,130,14,49,16,3)%Vs(invert)%ac%ss(0,5,%bs)
