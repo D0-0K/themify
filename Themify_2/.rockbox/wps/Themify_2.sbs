@@ -81,7 +81,7 @@
 %Vl(TopBar,0,0,-,25,-)%dr(0,0,-,6)%dr(0,6,11,13)%dr(25,6,6,13)%dr(160,6,123,13)%dr(313,6,7,13)%dr(0,19,-,6)
 #
 #Manually set the number for %cl hour on 12-hour time. The %cl tag puts a space at the start and throws off the positioning of the time.
-%Vl(TopBar,31,5,129,17,3)%Vb(-)%Vf(-)%Vs(invert)%?cf<%cH:%cM|%?cl<1|2|3|4|5|6|7|8|9|10|11|12>:%cM%cp> %?St(scrollbar)<1off|2left|3right>
+%Vl(TopBar,31,5,129,17,3)%Vb(-)%Vf(-)%Vs(invert)%?cf<%cH:%cM|%?cl<1|2|3|4|5|6|7|8|9|10|11|12>:%cM%cp>
 #
 #use the %?mh to flush the icons, text doesn't seem to play well when stuff is redrawn below it.
 #Battery level is drawn in both foreground and background so it renders. Probably %Vs(invert) shenanigans
@@ -195,6 +195,8 @@
 #
 #Calendar Widget
 %Vl(Widgets,257,32,58,60,5)%VB%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Calendar_Widget,2)|%xd(Calendar_Widget,1)>
+#
+%Vl(Widgets,263,56,46,25,6)%ac%cd
 #
 %Vl(Widgets,266,28,4,4,12)%VB%Vs(invert)I
 %Vl(Widgets,278,28,4,4,12)%VB%Vs(invert)I
