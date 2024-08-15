@@ -69,7 +69,7 @@
 %Vl(TopBar,0,0,-,25,-)%dr(0,0,-,6)%dr(0,6,11,13)%dr(25,6,6,13)%dr(160,6,123,13)%dr(313,6,7,13)%dr(0,19,-,6)
 #
 #Manually set the number for %cl hour on 12-hour time. The %cl tag puts a space at the start and throws off the positioning of the time.
-%Vl(TopBar,31,5,129,17,3)%Vb(-)%Vf(-)%Vs(invert)%?cf<%cH:%cM|%?cl<1|2|3|4|5|6|7|8|9|10|11|12>:%cM%cp>
+%Vl(TopBar,31,5,129,17,3)%Vb(-)%Vf(-)%Vs(invert)%?cf<%cH:%cM|%?cl<1|2|3|4|5|6|7|8|9|10|11|12>:%cM%cp> %?St(scrollbar)<1off|2left|3right>
 #
 #use the %?mh to flush the icons, text doesn't seem to play well when stuff is redrawn below it.
 #Battery level is drawn in both foreground and background so it renders. Probably %Vs(invert) shenanigans
@@ -88,22 +88,33 @@
 #
 #
 #--- Menu Engine ---#
-#- Home Menu Initialisation -#
-%?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%VI(Home_Menu_Viewport)%?St(show icons)<%Lb(Home_Menu_With_Icons,182,26)|%Lb(Home_Menu_No_Icons,182,26)>%Vd(Scrollbar_Home)>>
-#
-#- Sub Menu Initialisation -#
-%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%VI(Sub_Menu_Viewport)%Lb(Menu_No_Icons,302,26)%Vd(Sub_Menu_Header)%Vd(Scrollbar_Sub)>
-#
-#- Main Menu Initialisation -#
-%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 10),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 16))<%VI(Main_Viewport)%?St(show icons)<%Lb(Menu_With_Icons,302,26)|%Lb(Menu_No_Icons,302,26)>%Vd(Scrollbar_Default)>
-#
-#%St(show icons)%St(scrollbar)
 #
 %Vi(-,3,28,302,-,-)
-%Vi(Main_Viewport,3,28,302,-,-)
-%Vi(Sub_Menu_Viewport,3,55,302,-,-)
-%Vi(Home_Menu_Viewport,3,28,182,-,-)
 %Vi(Default_Menu_Supression,-65,0,30,30,7)
+# No Scrollbar
+%Vi(Main_Viewport_Full,3,28,-3,-,-)
+%Vi(Sub_Menu_Viewport_Full,3,55,-3,-,-)
+%Vi(Home_Menu_Viewport_Full,3,28,194,-,-)
+# Left Scrollbar
+%Vi(Main_Viewport_Left,3,28,302,-,-)
+%Vi(Sub_Menu_Viewport_Left,3,55,302,-,-)
+%Vi(Home_Menu_Viewport_Left,3,28,182,-,-)
+# Right Scrollbar
+%Vi(Main_Viewport_Right,15,28,302,-,-)
+%Vi(Sub_Menu_Viewport_Right,15,55,302,-,-)
+%Vi(Home_Menu_Viewport_Right,15,28,182,-,-)
+#
+#- Home Menu Initialisation -#
+%?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%?St(scrollbar)<%VI(Home_Menu_Viewport_Full)|%VI(Home_Menu_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Home_Menu_Viewport_Left)%Vd(Scrollbar_Home)>%?St(show icons)<%Lb(Home_Menu_With_Icons,182,26)|%Lb(Home_Menu_No_Icons,182,26)>>>
+#
+#- Sub Menu Initialisation -#
+%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%VI(Sub_Menu_Viewport_Left)%Lb(Menu_No_Icons,302,26)%Vd(Sub_Menu_Header)%Vd(Scrollbar_Sub)>
+#
+#- Main Menu Initialisation -#
+%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 6),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 10),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 14),%if(%cs, !=, 16))<%?St(scrollbar)<%VI(Main_Viewport_Full)|%VI(Main_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Main_Viewport_Left)%Vd(Scrollbar_Default)>%?St(show icons)<%Lb(Menu_With_Icons,302,26)|%Lb(Menu_No_Icons,302,26)>>
+#
+#- Settings Menu Initialisation -#
+%?if(%cs, =, 6)<%?St(scrollbar)<%VI(Main_Viewport_Full)|%VI(Main_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Main_Viewport_Left)%Vd(Scrollbar_Default)>%?if(%Lt, =, %Sx(Settings))<%?St(show icons)<%Lb(Menu_With_Icons,302,26)|%Lb(Menu_No_Icons,302,26)>|%Lb(Menu_No_Icons,302,26)>>
 #
 #- Menus with Icons -#
 #always place text last in these as it will not scroll otherwise
@@ -148,6 +159,11 @@
 %Vl(Scrollbar_Sub,310,57,5,178,-)%VB%?LB<%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Scrollbar_Track_Sub,2)|%xd(Scrollbar_Track_Sub,1)>>
 %Vl(Scrollbar_Sub,310,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,Thumb)>
 %Vl(Scrollbar_Sub,310,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,Thumb)|%xd(Scrollbar_Short_Flush)>
+#
+#- Left side Scrollbar -#
+%Vl(Scrollbar_Left,5,30,5,207,-)%VB%?LB<%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Scrollbar_Track_Default,2)|%xd(Scrollbar_Track_Default,1)>>
+#
+%Vl(Scrollbar_Left,5,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,Thumb)|%xd(Scrollbar_Tall_Flush)>
 #
 %Vl(b,0,0,1,1,-)
 %Vl(flush,0,0,-,-,-)
