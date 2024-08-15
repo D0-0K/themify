@@ -89,13 +89,15 @@
 #
 #--- Menu Engine ---#
 #- Home Menu Initialisation -#
-%?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%VI(Home_Menu_Viewport)%Lb(Home_Menu_With_Icons,182,26)%Vd(Scrollbar_Home)>>
+%?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%VI(Home_Menu_Viewport)%?St(show icons)<%Lb(Home_Menu_With_Icons,182,26)|%Lb(Home_Menu_No_Icons,182,26)>%Vd(Scrollbar_Home)>>
 #
 #- Sub Menu Initialisation -#
 %?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%VI(Sub_Menu_Viewport)%Lb(Menu_No_Icons,302,26)%Vd(Sub_Menu_Header)%Vd(Scrollbar_Sub)>
 #
 #- Main Menu Initialisation -#
-%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 10),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 16))<%VI(Main_Viewport)%Lb(Menu_With_Icons,302,26)%Vd(Scrollbar_Default)>
+%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 10),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 16))<%VI(Main_Viewport)%?St(show icons)<%Lb(Menu_With_Icons,302,26)|%Lb(Menu_No_Icons,302,26)>%Vd(Scrollbar_Default)>
+#
+#%St(show icons)%St(scrollbar)
 #
 %Vi(-,3,28,302,-,-)
 %Vi(Main_Viewport,3,28,302,-,-)
