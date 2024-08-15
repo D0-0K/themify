@@ -41,7 +41,7 @@
 %xl(Quickscreen_Slider_End,Quickscreen_Slider_End.bmp)
 %xl(Quickscreen_Cutout_End,Quickscreen_Cutout_End.bmp)
 %xl(Volume_Icon_Mid,Volume_Icon_Mid.bmp,2)
-%xl(Quickscreen_Status_Divider,Quickscreen_Status_Divider.bmp,2)
+%xl(Quickscreen_Status_Divider,Quickscreen_Status_Divider.bmp)
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
@@ -58,17 +58,8 @@
 #
 %?if(%cs, =, 1)<%?mh<%?mp<|%Vd(miniplayer)>|%?mp<%Vd(Widgets)%?ps<%Vd(Shuffle_Widget)>%?if(%mm, >, 1)<%Vd(Repeat_Widget)>|%Vd(miniplayer)>>>
 #
-%?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%VI(main_half_vp)%Lb(main_half,182,26)%Vd(Scrollbar_Home)>>
-#
 # Quickscreen Logic
-# This looks like I'm insane, but effectively there are 3 states for the status bar on the Quickscreen: No Sleep Shutoff, Sleep Shutoff with < 10 mins left and Sleep Shutoff with > 10 mins left. The Hold icon stays right at all times as it is a temporary marker and should remains consistant for the user. Hence this.
-%?if(%cs, =, 10)<%VI(quickscreen)%Vd(Quickscreen)%?mh<%Vd(Quickscreen_Hold_On)|%Vd(Quickscreen_Hold_Off)>%?or(%if(%Ql,=,0),%if(%Ql,=,No),%if(%Ql,=,Off),%if(%Ql,=,ERR))<|%Vd(Quickitem_Left)>%?or(%if(%Qt,=,0),%if(%Qt,=,No),%if(%Qt,=,Off),%if(%Qt,=,ERR))<|%Vd(Quickitem_Top)>%?or(%if(%Qb,=,0),%if(%Qb,=,No),%if(%Qb,=,Off),%if(%Qb,=,ERR))<|%Vd(Quickitem_Bottom)>%?or(%if(%Qr,=,0),%if(%Qr,=,No),%if(%Qr,=,Off),%if(%Qr,=,ERR))<|%Vd(Quickitem_Right)>>
-#
-#
-%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%VI(sub_vp)%Lb(no_icons,302,26)%Vd(sub_menu)%Vd(Scrollbar_Sub)>
-#
-%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 10),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 16))<%VI(main_vp)%Lb(main,302,26)%Vd(Scrollbar_Default)>
-#
+%?if(%cs, =, 10)<%VI(Default_Menu_Supression)%Vd(Quickscreen)%?mh<%Vd(Quickscreen_Hold_On)|%Vd(Quickscreen_Hold_Off)>%?or(%if(%Ql,=,0),%if(%Ql,=,No),%if(%Ql,=,Off),%if(%Ql,=,ERR))<|%Vd(Quickitem_Left)>%?or(%if(%Qt,=,0),%if(%Qt,=,No),%if(%Qt,=,Off),%if(%Qt,=,ERR))<|%Vd(Quickitem_Top)>%?or(%if(%Qb,=,0),%if(%Qb,=,No),%if(%Qb,=,Off),%if(%Qb,=,ERR))<|%Vd(Quickitem_Bottom)>%?or(%if(%Qr,=,0),%if(%Qr,=,No),%if(%Qr,=,Off),%if(%Qr,=,ERR))<|%Vd(Quickitem_Right)>>
 #
 #--- Clock Logic ---#
 #fallback top bar drawing function for after the lockscreen is turned off.
@@ -95,33 +86,43 @@
 %Vl(TopBar,11,5,14,14,12)%Vb(-)%Vf(-)%Vs(invert)
 %?lh<%t(0.1)0;%t(0.1)1;%t(0.1)2;%t(0.1)3;%t(0.1)2;%t(0.1)1|0>
 #
+#
+#--- Menu Engine ---#
+#- Home Menu Initialisation -#
+%?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%VI(Home_Menu_Viewport)%Lb(Home_Menu_With_Icons,182,26)%Vd(Scrollbar_Home)>>
+#
+#- Sub Menu Initialisation -#
+%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%VI(Sub_Menu_Viewport)%Lb(Menu_No_Icons,302,26)%Vd(Sub_Menu_Header)%Vd(Scrollbar_Sub)>
+#
+#- Main Menu Initialisation -#
+%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 10),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 16))<%VI(Main_Viewport)%Lb(Menu_With_Icons,302,26)%Vd(Scrollbar_Default)>
+#
 %Vi(-,3,28,302,-,-)
-%Vi(main_vp,3,28,302,-,-)
-%Vi(sub_vp,3,55,302,-,-)
-%Vi(main_half_vp,3,28,182,-,-)
-%Vi(quickscreen,-65,0,30,30,7)
+%Vi(Main_Viewport,3,28,302,-,-)
+%Vi(Sub_Menu_Viewport,3,55,302,-,-)
+%Vi(Home_Menu_Viewport,3,28,182,-,-)
+%Vi(Default_Menu_Supression,-65,0,30,30,7)
 #
+#- Menus with Icons -#
 #always place text last in these as it will not scroll otherwise
-%Vl(main,0,0,10,26,10)%?Lc<A>
-%Vl(main,7,0,20,26,11)%?Lc<%Vs(invert)>3
-%Vl(main,292,0,10,26,10)%?Lc<B>
-%Vl(main,27,0,265,26,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(Menu_With_Icons,0,0,302,26,10)%?Lc<A%arB>
+%Vl(Menu_With_Icons,7,0,20,26,11)%?Lc<%Vs(invert)>3
+%Vl(Menu_With_Icons,27,0,265,26,-)%?Lc<%Vs(invert)>%s%LT
 #
+%Vl(Home_Menu_With_Icons,0,0,182,26,10)%?Lc<A%arB>
+%Vl(Home_Menu_With_Icons,7,0,20,26,11)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
+%Vl(Home_Menu_With_Icons,27,0,145,26,-)%?Lc<%Vs(invert)>%s%LT
 #
-%Vl(main_half,0,0,10,26,10)%?Lc<A>
-%Vl(main_half,7,0,20,26,11)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
-%Vl(main_half,172,0,10,26,10)%?Lc<B>
-%Vl(main_half,27,0,145,26,-)%?Lc<%Vs(invert)>%s%LT
+#- Menus with no Icons -#
+%Vl(Menu_No_Icons,0,0,302,26,10)%?Lc<A%arB>
+%Vl(Menu_No_Icons,9,0,283,26,-)%?Lc<%Vs(invert)>%s%LT
 #
-%Vl(no_icons,0,0,10,26,10)%?Lc<A>
-%Vl(no_icons,292,0,10,26,10)%?Lc<B>
-%Vl(no_icons,9,0,283,26,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(Home_Menu_No_Icons,0,0,182,26,10)%?Lc<A%arB>
+%Vl(Home_Menu_No_Icons,9,0,163,26,-)%?Lc<%Vs(invert)>%s%LT
 #
-%Vl(no_icons_half,172,0,10,26,10)%?Lc<B>
-%Vl(no_icons_half,0,0,172,26,10)%?Lc<%Vs(invert)A>  %s%LT
+%Vl(Sub_Menu_Header,33,27,280,18,3)%Vb(-)%Vf(-)%Vs(invert)%s%Lt
 #
-%Vl(sub_menu,33,27,280,18,3)%Vb(-)%Vf(-)%Vs(invert)%s%Lt
-#
+#- Rounded Corners on menus -#
 #Draw rounded corners on the menus. Draw on foreground and background to prevent some minor clipping from the menu items.
 %Vl(Scrollbar_Default,0,25,-,12,12)J%arK
 %Vl(Scrollbar_Default,0,25,-,12,12)%VBJ%arK
@@ -300,8 +301,7 @@
 %Vl(Quickscreen,20,17,22,7,7)%xd(Battery_Level,%bl)
 %Vl(Quickscreen,55,13,45,16,3)%Vs(invert)%bl%%
 #
-%Vl(Quickscreen,104,7,1,28,7)%VB%dr(0,0,-,-)
-%Vl(Quickscreen,104,7,1,28,7)%?bs<%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Quickscreen_Status_Divider,1)|%xd(Quickscreen_Status_Divider,2)>>
+%Vl(Quickscreen,104,7,1,28,7)%?bs<%xd(Quickscreen_Status_Divider)>
 #
 # Sleep Status
 %Vl(Quickscreen,116,14,13,14,12)%?bs<%Vs(invert)H|%dr(0,0,-,-)>
