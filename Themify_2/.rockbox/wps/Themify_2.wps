@@ -84,8 +84,8 @@
 #This section draws the rounded corners of the album art with fonts
 %V(0,22,160,160,-)
 %V(144,16,22,22,6)b
-%V(144,165,22,22,6)c
-%V(144,199,22,22,6)e
+%V(144,166,22,22,6)c
+%V(144,199,22,22,6)d
 #
 #Swap out the status dialog for a longer one when on hold or sleep mode
 %?mh<%Vd(long_status)|%Vd(short_status)>
