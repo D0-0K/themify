@@ -39,6 +39,7 @@
 #
 #---- Sub-Status Bar Background ----#
 #Show the right background depending on how many icons are on.
+# Gotta run the contrast algorithm for the backdrops, which doubles the code size unfortunately.
 #Background: if only 1 icon is active
 %V(173,14,98,29,-)%VB
 %?and(%if(%ps, =, 1),%if(%mm, =, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%?mh<%xd(sub_status_backdrop_long,1)|%xd(sub_status_backdrop,1)>>%?and(%if(%ps, !=, 1),%if(%mm, >, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%?mh<%xd(sub_status_backdrop_long,1)|%xd(sub_status_backdrop,1)>>%?and(%if(%ps, !=, 1),%if(%mm, =, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(sub_status_backdrop_long,1)|%xd(sub_status_backdrop,1)>>
@@ -68,7 +69,7 @@
 %V(180,104,-8,16,3)
 %?if(%St(statusbar), =,off)<%s%al%ia>%?if(%St(statusbar), =,top)<%s%al%id>%?if(%St(statusbar), =,bottom)<%s%al%t(6)%ia;%s%al%t(6)%id;%t(0)>
 #
-%?St(battery display)<%Vd(Battery_Numeric)|%Vd(Battery_Graphical)>
+%?St(battery display)<%Vd(Battery_Graphical)|%Vd(Battery_Numeric)>
 #
 #Don't display volume if fastwarding etc.
 %?if(%mp,<=,3)<%?mv(1)<%Vd(volume)|%Vd(player_status)>|%Vd(player_status)>

@@ -74,25 +74,25 @@
 #
 #--- Clock Logic ---#
 #fallback top bar drawing function for after the lockscreen is turned off.
-%?if(%cs, =, 1)<%?mh<%?St(battery display)<%Vd(lockscreen_battery_numeric)|%Vd(lockscreen_battery_graphical)>%?bs<%Vd(lockscreen_status_long)|%Vd(lockscreen_status_short)>|%Vd(TopBar)%?St(battery display)<%Vd(Battery_Numeric)|%Vd(Battery_Graphical)>>|%?if(%cs, !=, 10)<%Vd(TopBar)%?St(battery display)<%Vd(Battery_Numeric)|%Vd(Battery_Graphical)>>>
+%?if(%cs, =, 1)<%?mh<%?St(battery display)<%Vd(lockscreen_battery_graphical)|%Vd(lockscreen_battery_numeric)>%?bs<%Vd(lockscreen_status_long)|%Vd(lockscreen_status_short)>|%Vd(TopBar)%?St(battery display)<%Vd(Battery_Graphical)|%Vd(Battery_Numeric)>>|%?if(%cs, !=, 10)<%Vd(TopBar)%?St(battery display)<%Vd(Battery_Graphical)|%Vd(Battery_Numeric)>>>
 #
 #
 %Vl(TopBar,0,0,-,25,-)%dr(0,0,-,6)%dr(0,6,11,13)%dr(25,6,6,13)%dr(160,6,123,13)%dr(313,6,7,13)%dr(0,19,-,6)
 #
 #Manually set the number for %cl hour on 12-hour time. The %cl tag puts a space at the start and throws off the positioning of the time.
-%Vl(TopBar,31,5,129,17,3)%Vb(-)%Vf(-)%Vs(invert)%?cf<%cH:%cM|%?cl<1|2|3|4|5|6|7|8|9|10|11|12>:%cM%cp>
+%Vl(TopBar,31,5,129,17,3)%Vs(invert)%?cf<%cH:%cM|%?cl<1|2|3|4|5|6|7|8|9|10|11|12>:%cM%cp>
 #
 #use the %?mh to flush the icons, text doesn't seem to play well when stuff is redrawn below it.
 #Battery level is drawn in both foreground and background so it renders. Probably %Vs(invert) shenanigans
 #battery background called last to prevent rendering issues.
-%Vl(Battery_Numeric,283,6,30,14,12)%Vb(-)%Vf(-)%Vs(invert)%?mh<EFG|EFG>
+%Vl(Battery_Numeric,283,6,30,14,12)%Vs(invert)%?mh<EFG|EFG>
 %Vl(Battery_Numeric,285,8,24,9,5)%ac%bl
 #
 %Vl(Battery_Graphical,283,6,30,14,12)%Vs(invert)%?mh<LMG|LMG>
 %Vl(Battery_Graphical,286,9,22,7,5)%xd(Battery_Level,%bl)
 #
-%Vl(TopBar,263,6,14,13,12)%Vb(-)%Vf(-)%Vs(invert)%ac%?bs<H|%?mh<D|%dr(0,0,-,-)>>
-%Vl(TopBar,244,6,14,13,12)%Vb(-)%Vf(-)%Vs(invert)%ac%?bs<%?mh<D|%dr(0,0,-,-)>|%dr(0,0,-,-)>
+%Vl(TopBar,263,6,14,13,12)%Vs(invert)%ac%?bs<H|%?mh<D|%dr(0,0,-,-)>>
+%Vl(TopBar,244,6,14,13,12)%Vs(invert)%ac%?bs<%?mh<D|%dr(0,0,-,-)>|%dr(0,0,-,-)>
 #
 %Vl(TopBar,11,5,14,14,12)%Vb(-)%Vf(-)%Vs(invert)
 %?lh<%t(0.1)0;%t(0.1)1;%t(0.1)2;%t(0.1)3;%t(0.1)2;%t(0.1)1|0>
@@ -207,11 +207,11 @@
 %Vl(Shuffle_Widget,207,32,43,26,12)%VB%Vs(invert)a%arb
 %Vl(Shuffle_Widget,207,48,43,10,12)%VB%Vs(invert)c%ard
 #Button's Shuffle Icon
-%Vl(Shuffle_Widget,221,38,14,13,12)%VB%Vb(-)%Vf(-)%Vs(invert)B
+%Vl(Shuffle_Widget,221,38,14,13,12)%VB%Vs(invert)B
 # Repeat Button
 %Vl(Repeat_Widget,207,62,43,26,12)%VB%Vs(invert)a%arb
 %Vl(Repeat_Widget,207,78,43,10,12)%VB%Vs(invert)c%ard
-%Vl(Repeat_Widget,221,68,14,13,12)%VB%Vb(-)%Vf(-)%Vs(invert)C
+%Vl(Repeat_Widget,221,68,14,13,12)%VBVs(invert)C
 #Flush the drawing system in the foreground layer to show the background layer.
 %Vl(Widgets,205,30,47,62,-)
 #Rounded corners for the widget
@@ -253,8 +253,8 @@
 #
 # Lockscreen Stuff
 #
-%Vl(lockscreen_battery_numeric,283,16,30,14,12)%VB%Vb(-)%Vf(-)%Vs(invert)EFG
-%Vl(lockscreen_battery_numeric,283,16,30,14,12)%Vb(-)%Vf(-)%Vs(invert)EFG
+%Vl(lockscreen_battery_numeric,283,16,30,14,12)%VB%Vs(invert)EFG
+%Vl(lockscreen_battery_numeric,283,16,30,14,12)%Vs(invert)EFG
 #
 %Vl(lockscreen_battery_graphical,283,16,30,14,12)%VB%Vs(invert)LMG
 %Vl(lockscreen_battery_graphical,283,16,30,14,12)%Vs(invert)LMG
