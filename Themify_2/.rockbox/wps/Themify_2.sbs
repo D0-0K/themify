@@ -13,7 +13,6 @@
 %Fl(5,16-LeagueSpartan-SemiBold.fnt)#battery icon font
 %Fl(6,10-Large_UI.fnt)
 %Fl(7,1-Blank_Font.fnt)
-%Fl(10,10-Menu_Char.fnt)
 %Fl(11,7-14x13_Menu_Icons.fnt)
 %Fl(12,7-14x13_Icons.fnt)
 #--- Icons ---#
@@ -121,36 +120,36 @@
 #-- Menu Drawing with Scrollbar --#
 #- Menus with Icons -#
 #always place text last in these as it will not scroll otherwise
-%Vl(Menu_With_Icons,0,0,302,26,10)%?Lc<A%arB>
-%Vl(Menu_With_Icons,7,0,20,26,11)%?Lc<%Vs(invert)>3
-%Vl(Menu_With_Icons,27,0,265,26,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(Menu_With_Icons,0,0,302,25,6)%?Lc<A%arB>
+%Vl(Menu_With_Icons,7,0,20,25,11)%?Lc<%Vs(invert)>3
+%Vl(Menu_With_Icons,27,0,265,25,-)%?Lc<%Vs(invert)>%s%LT
 #
-%Vl(Home_Menu_With_Icons,0,0,182,26,10)%?Lc<A%arB>
-%Vl(Home_Menu_With_Icons,7,0,20,26,11)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
-%Vl(Home_Menu_With_Icons,27,0,145,26,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(Home_Menu_With_Icons,0,0,182,25,6)%?Lc<A%arB>
+%Vl(Home_Menu_With_Icons,7,0,20,25,11)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
+%Vl(Home_Menu_With_Icons,27,0,145,25,-)%?Lc<%Vs(invert)>%s%LT
 #
 #- Menus with no Icons -#
-%Vl(Menu_No_Icons,0,0,302,26,10)%?Lc<A%arB>
-%Vl(Menu_No_Icons,9,0,283,26,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(Menu_No_Icons,0,0,302,25,6)%?Lc<A%arB>
+%Vl(Menu_No_Icons,9,0,283,25,-)%?Lc<%Vs(invert)>%s%LT
 #
-%Vl(Home_Menu_No_Icons,0,0,182,26,10)%?Lc<A%arB>
-%Vl(Home_Menu_No_Icons,9,0,163,26,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(Home_Menu_No_Icons,0,0,182,25,6)%?Lc<A%arB>
+%Vl(Home_Menu_No_Icons,9,0,163,25,-)%?Lc<%Vs(invert)>%s%LT
 #
 #-- Menu Drawing without Scrollbar --#
 #- Menus with Icons -#
-%Vl(No_Scroll_Menu_With_Icons,0,0,314,26,10)%?Lc<A%arB>
-%Vl(No_Scroll_Menu_With_Icons,7,0,20,26,11)%?Lc<%Vs(invert)>3
-%Vl(No_Scroll_Menu_With_Icons,27,0,277,26,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(No_Scroll_Menu_With_Icons,0,0,314,25,6)%?Lc<A%arB>
+%Vl(No_Scroll_Menu_With_Icons,7,0,20,25,11)%?Lc<%Vs(invert)>3
+%Vl(No_Scroll_Menu_With_Icons,27,0,277,25,-)%?Lc<%Vs(invert)>%s%LT
 #
-%Vl(No_Scroll_Home_Menu_With_Icons,0,0,194,26,10)%?Lc<A%arB>
-%Vl(No_Scroll_Home_Menu_With_Icons,7,0,20,26,11)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
+%Vl(No_Scroll_Home_Menu_With_Icons,0,0,194,25,6)%?Lc<A%arB>
+%Vl(No_Scroll_Home_Menu_With_Icons,7,0,20,25,11)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
 %Vl(No_Scroll_Home_Menu_With_Icons,27,0,157,26,-)%?Lc<%Vs(invert)>%s%LT
 #
 #- Menus with no Icons -#
-%Vl(No_Scroll_Menu_No_Icons,0,0,314,26,10)%?Lc<A%arB>
+%Vl(No_Scroll_Menu_No_Icons,0,0,314,26,6)%?Lc<A%arB>
 %Vl(No_Scroll_Menu_No_Icons,9,0,295,26,-)%?Lc<%Vs(invert)>%s%LT
 #
-%Vl(No_Scroll_Home_Menu_No_Icons,0,0,194,26,10)%?Lc<A%arB>
+%Vl(No_Scroll_Home_Menu_No_Icons,0,0,194,26,6)%?Lc<A%arB>
 %Vl(No_Scroll_Home_Menu_No_Icons,9,0,175,26,-)%?Lc<%Vs(invert)>%s%LT
 #
 #-- Menu Aesthetics --#
