@@ -21,7 +21,6 @@
 %xl(lockscreen,Lockscreen.bmp)
 #--- Scrollbar Images ---#
 %xl(Scrollbar_Track_Default,Scrollbar_Track_Default.bmp,2)
-%xl(Scrollbar_Track_Home,Scrollbar_Track_Home.bmp,190,30,2)
 %xl(Scrollbar_Track_Sub,Scrollbar_Track_Sub.bmp,2)
 %xl(Scrollbar_Tall_Flush,Scrollbar_Tall_Flush.bmp)
 %xl(Scrollbar_Short_Flush,Scrollbar_Short_Flush.bmp)
@@ -45,7 +44,7 @@
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
-%?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Scrollbar_Track_Home,2)|%xd(Scrollbar_Track_Home,1)>>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,2)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
+%?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,2)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
 %?if(%cs, =, 10)<%dr(0,0,-,7)%dr(0,35,-,7)%dr(21,50,10,7)%dr(255,7,30,28)%dr(313,7,7,28)%dr(21,70,10,7)%dr(21,85,9,7)%dr(21,105,9,7)>
 #
 # Quickscreen
@@ -59,16 +58,17 @@
 %?if(%cs, =, 1)<%?mh<%?mp<|%Vd(miniplayer)>|%?mp<%Vd(Widgets)%?ps<%Vd(Shuffle_Widget)>%?if(%mm, >, 1)<%Vd(Repeat_Widget)>|%Vd(miniplayer)>>>
 #
 #- Home Menu Initialisation -#
-%?if(%cs, =, 1)<%?mh<%Lb(b,1,1)%Vd(flush)|%?St(scrollbar)<%VI(Home_Menu_Viewport_Full)|%VI(Home_Menu_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Home_Menu_Viewport_Left)%Vd(Scrollbar_Home)>%?St(show icons)<%Lb(Home_Menu_With_Icons,182,26)|%Lb(Home_Menu_No_Icons,182,26)>>>
+%?if(%cs, =, 1)<%?mh<%Lb(Compressed_Menu,1,1)%Vd(Lockscreen_Display_Flush)|%Vd(Home_Corners)%?St(scrollbar)<%VI(Home_Menu_Viewport_Full)|%VI(Home_Menu_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Home_Menu_Viewport_Left)%Vd(Scrollbar_Home)>%?St(scrollbar)<%?St(show icons)<%Lb(No_Scroll_Home_Menu_With_Icons,182,26)|%Lb(No_Scroll_Home_Menu_No_Icons,182,26)>|%?St(show icons)<%Lb(Home_Menu_With_Icons,182,26)|%Lb(Home_Menu_No_Icons,182,26)>>>>
 #
 #- Sub Menu Initialisation -#
-%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%VI(Sub_Menu_Viewport_Left)%Lb(Menu_No_Icons,302,26)%Vd(Sub_Menu_Header)%Vd(Scrollbar_Sub)>
+%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%Vd(Sub_Menu_Header)%Vd(Sub_Menu_Corners)%?St(scrollbar)<%VI(Sub_Menu_Viewport_Full)|%VI(Sub_Menu_Viewport_Right)%Vd(Scrollbar_Sub_Left)|%VI(Sub_Menu_Viewport_Left)%Vd(Scrollbar_Sub_Default)>%?St(scrollbar)<%Lb(No_Scroll_Menu_No_Icons,182,26)|%Lb(Menu_No_Icons,182,26)>>
 #
 #- Main Menu Initialisation -#
-%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 6),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 10),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 14),%if(%cs, !=, 16))<%?St(scrollbar)<%VI(Main_Viewport_Full)|%VI(Main_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Main_Viewport_Left)%Vd(Scrollbar_Default)>%?St(show icons)<%Lb(Menu_With_Icons,302,26)|%Lb(Menu_No_Icons,302,26)>>
+%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 6),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 10),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 14),%if(%cs, !=, 16))<%Vd(Default_Corners)%?St(scrollbar)<%VI(Main_Viewport_Full)|%VI(Main_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Main_Viewport_Left)%Vd(Scrollbar_Default)>%?St(scrollbar)<%?St(show icons)<%Lb(No_Scroll_Menu_With_Icons,182,26)|%Lb(No_Scroll_Menu_No_Icons,182,26)>|%?St(show icons)<%Lb(Menu_With_Icons,182,26)|%Lb(Menu_No_Icons,182,26)>>>
+#
 #
 #- Settings Menu Initialisation -#
-%?if(%cs, =, 6)<%?St(scrollbar)<%VI(Main_Viewport_Full)|%VI(Main_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Main_Viewport_Left)%Vd(Scrollbar_Default)>%?if(%Lt, =, %Sx(Settings))<%?St(show icons)<%Lb(Menu_With_Icons,302,26)|%Lb(Menu_No_Icons,302,26)>|%Lb(Menu_No_Icons,302,26)>>
+%?if(%cs, =, 6)<%Vd(Default_Corners)%?St(scrollbar)<%VI(Main_Viewport_Full)|%VI(Main_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Main_Viewport_Left)%Vd(Scrollbar_Default)>%?St(scrollbar)<%?if(%Lt, =, %Sx(Settings))<%?St(show icons)<%Lb(No_Scroll_Menu_With_Icons,302,26)|%Lb(No_Scroll_Menu_No_Icons,302,26)>|%Lb(No_Scroll_Menu_No_Icons,302,26)>|%?if(%Lt, =, %Sx(Settings))<%?St(show icons)<%Lb(Menu_With_Icons,302,26)|%Lb(Menu_No_Icons,302,26)>|%Lb(Menu_No_Icons,302,26)>>>
 #
 # Quickscreen Logic
 %?if(%cs, =, 10)<%VI(Default_Menu_Supression)%Vd(Quickscreen)%?mh<%Vd(Quickscreen_Hold_On)|%Vd(Quickscreen_Hold_Off)>%?or(%if(%Ql,=,0),%if(%Ql,=,No),%if(%Ql,=,Off),%if(%Ql,=,ERR))<|%Vd(Quickitem_Left)>%?or(%if(%Qt,=,0),%if(%Qt,=,No),%if(%Qt,=,Off),%if(%Qt,=,ERR))<|%Vd(Quickitem_Top)>%?or(%if(%Qb,=,0),%if(%Qb,=,No),%if(%Qb,=,Off),%if(%Qb,=,ERR))<|%Vd(Quickitem_Bottom)>%?or(%if(%Qr,=,0),%if(%Qr,=,No),%if(%Qr,=,Off),%if(%Qr,=,ERR))<|%Vd(Quickitem_Right)>>
@@ -103,6 +103,8 @@
 #
 %Vi(-,3,28,302,-,-)
 %Vi(Default_Menu_Supression,-65,0,30,30,7)
+%Vl(Compressed_Menu,0,0,1,1,-)
+%Vl(Lockscreen_Display_Flush,0,0,-,-,-)
 # No Scrollbar
 %Vi(Main_Viewport_Full,3,28,-3,-,-)
 %Vi(Sub_Menu_Viewport_Full,3,55,-3,-,-)
@@ -116,6 +118,7 @@
 %Vi(Sub_Menu_Viewport_Right,15,55,302,-,-)
 %Vi(Home_Menu_Viewport_Right,15,28,182,-,-)
 #
+#-- Menu Drawing with Scrollbar --#
 #- Menus with Icons -#
 #always place text last in these as it will not scroll otherwise
 %Vl(Menu_With_Icons,0,0,302,26,10)%?Lc<A%arB>
@@ -133,17 +136,36 @@
 %Vl(Home_Menu_No_Icons,0,0,182,26,10)%?Lc<A%arB>
 %Vl(Home_Menu_No_Icons,9,0,163,26,-)%?Lc<%Vs(invert)>%s%LT
 #
+#-- Menu Drawing without Scrollbar --#
+#- Menus with Icons -#
+%Vl(No_Scroll_Menu_With_Icons,0,0,314,26,10)%?Lc<A%arB>
+%Vl(No_Scroll_Menu_With_Icons,7,0,20,26,11)%?Lc<%Vs(invert)>3
+%Vl(No_Scroll_Menu_With_Icons,27,0,277,26,-)%?Lc<%Vs(invert)>%s%LT
+#
+%Vl(No_Scroll_Home_Menu_With_Icons,0,0,194,26,10)%?Lc<A%arB>
+%Vl(No_Scroll_Home_Menu_With_Icons,7,0,20,26,11)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
+%Vl(No_Scroll_Home_Menu_With_Icons,27,0,157,26,-)%?Lc<%Vs(invert)>%s%LT
+#
+#- Menus with no Icons -#
+%Vl(No_Scroll_Menu_No_Icons,0,0,314,26,10)%?Lc<A%arB>
+%Vl(No_Scroll_Menu_No_Icons,9,0,295,26,-)%?Lc<%Vs(invert)>%s%LT
+#
+%Vl(No_Scroll_Home_Menu_No_Icons,0,0,194,26,10)%?Lc<A%arB>
+%Vl(No_Scroll_Home_Menu_No_Icons,9,0,175,26,-)%?Lc<%Vs(invert)>%s%LT
+#
+#-- Menu Aesthetics --#
+#- Sub Menu Header -#
 %Vl(Sub_Menu_Header,33,27,280,18,3)%Vb(-)%Vf(-)%Vs(invert)%s%Lt
 #
 #- Rounded Corners on menus -#
 #Draw rounded corners on the menus. Draw on foreground and background to prevent some minor clipping from the menu items.
-%Vl(Scrollbar_Default,0,25,-,12,12)J%arK
-%Vl(Scrollbar_Default,0,25,-,12,12)%VBJ%arK
+%Vl(Default_Corners,0,25,-,12,12)%?St(scrollbar)<J%arT|S%arT|J%arK>
+%Vl(Default_Corners,0,25,-,12,12)%VB%?St(scrollbar)<J%arT|S%arT|J%arK>
 #
-%Vl(Scrollbar_Home,0,25,200,12,12)J%arK
+%Vl(Home_Corners,0,25,200,12,12)%?St(scrollbar)<J%arT|S%arT|J%arK>
 #
-%Vl(Scrollbar_Sub,0,52,-,12,12)J%arK
-%Vl(Scrollbar_Sub,0,52,-,12,12)%VBJ%arK
+%Vl(Sub_Menu_Corners,0,52,-,12,12)%?St(scrollbar)<J%arT|S%arT|J%arK>
+%Vl(Sub_Menu_Corners,0,52,-,12,12)%VB%?St(scrollbar)<J%arT|S%arT|J%arK>
 #
 #--- Scroll Engine ---#
 # Logic controlling the scrollbars. "Flush" images are used to flush the
@@ -153,20 +175,23 @@
 %Vl(Scrollbar_Default,310,30,5,207,-)%VB%?LB<%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Scrollbar_Track_Default,2)|%xd(Scrollbar_Track_Default,1)>>
 %Vl(Scrollbar_Default,310,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,Thumb)|%xd(Scrollbar_Tall_Flush)>
 #
+%Vl(Scrollbar_Home,190,30,5,207,-)%VB%?LB<%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Scrollbar_Track_Default,2)|%xd(Scrollbar_Track_Default,1)>>
 %Vl(Scrollbar_Home,190,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,Thumb)>
 %Vl(Scrollbar_Home,190,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,Thumb)|%xd(Scrollbar_Tall_Flush)>
 #
-%Vl(Scrollbar_Sub,310,57,5,178,-)%VB%?LB<%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Scrollbar_Track_Sub,2)|%xd(Scrollbar_Track_Sub,1)>>
-%Vl(Scrollbar_Sub,310,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,Thumb)>
-%Vl(Scrollbar_Sub,310,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,Thumb)|%xd(Scrollbar_Short_Flush)>
+%Vl(Scrollbar_Sub_Default,310,57,5,178,-)%VB%?LB<%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Scrollbar_Track_Sub,2)|%xd(Scrollbar_Track_Sub,1)>>
+%Vl(Scrollbar_Sub_Default,310,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,Thumb)>
+%Vl(Scrollbar_Sub_Default,310,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,Thumb)|%xd(Scrollbar_Short_Flush)>
+#
+%Vl(Scrollbar_Sub_Left,5,57,5,178,-)%VB%?LB<%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Scrollbar_Track_Sub,2)|%xd(Scrollbar_Track_Sub,1)>>
+%Vl(Scrollbar_Sub_Left,5,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,Thumb)>
+%Vl(Scrollbar_Sub_Left,5,57,5,178,-)%?LB<%LB(0,0,5,178,invert,noborder,nobar,slider,Thumb)|%xd(Scrollbar_Short_Flush)>
 #
 #- Left side Scrollbar -#
 %Vl(Scrollbar_Left,5,30,5,207,-)%VB%?LB<%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Scrollbar_Track_Default,2)|%xd(Scrollbar_Track_Default,1)>>
 #
 %Vl(Scrollbar_Left,5,30,5,207,-)%?LB<%LB(0,0,5,207,invert,noborder,nobar,slider,Thumb)|%xd(Scrollbar_Tall_Flush)>
 #
-%Vl(b,0,0,1,1,-)
-%Vl(flush,0,0,-,-,-)
 #
 %Vl(miniplayer,205,25,111,211,-)%VB%dr(0,0,-,-)%?mp<|%Cl(-51,0,211,211,c,t)%Cd>
 #
@@ -196,8 +221,6 @@
 #Calendar Widget
 %Vl(Widgets,257,32,58,60,5)%VB%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Calendar_Widget,2)|%xd(Calendar_Widget,1)>
 #
-%Vl(Widgets,263,56,46,25,6)%ac%cd
-#
 %Vl(Widgets,266,28,4,4,12)%VB%Vs(invert)I
 %Vl(Widgets,278,28,4,4,12)%VB%Vs(invert)I
 %Vl(Widgets,290,28,4,4,12)%VB%Vs(invert)I
@@ -206,6 +229,7 @@
 %Vl(Widgets,257,32,58,10,12)a%arb
 %Vl(Widgets,257,82,58,10,12)c%ard
 %Vl(Widgets,263,36,46,14,4)%ac%cb
+%Vl(Widgets,263,56,46,25,6)%ac%cd
 #
 #Battery Widget
 %Vl(Widgets,205,97,110,64,-)%VB%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(Battery_Widget,2)|%xd(Battery_Widget,1)>
@@ -279,8 +303,6 @@
 %Vl(Quickscreen,0,42,24,8,6)f
 %Vl(Quickscreen,-24,42,24,24,6)g
 %Vl(Quickscreen,-24,42,24,24,6)%VBg
-#%Vl(Quickscreen,-8,42,8,24,6)%t(0.1)g;%t(0.1)g
-#%Vl(Quickscreen,-24,42,24,8,6)g
 # Left Button
 %Vl(Quickitem_Left,10,122,144,14,12)ij%ark
 %Vl(Quickitem_Left,10,154,144,14,12)lm%arn
