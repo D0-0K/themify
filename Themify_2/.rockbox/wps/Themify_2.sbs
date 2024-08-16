@@ -44,7 +44,7 @@
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
-%?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,2)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
+%?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,4)%dr(0,27,10,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
 %?if(%cs, =, 10)<%dr(0,0,-,7)%dr(0,35,-,7)%dr(21,50,10,7)%dr(255,7,30,28)%dr(313,7,7,28)%dr(21,70,10,7)%dr(21,85,9,7)%dr(21,105,9,7)>
 #
 # Quickscreen
@@ -155,7 +155,8 @@
 #
 #-- Menu Aesthetics --#
 #- Sub Menu Header -#
-%Vl(Sub_Menu_Header,33,27,280,18,3)%Vb(-)%Vf(-)%Vs(invert)%s%Lt
+%Vl(Sub_Menu_Header,33,29,280,18,3)%Vs(invert)%s%Lt
+%Vl(Sub_Menu_Header,10,24,20,31,11)%Vs(invert)1#%Li
 #
 #- Rounded Corners on menus -#
 #Draw rounded corners on the menus. Draw on foreground and background to prevent some minor clipping from the menu items.
