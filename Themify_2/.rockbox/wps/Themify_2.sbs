@@ -120,37 +120,37 @@
 #-- Menu Drawing with Scrollbar --#
 #- Menus with Icons -#
 #always place text last in these as it will not scroll otherwise
-%Vl(Menu_With_Icons,0,0,302,25,6)%?Lc<A%arB>
+%Vl(Menu_With_Icons,0,0,302,25,6)%?Lc<%Vs(invert)A%arB>
 %Vl(Menu_With_Icons,7,0,20,25,11)%?Lc<%Vs(invert)>3
-%Vl(Menu_With_Icons,27,0,265,25,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(Menu_With_Icons,27,5,265,20,-)%?Lc<%Vs(invert)>%s%LT
 #
-%Vl(Home_Menu_With_Icons,0,0,182,25,6)%?Lc<A%arB>
+%Vl(Home_Menu_With_Icons,0,0,182,25,6)%?Lc<%Vs(invert)A%arB>
 %Vl(Home_Menu_With_Icons,7,0,20,25,11)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
-%Vl(Home_Menu_With_Icons,27,0,145,25,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(Home_Menu_With_Icons,27,5,145,20,-)%?Lc<%Vs(invert)>%s%LT
 #
 #- Menus with no Icons -#
-%Vl(Menu_No_Icons,0,0,302,25,6)%?Lc<A%arB>
-%Vl(Menu_No_Icons,9,0,283,25,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(Menu_No_Icons,0,0,302,25,6)%?Lc<%Vs(invert)A%arB>
+%Vl(Menu_No_Icons,9,5,283,20,-)%?Lc<%Vs(invert)>%s%LT
 #
-%Vl(Home_Menu_No_Icons,0,0,182,25,6)%?Lc<A%arB>
-%Vl(Home_Menu_No_Icons,9,0,163,25,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(Home_Menu_No_Icons,0,0,182,25,6)%?Lc<%Vs(invert)A%arB>
+%Vl(Home_Menu_No_Icons,9,5,163,20,-)%?Lc<%Vs(invert)>%s%LT
 #
 #-- Menu Drawing without Scrollbar --#
 #- Menus with Icons -#
-%Vl(No_Scroll_Menu_With_Icons,0,0,314,25,6)%?Lc<A%arB>
+%Vl(No_Scroll_Menu_With_Icons,0,0,314,25,6)%?Lc<%Vs(invert)A%arB>
 %Vl(No_Scroll_Menu_With_Icons,7,0,20,25,11)%?Lc<%Vs(invert)>3
-%Vl(No_Scroll_Menu_With_Icons,27,0,277,25,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(No_Scroll_Menu_With_Icons,27,5,277,20,-)%?Lc<%Vs(invert)>%s%LT
 #
-%Vl(No_Scroll_Home_Menu_With_Icons,0,0,194,25,6)%?Lc<A%arB>
+%Vl(No_Scroll_Home_Menu_With_Icons,0,0,194,25,6)%?Lc<%Vs(invert)A%arB>
 %Vl(No_Scroll_Home_Menu_With_Icons,7,0,20,25,11)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
-%Vl(No_Scroll_Home_Menu_With_Icons,27,0,157,26,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(No_Scroll_Home_Menu_With_Icons,27,5,157,20,-)%?Lc<%Vs(invert)%Vs(invert)>%s%LT
 #
 #- Menus with no Icons -#
-%Vl(No_Scroll_Menu_No_Icons,0,0,314,26,6)%?Lc<A%arB>
-%Vl(No_Scroll_Menu_No_Icons,9,0,295,26,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(No_Scroll_Menu_No_Icons,0,0,314,26,6)%?Lc<%Vs(invert)A%arB>
+%Vl(No_Scroll_Menu_No_Icons,9,5,295,20,-)%?Lc<%Vs(invert)>%s%LT
 #
-%Vl(No_Scroll_Home_Menu_No_Icons,0,0,194,26,6)%?Lc<A%arB>
-%Vl(No_Scroll_Home_Menu_No_Icons,9,0,175,26,-)%?Lc<%Vs(invert)>%s%LT
+%Vl(No_Scroll_Home_Menu_No_Icons,0,0,194,26,6)%?Lc<%Vs(invert)A%arB>
+%Vl(No_Scroll_Home_Menu_No_Icons,9,5,175,20,-)%?Lc<%Vs(invert)>%s%LT
 #
 #-- Menu Aesthetics --#
 #- Sub Menu Header -#
