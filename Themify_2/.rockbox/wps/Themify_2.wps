@@ -18,8 +18,10 @@
 #
 %xl(playbackground,playbackdrop.bmp,192,140)
 %xl(AlbumPlaceholder,no_album_art.bmp)
-%xl(player_status,player_status.bmp,194,145,4)
-%xl(player_status_background,player_status_background.bmp,248,145)
+%xl(Player_Status_White,Player_Status_White.bmp,4)
+%xl(Player_Status_Black,Player_Status_Black.bmp,4)
+%xl(Player_Status_Backdrop_Short,Player_Status_Backdrop_Short.bmp,52,0,2)
+%xl(Player_Status_Backdrop_Long,Player_Status_Backdrop_Long.bmp,52,0,2)
 %xl(corner_underlay_top,corner_underlay_top.bmp,144,16)
 %xl(corner_underlay_bottom,corner_underlay_bottom.bmp,144,199)
 %xl(sub_status_backdrop,sub_status_backdrop.bmp,16,0,3)
@@ -32,8 +34,7 @@
 #
 #Need to flush the background and foreground, or the previous screen's background remains for some reason.
 %V(0,0,-,-,-)%VB
-%dr(0,16,166,205)%xd(corner_underlay_top)%xd(corner_underlay_bottom)%?if(%mp,<=,3)< %?mv(1)<%?and(%if(%pv, <=, -27),%if(%pv, >, -60))<%xd(player_status,4)|%xd(player_status,3)>|%?mp<%xd(player_status,1)|%xd(player_status,2)|%xd(player_status,1)>>|%xd(player_status,1)>
-%xd(player_status_background)
+%dr(0,16,166,205)%xd(corner_underlay_top)%xd(corner_underlay_bottom)
 %x(x,Player_Slider_Cutout_Start.bmp,17,196)
 %pb(18,196,126,5,Player_Cutout_Front.bmp,backdrop,Cutout_Backdrop,slider,Cutout_End)
 #
@@ -49,6 +50,16 @@
 #
 #Background:if all 3 icons active
 %?and(%if(%ps, =, 1),%if(%mm, >, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(sub_status_backdrop_long,3)|%xd(sub_status_backdrop,3)>>
+#
+#-- Player Status Backdrops --#
+# Seperated the viewports into Black and White to keep logic mess down.
+%Vl(Player_Status_Short_Black_BG,257,154,63,57,-)%VB%?if(%mp,<=,3)<%?mv(1)<%?and(%if(%pv, <=, -27),%if(%pv, >, -60))<%xd(Player_Status_Black,4)|%xd(Player_Status_Black,3)>|%?mp<%xd(Player_Status_Black,1)|%xd(Player_Status_Black,2)|%xd(Player_Status_Black,1)>>|%xd(Player_Status_Black,1)>%xd(Player_Status_Backdrop_Short,1)
+#
+%Vl(Player_Status_Long_Black_BG,196,154,124,57,-)%VB%?if(%mp,<=,3)<%?mv(1)<%?and(%if(%pv, <=, -27),%if(%pv, >, -60))<%xd(Player_Status_Black,4)|%xd(Player_Status_Black,3)>|%?mp<%xd(Player_Status_Black,1)|%xd(Player_Status_Black,2)|%xd(Player_Status_Black,1)>>|%xd(Player_Status_Black,1)>%xd(Player_Status_Backdrop_Long,1)
+#
+%Vl(Player_Status_Short_White_BG,257,154,63,57,-)%VB%?if(%mp,<=,3)<%?mv(1)<%?and(%if(%pv, <=, -27),%if(%pv, >, -60))<%xd(Player_Status_White,4)|%xd(Player_Status_White,3)>|%?mp<%xd(Player_Status_White,1)|%xd(Player_Status_White,2)|%xd(Player_Status_White,1)>>|%xd(Player_Status_White,1)>%xd(Player_Status_Backdrop_Short,2)
+#
+%Vl(Player_Status_Long_White_BG,196,154,124,57,-)%VB%?if(%mp,<=,3)<%?mv(1)<%?and(%if(%pv, <=, -27),%if(%pv, >, -60))<%xd(Player_Status_White,4)|%xd(Player_Status_White,3)>|%?mp<%xd(Player_Status_White,1)|%xd(Player_Status_White,2)|%xd(Player_Status_White,1)>>|%xd(Player_Status_White,1)>%xd(Player_Status_Backdrop_Long,2)
 #
 %V(0,0,-,-,-)
 #Draw the album art section
@@ -67,16 +78,30 @@
 %al%ss(12, 26, %it)
 #
 %V(180,104,-8,16,3)
-%?if(%St(statusbar), =,off)<%s%al%ia>%?if(%St(statusbar), =,top)<%s%al%id>%?if(%St(statusbar), =,bottom)<%s%al%t(6)%ia;%s%al%t(6)%id;%t(0)>
+#%?if(%St(statusbar), =,off)<%s%al%ia>%?if(%St(statusbar), =,top)<%s%al%id>%?if(%St(statusbar), =,bottom)<%s%al%t(6)%ia;%s%al%t(6)%id;%t(0)>
+%ss(4,1,%it) %?if(%ss(4,1,%it),=,1)<1True|1False> %?if(%ss(4,1,%it),<,A)<AT|AF>
 #
 %?St(battery display)<%Vd(Battery_Graphical)|%Vd(Battery_Numeric)>
 #
+#--- Player Status ---#
+#
+%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%?if(%pe,!=,1)<%Vd(Player_Status_Long_White_BG)|%Vd(Player_Status_Short_White_BG)>|%?if(%pe,!=,1)<%Vd(Player_Status_Long_Black_BG)|%Vd(Player_Status_Short_Black_BG)>>
 #Don't display volume if fastwarding etc.
-%?if(%mp,<=,3)<%?mv(1)<%Vd(volume)|%Vd(player_status)>|%Vd(player_status)>
+%?if(%pe,!=,1)<%?if(%mp,<=,3)<%?mv(1)<%Vd(Player_Volume_Long)|%Vd(Player_Status_Long)>|%Vd(Player_Status_Long)>|%?if(%mp,<=,3)<%?mv(1)<%Vd(Player_Volume_Short)|%Vd(Player_Status_Short)>|%Vd(Player_Status_Short)>>
+#
+%?if(%pe,!=,1)<%?if(%pe, >=, 100)<%Vd(playlist_pos_triple)|%Vd(playlist_pos_single)>>
+#
+#- Shorter Dialog Positions -#
 #Animate the fast forward and rewind icons, plus pause and play
-%Vl(player_status,202,152,46,46,4)%?mp<|0|1|%t(0.1)æ;%t(0.1)ç;%t(0.1)è;%t(0.1)é;%t(0.1)ê;%t(0.1)ë;%t(0.1)ì;%t(0.1)í;%t(0.1)î;%t(0.1)ï;%t(0.1)ð;%t(0.1)ñ;%t(0.1)ò;%t(0.1)ó;%t(0.1)ô;|%t(0.1)õ;%t(0.1)ö;%t(0.1)÷;%t(0.1)ø;%t(0.1)ù;%t(0.1)ú;%t(0.1)û;%t(0.1)ü;%t(0.1)ý;%t(0.1)þ;%t(0.1)ÿ;%t(0.1)Ā;%t(0.1)ā;%t(0.1)Ă;%t(0.1)ă;|>
+%Vl(Player_Status_Short,263,159,46,46,4)%?mp<|0|1|%t(0.1)æ;%t(0.1)ç;%t(0.1)è;%t(0.1)é;%t(0.1)ê;%t(0.1)ë;%t(0.1)ì;%t(0.1)í;%t(0.1)î;%t(0.1)ï;%t(0.1)ð;%t(0.1)ñ;%t(0.1)ò;%t(0.1)ó;%t(0.1)ô;|%t(0.1)õ;%t(0.1)ö;%t(0.1)÷;%t(0.1)ø;%t(0.1)ù;%t(0.1)ú;%t(0.1)û;%t(0.1)ü;%t(0.1)ý;%t(0.1)þ;%t(0.1)ÿ;%t(0.1)Ā;%t(0.1)ā;%t(0.1)Ă;%t(0.1)ă;|>
 #Volume Slider, one character for the 91 positions of regular volume settings.
-%Vl(volume,202,152,46,46,4)%?pv<4|5|6|7|8|9|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|À|Á|Â|Ã|Ä|Å|Ç|È|É|Ê|Ë|Ì|Í|Î|Ï|Ð|Ñ|Ò|Ó|Ô|Õ|Ö|×|Ø|Ù|Ú|Û|Ü|Ý|Þ|ß|à|á|â|ã|ä|ä|å>
+%Vl(Player_Volume_Short,263,159,46,46,4)%?pv<4|5|6|7|8|9|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|À|Á|Â|Ã|Ä|Å|Ç|È|É|Ê|Ë|Ì|Í|Î|Ï|Ð|Ñ|Ò|Ó|Ô|Õ|Ö|×|Ø|Ù|Ú|Û|Ü|Ý|Þ|ß|à|á|â|ã|ä|ä|å>
+#
+#- Longer Dialog Positions -#
+#Animate the fast forward and rewind icons, plus pause and play
+%Vl(Player_Status_Long,202,159,46,46,4)%?mp<|0|1|%t(0.1)æ;%t(0.1)ç;%t(0.1)è;%t(0.1)é;%t(0.1)ê;%t(0.1)ë;%t(0.1)ì;%t(0.1)í;%t(0.1)î;%t(0.1)ï;%t(0.1)ð;%t(0.1)ñ;%t(0.1)ò;%t(0.1)ó;%t(0.1)ô;|%t(0.1)õ;%t(0.1)ö;%t(0.1)÷;%t(0.1)ø;%t(0.1)ù;%t(0.1)ú;%t(0.1)û;%t(0.1)ü;%t(0.1)ý;%t(0.1)þ;%t(0.1)ÿ;%t(0.1)Ā;%t(0.1)ā;%t(0.1)Ă;%t(0.1)ă;|>
+#Volume Slider, one character for the 91 positions of regular volume settings.
+%Vl(Player_Volume_Long,202,159,46,46,4)%?pv<4|5|6|7|8|9|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|À|Á|Â|Ã|Ä|Å|Ç|È|É|Ê|Ë|Ì|Í|Î|Ï|Ð|Ñ|Ò|Ó|Ô|Õ|Ö|×|Ø|Ù|Ú|Û|Ü|Ý|Þ|ß|à|á|â|ã|ä|ä|å>
 #
 #
 %V(0,22,160,160,-)%VB%dr(0,0,-,-)%Cl(0,0,160,160)%Cd%?C<|%xd(AlbumPlaceholder)>
@@ -105,7 +130,7 @@
 #
 %Vl(long_status,262,22,13,14,12)%Vs(invert)%?mh<D|>
 #
-%Vl(Battery_Numeric,283,22,30,14,12)%Vb(-)%Vf(-)%Vs(invert)%?mh<EFG|EFG>
+%Vl(Battery_Numeric,283,22,30,14,12)%Vs(invert)%?mh<EFG|EFG>
 %Vl(Battery_Numeric,285,24,24,9,5)%ac%bl
 #
 %Vl(Battery_Graphical,283,22,30,14,12)%Vs(invert)%?mh<LMG|LMG>
@@ -135,10 +160,7 @@
 %V(18,196,126,5,-)
 %pb(0,0,126,5,Player_Slider_Front.bmp,backdrop,Slider_Backdrop,slider,Slider_End)
 #
-%?if(%pe, >=, 100)<%Vd(playlist_pos_triple)|%Vd(playlist_pos_single)>
+%Vl(playlist_pos_single,250,176,68,12,3)%ac%pp %Sx(of) %pe
 #
-%Vl(playlist_pos_single,253,169,61,12,3)%ac%pp %Sx(of) %pe
-#
-%Vl(playlist_pos_triple,263,152,37,12,3)%ac%pp
-%Vl(playlist_pos_triple,263,169,37,12,3)%ac%Sx(of)
-%Vl(playlist_pos_triple,263,187,37,12,3)%ac%pe
+%Vl(playlist_pos_triple,250,167,68,12,3)%ac%pp %Sx(of)
+%Vl(playlist_pos_triple,250,187,68,12,3)%ac%pe
