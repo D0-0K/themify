@@ -27,6 +27,7 @@
 #--- Homescreen Widgets ---#
 # For the Widget backdrops, the first image in the array
 # is always the black version while the second is white.
+%xl(AlbumPlaceholder,Home_Album_Art.bmp,2)
 %xl(PlayStatus_Widget,PlayStatus_Widget.bmp,2)
 %xl(Calendar_Widget,Calendar_Widget.bmp,2)
 %xl(Colour_Widget,Colour_Widget.bmp,2)
@@ -146,10 +147,10 @@
 %Vl(No_Scroll_Home_Menu_With_Icons,27,5,157,20,-)%?Lc<%Vs(invert)%Vs(invert)>%s%LT
 #
 #- Menus with no Icons -#
-%Vl(No_Scroll_Menu_No_Icons,0,0,314,26,6)%?Lc<%Vs(invert)A%arB>
+%Vl(No_Scroll_Menu_No_Icons,0,0,314,25,6)%?Lc<%Vs(invert)A%arB>
 %Vl(No_Scroll_Menu_No_Icons,9,5,295,20,-)%?Lc<%Vs(invert)>%s%LT
 #
-%Vl(No_Scroll_Home_Menu_No_Icons,0,0,194,26,6)%?Lc<%Vs(invert)A%arB>
+%Vl(No_Scroll_Home_Menu_No_Icons,0,0,194,25,6)%?Lc<%Vs(invert)A%arB>
 %Vl(No_Scroll_Home_Menu_No_Icons,9,5,175,20,-)%?Lc<%Vs(invert)>%s%LT
 #
 #-- Menu Aesthetics --#
@@ -194,6 +195,7 @@
 #
 #
 %Vl(miniplayer,205,25,111,211,-)%VB%dr(0,0,-,-)%?mp<|%Cl(-51,0,211,211,c,t)%Cd>
+%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%?C<|%xd(AlbumPlaceholder,2)>|%?C<|%xd(AlbumPlaceholder,1)>>
 #
 %Vl(miniplayer,205,25,111,211,-)
 %Vl(miniplayer,205,25,111,10,12)%?mh<|a%arb>
@@ -211,7 +213,7 @@
 # Repeat Button
 %Vl(Repeat_Widget,207,62,43,26,12)%VB%Vs(invert)a%arb
 %Vl(Repeat_Widget,207,78,43,10,12)%VB%Vs(invert)c%ard
-%Vl(Repeat_Widget,221,68,14,13,12)%VBVs(invert)C
+%Vl(Repeat_Widget,221,68,14,13,12)%VB%Vs(invert)C
 #Flush the drawing system in the foreground layer to show the background layer.
 %Vl(Widgets,205,30,47,62,-)
 #Rounded corners for the widget
