@@ -91,14 +91,21 @@
 %Vl(titlesingle,180,76,-8,18,2)
 %s%al%?it<%it|%fn>
 #
-%Vl(nobreak,180,55,-8,18,2)
+%Vl(nobreak,180,62,-8,18,2)
 %al%ss(0, 12, %it)
-%Vl(nobreak,180,76,-8,18,2)
+%Vl(nobreak,180,85,-8,18,2)
 %al%ss(12, 26, %it)
 #
-%V(180,104,-8,16,3)
-#%?if(%St(statusbar), =,off)<%s%al%ia>%?if(%St(statusbar), =,top)<%s%al%id>%?if(%St(statusbar), =,bottom)<%s%al%t(6)%ia;%s%al%t(6)%id;%t(0)>
-%ss(4,1,%it) %?if(%ss(4,1,%it),=,1)<1True|1False> %?if(%ss(4,1,%it),<,A)<AT|AF>
+%Vl(nobreak,180,112,-8,16,3)
+%?if(%St(statusbar), =,off)<%s%al%ia>%?if(%St(statusbar), =,top)<%s%al%id>%?if(%St(statusbar), =,bottom)<%s%al%t(6)%ia;%s%al%t(6)%id;%t(0)>
+#%ss(4,1,%it) %?if(%ss(4,1,%it),=,1)<1True|1False> %?if(%ss(4,1,%it),<,A)<AT|AF>
+#
+%Vl(titlesingle,180,102,-8,16,3)
+%?if(%St(statusbar), =,off)<%s%al%ia>%?if(%St(statusbar), =,top)<%s%al%id>%?if(%St(statusbar), =,bottom)<%s%al%t(6)%ia;%s%al%t(6)%id;%t(0)>
+#
+# Add a tag here for extra song info, and remove the #
+#%Vl(titlesingle,180,122,-8,16,3)%fc
+#%Vl(nobreak,180,129,-8,16,3)%fc
 #
 %?St(battery display)<%Vd(Battery_Graphical)|%Vd(Battery_Numeric)>
 #

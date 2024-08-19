@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="320"
+   height="240"
+   viewBox="0 0 84.666664 63.5"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="USB_Screen.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#5c6066"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     inkscape:showpageshadow="false"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.415625"
+     inkscape:cx="842.73731"
+     inkscape:cy="526.26932"
+     inkscape:current-layer="layer1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="84.666664"
+       height="63.5"
+       id="page12"
+       margin="0"
+       bleed="0" />
+    <inkscape:page
+       x="100.7522"
+       y="1.7763569e-15"
+       width="84.666671"
+       height="63.5"
+       id="page13" />
+    <inkscape:page
+       x="201.53125"
+       y="1.7763569e-15"
+       width="84.666663"
+       height="63.500001"
+       id="page19" />
+    <inkscape:grid
+       id="grid26"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="0.26458332"
+       spacingy="0.26458333"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect192" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect193" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect10" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect12" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect18" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect19" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect25" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect26" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect33" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect34" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect44" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect45" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect52" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect53" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect60" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect61" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect70" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect71" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.661458;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect11"
+       width="84.666664"
+       height="63.5"
+       x="3.5527137e-15"
+       y="1.7763568e-15" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="circle84"
+       cx="4.8947926"
+       cy="3.3072586"
+       r="0.66145831" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="8.0835495"
+       y="4.9064407"
+       id="text87"><tspan
+         sodipodi:role="line"
+         id="tspan87"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.9389px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="8.0835495"
+         y="4.9064407">9:00</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="18.705708"
+       y="4.9455643"
+       id="text106"><tspan
+         sodipodi:role="line"
+         id="tspan100"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="18.705708"
+         y="4.9455643">am</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text178"
+       style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect192);display:inline;fill:#24221c;fill-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,73.228014,-48.12665)"><tspan
+         x="12.955078"
+         y="198.70185"
+         id="tspan12"><tspan
+           style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
+           id="tspan11">70</tspan></tspan></text>
+    <g
+       id="g181"
+       transform="matrix(0.26458333,0,0,0.26458333,-827.35208,-514.08123)">
+      <path
+         id="path178"
+         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers fill stroke"
+         d="m 3414,1949 c -2.1987,0 -4,1.8013 -4,4 v 5 c 0,2.1987 1.8013,4 4,4 h 20 c 2.1987,0 4,-1.8013 4,-4 h 1 c 0.554,0 1,-0.446 1,-1 v -3 c 0,-0.554 -0.446,-1 -1,-1 h -1 c 0,-2.1987 -1.8013,-4 -4,-4 z"
+         sodipodi:nodetypes="ssssscsssscss" />
+      <text
+         xml:space="preserve"
+         id="text181"
+         style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect193);display:inline;fill:#24221c;fill-opacity:1"
+         transform="translate(3403.6449,1761.0882)"><tspan
+           x="12.955078"
+           y="198.70185"
+           id="tspan14"><tspan
+             style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
+             id="tspan13">32</tspan></tspan></text>
+    </g>
+    <path
+       d="M 3.1749999,6.6145832 C 1.4160588,6.6145832 0,8.030642 0,9.7895832 v 50.5354158 3.175 h 3.1749999 78.3166651 3.175 v -3.175 -50.5354158 c 0,-1.7589412 -1.416058,-3.175 -3.175,-3.175 z"
+       style="opacity:1;fill:#ffffff;fill-rule:evenodd;stroke-width:0.00690381;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
+       id="path2" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.661458;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect2"
+       width="84.666664"
+       height="63.5"
+       x="100.7522"
+       y="1.7763568e-15" />
+    <circle
+       style="fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="circle2"
+       cx="105.647"
+       cy="3.3072586"
+       r="0.66145831" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#24221c;fill-opacity:1;stroke-width:0.264583"
+       x="108.83575"
+       y="4.9064407"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.9389px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Bold';fill:#24221c;fill-opacity:1;stroke-width:0.264583"
+         x="108.83575"
+         y="4.9064407">9:00</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#24221c;fill-opacity:1;stroke-width:0.264583"
+       x="119.45791"
+       y="4.9455643"
+       id="text6"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';fill:#24221c;fill-opacity:1;stroke-width:0.264583"
+         x="119.45791"
+         y="4.9455643">am</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text8"
+       style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect10);display:inline;fill:#24221c;fill-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,173.98022,-48.12665)"><tspan
+         x="12.955078"
+         y="198.70185"
+         id="tspan16"><tspan
+           style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
+           id="tspan15">70</tspan></tspan></text>
+    <g
+       id="g10"
+       transform="matrix(0.26458333,0,0,0.26458333,-726.59988,-514.08123)"
+       style="fill:#24221c;fill-opacity:1">
+      <path
+         id="path8"
+         style="color:#000000;fill:#24221c;fill-opacity:1;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers fill stroke"
+         d="m 3414,1949 c -2.1987,0 -4,1.8013 -4,4 v 5 c 0,2.1987 1.8013,4 4,4 h 20 c 2.1987,0 4,-1.8013 4,-4 h 1 c 0.554,0 1,-0.446 1,-1 v -3 c 0,-0.554 -0.446,-1 -1,-1 h -1 c 0,-2.1987 -1.8013,-4 -4,-4 z"
+         sodipodi:nodetypes="ssssscsssscss" />
+      <text
+         xml:space="preserve"
+         id="text10"
+         style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect12);display:inline;fill:#ffffff;fill-opacity:1"
+         transform="translate(3403.6449,1761.0882)"><tspan
+           x="12.955078"
+           y="198.70185"
+           id="tspan18"><tspan
+             style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
+             id="tspan17">32</tspan></tspan></text>
+    </g>
+    <path
+       d="m 103.9272,6.6145832 c -1.75894,0 -3.175,1.4160588 -3.175,3.175 v 50.5354158 3.175 h 3.175 78.31667 3.175 v -3.175 -50.5354158 c 0,-1.7589412 -1.41606,-3.175 -3.175,-3.175 z"
+       style="opacity:1;fill:#24221c;fill-rule:evenodd;stroke-width:0.00690381;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke;fill-opacity:1"
+       id="path10" />
+    <rect
+       style="fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.661458;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect20"
+       width="84.666664"
+       height="63.5"
+       x="201.53125"
+       y="1.7763568e-15" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="circle20"
+       cx="206.42604"
+       cy="3.3072586"
+       r="0.66145831" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="209.61481"
+       y="4.9064407"
+       id="text20"><tspan
+         sodipodi:role="line"
+         id="tspan20"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.9389px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="209.61481"
+         y="4.9064407">9:00</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="220.23697"
+       y="4.9455643"
+       id="text21"><tspan
+         sodipodi:role="line"
+         id="tspan21"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="220.23697"
+         y="4.9455643">am</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text23"
+       style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect25);display:inline;fill:#24221c;fill-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,274.75927,-48.12665)"><tspan
+         x="12.955078"
+         y="198.70185"
+         id="tspan26"><tspan
+           style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
+           id="tspan19">70</tspan></tspan></text>
+    <g
+       id="g25"
+       transform="matrix(0.26458333,0,0,0.26458333,-625.82083,-514.08123)">
+      <path
+         id="path23"
+         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers fill stroke"
+         d="m 3414,1949 c -2.1987,0 -4,1.8013 -4,4 v 5 c 0,2.1987 1.8013,4 4,4 h 20 c 2.1987,0 4,-1.8013 4,-4 h 1 c 0.554,0 1,-0.446 1,-1 v -3 c 0,-0.554 -0.446,-1 -1,-1 h -1 c 0,-2.1987 -1.8013,-4 -4,-4 z"
+         sodipodi:nodetypes="ssssscsssscss" />
+      <text
+         xml:space="preserve"
+         id="text25"
+         style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect26);display:inline;fill:#24221c;fill-opacity:1"
+         transform="translate(3403.6449,1761.0882)"><tspan
+           x="12.955078"
+           y="198.70185"
+           id="tspan35"><tspan
+             style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
+             id="tspan34">32</tspan></tspan></text>
+    </g>
+    <path
+       id="rect2-6"
+       style="fill:#ffffff;stroke-width:5.55628;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:58;stroke-dashoffset:3;paint-order:stroke fill markers"
+       d="m 238.30833,17.065627 v 9.260415 h 11.11255 v -9.260415 z m 1.85215,3.704161 h 1.85203 v 1.852093 h -1.85203 z m 5.55616,0 h 1.85215 v 1.852093 h -1.85215 z m -6.48224,7.408335 c -1.53984,0 -2.77817,1.238243 -2.77817,2.778127 v 6.482288 c 0,2.053221 1.65099,3.704168 3.70425,3.704168 h 7.40831 c 2.0532,0 3.70413,-1.650977 3.70413,-3.704168 V 30.95625 c 0,-1.539714 -1.23821,-2.778127 -2.77817,-2.778127 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.02708px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="217.2178"
+       y="53.18222"
+       id="text1447"><tspan
+         sodipodi:role="line"
+         id="tspan1447"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.02708px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="217.2178"
+         y="53.18222">Eject before disconnecting</tspan></text>
+    <rect
+       style="fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.661458;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect27"
+       width="84.666664"
+       height="63.5"
+       x="201.53125"
+       y="76.127571" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="circle27"
+       cx="206.42604"
+       cy="79.43483"
+       r="0.66145831" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="209.61481"
+       y="81.034012"
+       id="text27"><tspan
+         sodipodi:role="line"
+         id="tspan27"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.9389px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="209.61481"
+         y="81.034012">9:00</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="220.23697"
+       y="81.073135"
+       id="text28"><tspan
+         sodipodi:role="line"
+         id="tspan28"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="220.23697"
+         y="81.073135">am</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text30"
+       style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect33);display:inline;fill:#24221c;fill-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,274.75927,28.000924)"><tspan
+         x="12.955078"
+         y="198.70185"
+         id="tspan44"><tspan
+           style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
+           id="tspan36">70</tspan></tspan></text>
+    <g
+       id="g32"
+       transform="matrix(0.26458333,0,0,0.26458333,-625.82083,-437.95366)">
+      <path
+         id="path30"
+         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers fill stroke"
+         d="m 3414,1949 c -2.1987,0 -4,1.8013 -4,4 v 5 c 0,2.1987 1.8013,4 4,4 h 20 c 2.1987,0 4,-1.8013 4,-4 h 1 c 0.554,0 1,-0.446 1,-1 v -3 c 0,-0.554 -0.446,-1 -1,-1 h -1 c 0,-2.1987 -1.8013,-4 -4,-4 z"
+         sodipodi:nodetypes="ssssscsssscss" />
+      <text
+         xml:space="preserve"
+         id="text32"
+         style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect34);display:inline;fill:#24221c;fill-opacity:1"
+         transform="translate(3403.6449,1761.0882)"><tspan
+           x="12.955078"
+           y="198.70185"
+           id="tspan53"><tspan
+             style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
+             id="tspan45">32</tspan></tspan></text>
+    </g>
+    <path
+       id="path32"
+       style="fill:#ffffff;stroke-width:5.55628;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:58;stroke-dashoffset:3;paint-order:stroke fill markers"
+       d="m 238.30833,93.193201 v 9.260419 h 11.11255 v -9.260419 z m 1.85215,3.704161 h 1.85203 v 1.852093 h -1.85203 z m 5.55616,0 h 1.85215 v 1.852093 h -1.85215 z m -6.48224,7.408338 c -1.53984,0 -2.77817,1.23824 -2.77817,2.77812 v 6.48229 c 0,2.05322 1.65099,3.70417 3.70425,3.70417 h 7.40831 c 2.0532,0 3.70413,-1.65098 3.70413,-3.70417 v -6.48229 c 0,-1.53971 -1.23821,-2.77812 -2.77817,-2.77812 z" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.00523888;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
+       id="rect35"
+       width="67.153137"
+       height="8.9958334"
+       x="210.33971"
+       y="123.38596"
+       rx="2.6458333"
+       ry="2.6458333" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.02708px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#24221c;fill-opacity:1;stroke-width:0.264583"
+       x="217.2178"
+       y="129.3098"
+       id="text33"><tspan
+         sodipodi:role="line"
+         id="tspan33"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.02708px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#24221c;fill-opacity:1;stroke-width:0.264583"
+         x="217.2178"
+         y="129.3098">Eject before disconnecting</tspan></text>
+    <rect
+       style="fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.661458;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect37"
+       width="84.666664"
+       height="63.5"
+       x="201.53125"
+       y="152.01276" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="circle37"
+       cx="206.42604"
+       cy="155.32002"
+       r="0.66145831" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="209.61481"
+       y="156.9192"
+       id="text37"><tspan
+         sodipodi:role="line"
+         id="tspan37"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.9389px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="209.61481"
+         y="156.9192">9:00</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="220.23697"
+       y="156.95833"
+       id="text38"><tspan
+         sodipodi:role="line"
+         id="tspan38"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="220.23697"
+         y="156.95833">am</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text40"
+       style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect44);display:inline;fill:#24221c;fill-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,274.75927,103.88611)"><tspan
+         x="12.955078"
+         y="198.70185"
+         id="tspan62"><tspan
+           style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
+           id="tspan61">70</tspan></tspan></text>
+    <g
+       id="g42"
+       transform="matrix(0.26458333,0,0,0.26458333,-625.82083,-362.06847)">
+      <path
+         id="path40"
+         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers fill stroke"
+         d="m 3414,1949 c -2.1987,0 -4,1.8013 -4,4 v 5 c 0,2.1987 1.8013,4 4,4 h 20 c 2.1987,0 4,-1.8013 4,-4 h 1 c 0.554,0 1,-0.446 1,-1 v -3 c 0,-0.554 -0.446,-1 -1,-1 h -1 c 0,-2.1987 -1.8013,-4 -4,-4 z"
+         sodipodi:nodetypes="ssssscsssscss" />
+      <text
+         xml:space="preserve"
+         id="text42"
+         style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect45);display:inline;fill:#24221c;fill-opacity:1"
+         transform="translate(3403.6449,1761.0882)"><tspan
+           x="12.955078"
+           y="198.70185"
+           id="tspan71"><tspan
+             style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
+             id="tspan70">32</tspan></tspan></text>
+    </g>
+    <path
+       id="path42"
+       style="fill:#ffffff;stroke-width:5.55628;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:58;stroke-dashoffset:3;paint-order:stroke fill markers"
+       d="m 238.30833,169.07839 v 9.26042 h 11.11255 v -9.26042 z m 1.85215,3.70416 h 1.85203 v 1.85209 h -1.85203 z m 5.55616,0 h 1.85215 v 1.85209 h -1.85215 z m -6.48224,7.40834 c -1.53984,0 -2.77817,1.23824 -2.77817,2.77812 v 6.48229 c 0,2.05322 1.65099,3.70417 3.70425,3.70417 h 7.40831 c 2.0532,0 3.70413,-1.65098 3.70413,-3.70417 v -6.48229 c 0,-1.53971 -1.23821,-2.77812 -2.77817,-2.77812 z" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.00508246;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
+       id="rect42"
+       width="67.153137"
+       height="8.4666662"
+       x="210.33971"
+       y="199.53574"
+       rx="2.6458333"
+       ry="2.6458333" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:0.250521;fill-rule:evenodd;stroke-width:0.00508246;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
+       id="rect43"
+       width="67.153137"
+       height="8.4666662"
+       x="210.33971"
+       y="199.53574"
+       rx="2.6458333"
+       ry="2.6458333" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.02708px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#24221c;fill-opacity:1;stroke-width:0.264583"
+       x="217.2178"
+       y="205.19499"
+       id="text43"><tspan
+         sodipodi:role="line"
+         id="tspan43"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.02708px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#24221c;fill-opacity:1;stroke-width:0.264583"
+         x="217.2178"
+         y="205.19499">Eject before disconnecting</tspan></text>
+    <rect
+       style="fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.661458;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect46"
+       width="84.666664"
+       height="63.5"
+       x="302.55331"
+       y="1.7763568e-15" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="circle46"
+       cx="307.44809"
+       cy="3.3072586"
+       r="0.66145831" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="310.63687"
+       y="4.9064407"
+       id="text46"><tspan
+         sodipodi:role="line"
+         id="tspan46"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.9389px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="310.63687"
+         y="4.9064407">9:00</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="321.25903"
+       y="4.9455643"
+       id="text47"><tspan
+         sodipodi:role="line"
+         id="tspan47"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="321.25903"
+         y="4.9455643">am</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text49"
+       style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect52);display:inline;fill:#24221c;fill-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,375.78133,-48.12665)"><tspan
+         x="12.955078"
+         y="198.70185"
+         id="tspan73"><tspan
+           style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
+           id="tspan72">70</tspan></tspan></text>
+    <g
+       id="g51"
+       transform="matrix(0.26458333,0,0,0.26458333,-524.79877,-514.08123)">
+      <path
+         id="path49"
+         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers fill stroke"
+         d="m 3414,1949 c -2.1987,0 -4,1.8013 -4,4 v 5 c 0,2.1987 1.8013,4 4,4 h 20 c 2.1987,0 4,-1.8013 4,-4 h 1 c 0.554,0 1,-0.446 1,-1 v -3 c 0,-0.554 -0.446,-1 -1,-1 h -1 c 0,-2.1987 -1.8013,-4 -4,-4 z"
+         sodipodi:nodetypes="ssssscsssscss" />
+      <text
+         xml:space="preserve"
+         id="text51"
+         style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect53);display:inline;fill:#24221c;fill-opacity:1"
+         transform="translate(3403.6449,1761.0882)"><tspan
+           x="12.955078"
+           y="198.70185"
+           id="tspan75"><tspan
+             style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
+             id="tspan74">32</tspan></tspan></text>
+    </g>
+    <path
+       id="path51"
+       style="fill:#ffffff;stroke-width:5.55628;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:58;stroke-dashoffset:3;paint-order:stroke fill markers"
+       d="m 339.33039,17.065627 v 9.260415 h 11.11255 v -9.260415 z m 1.85215,3.704161 h 1.85203 v 1.852093 h -1.85203 z m 5.55616,0 h 1.85215 v 1.852093 h -1.85215 z m -6.48224,7.408335 c -1.53984,0 -2.77817,1.238243 -2.77817,2.778127 v 6.482288 c 0,2.053221 1.65099,3.704168 3.70425,3.704168 h 7.40831 c 2.0532,0 3.70413,-1.650977 3.70413,-3.704168 V 30.95625 c 0,-1.539714 -1.23821,-2.778127 -2.77817,-2.778127 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.02708px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="316.38776"
+       y="53.18222"
+       id="text52"><tspan
+         sodipodi:role="line"
+         id="tspan52"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.02708px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="316.38776"
+         y="53.18222">Eject before disconnecting</tspan></text>
+    <rect
+       style="fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.661458;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect54"
+       width="84.666664"
+       height="63.5"
+       x="302.55331"
+       y="76.193123" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="circle54"
+       cx="307.44809"
+       cy="79.500381"
+       r="0.66145831" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="310.63687"
+       y="81.099564"
+       id="text54"><tspan
+         sodipodi:role="line"
+         id="tspan54"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.9389px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="310.63687"
+         y="81.099564">9:00</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="321.25903"
+       y="81.138687"
+       id="text55"><tspan
+         sodipodi:role="line"
+         id="tspan55"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="321.25903"
+         y="81.138687">am</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text57"
+       style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect60);display:inline;fill:#24221c;fill-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,375.78133,28.066476)"><tspan
+         x="12.955078"
+         y="198.70185"
+         id="tspan77"><tspan
+           style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
+           id="tspan76">70</tspan></tspan></text>
+    <g
+       id="g59"
+       transform="matrix(0.26458333,0,0,0.26458333,-524.79877,-437.8881)">
+      <path
+         id="path57"
+         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers fill stroke"
+         d="m 3414,1949 c -2.1987,0 -4,1.8013 -4,4 v 5 c 0,2.1987 1.8013,4 4,4 h 20 c 2.1987,0 4,-1.8013 4,-4 h 1 c 0.554,0 1,-0.446 1,-1 v -3 c 0,-0.554 -0.446,-1 -1,-1 h -1 c 0,-2.1987 -1.8013,-4 -4,-4 z"
+         sodipodi:nodetypes="ssssscsssscss" />
+      <text
+         xml:space="preserve"
+         id="text59"
+         style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect61);display:inline;fill:#24221c;fill-opacity:1"
+         transform="translate(3403.6449,1761.0882)"><tspan
+           x="12.955078"
+           y="198.70185"
+           id="tspan79"><tspan
+             style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
+             id="tspan78">32</tspan></tspan></text>
+    </g>
+    <path
+       id="path59"
+       style="fill:#ffffff;stroke-width:5.55628;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:58;stroke-dashoffset:3;paint-order:stroke fill markers"
+       d="m 339.33039,93.258753 v 9.260417 h 11.11255 v -9.260417 z m 1.85215,3.704161 h 1.85203 v 1.852093 h -1.85203 z m 5.55616,0 h 1.85215 v 1.852093 h -1.85215 z m -6.48224,7.408336 c -1.53984,0 -2.77817,1.23824 -2.77817,2.77813 v 6.48228 c 0,2.05322 1.65099,3.70417 3.70425,3.70417 h 7.40831 c 2.0532,0 3.70413,-1.65098 3.70413,-3.70417 v -6.48228 c 0,-1.53972 -1.23821,-2.77813 -2.77817,-2.77813 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.02708px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#bfbfbf;fill-opacity:1;stroke-width:0.264583"
+       x="316.38776"
+       y="129.37535"
+       id="text60"><tspan
+         sodipodi:role="line"
+         id="tspan60"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.02708px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Bold';fill:#bfbfbf;fill-opacity:1;stroke-width:0.264583"
+         x="316.38776"
+         y="129.37535">Eject before disconnecting</tspan></text>
+    <rect
+       style="fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.661458;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect63"
+       width="84.666664"
+       height="63.5"
+       x="201.53125"
+       y="235.21385" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="circle63"
+       cx="206.42604"
+       cy="238.52112"
+       r="0.66145831" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="209.61481"
+       y="240.1203"
+       id="text63"><tspan
+         sodipodi:role="line"
+         id="tspan63"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.9389px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="209.61481"
+         y="240.1203">9:00</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="220.23697"
+       y="240.15942"
+       id="text64"><tspan
+         sodipodi:role="line"
+         id="tspan64"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="220.23697"
+         y="240.15942">am</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text66"
+       style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect70);display:inline;fill:#24221c;fill-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,274.75927,187.08721)"><tspan
+         x="12.955078"
+         y="198.70185"
+         id="tspan81"><tspan
+           style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
+           id="tspan80">70</tspan></tspan></text>
+    <g
+       id="g68"
+       transform="matrix(0.26458333,0,0,0.26458333,-625.82083,-278.86738)">
+      <path
+         id="path66"
+         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers fill stroke"
+         d="m 3414,1949 c -2.1987,0 -4,1.8013 -4,4 v 5 c 0,2.1987 1.8013,4 4,4 h 20 c 2.1987,0 4,-1.8013 4,-4 h 1 c 0.554,0 1,-0.446 1,-1 v -3 c 0,-0.554 -0.446,-1 -1,-1 h -1 c 0,-2.1987 -1.8013,-4 -4,-4 z"
+         sodipodi:nodetypes="ssssscsssscss" />
+      <text
+         xml:space="preserve"
+         id="text68"
+         style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect71);display:inline;fill:#24221c;fill-opacity:1"
+         transform="translate(3403.6449,1761.0882)"><tspan
+           x="12.955078"
+           y="198.70185"
+           id="tspan83"><tspan
+             style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
+             id="tspan82">32</tspan></tspan></text>
+    </g>
+    <path
+       id="path68"
+       style="fill:#ffffff;stroke-width:5.55628;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:58;stroke-dashoffset:3;paint-order:stroke fill markers"
+       d="m 238.30833,252.27948 v 9.26042 h 11.11255 v -9.26042 z m 1.85215,3.70417 h 1.85203 v 1.85209 h -1.85203 z m 5.55616,0 h 1.85215 v 1.85209 h -1.85215 z m -6.48224,7.40833 c -1.53984,0 -2.77817,1.23824 -2.77817,2.77812 v 6.48229 c 0,2.05322 1.65099,3.70417 3.70425,3.70417 h 7.40831 c 2.0532,0 3.70413,-1.65098 3.70413,-3.70417 v -6.48229 c 0,-1.53971 -1.23821,-2.77812 -2.77817,-2.77812 z" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:0.504673;fill-rule:evenodd;stroke-width:0.00572696;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
+       id="rect68"
+       width="68.211456"
+       height="10.583335"
+       x="209.81053"
+       y="281.94308"
+       rx="3.175"
+       ry="3.175" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.00523888;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
+       id="rect69"
+       width="67.153137"
+       height="8.9958334"
+       x="210.33971"
+       y="282.47226"
+       rx="2.6458333"
+       ry="2.6458333" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.02708px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#24221c;fill-opacity:1;stroke-width:0.264583"
+       x="217.2178"
+       y="288.39609"
+       id="text69"><tspan
+         sodipodi:role="line"
+         id="tspan69"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.02708px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#24221c;fill-opacity:1;stroke-width:0.264583"
+         x="217.2178"
+         y="288.39609">Eject before disconnecting</tspan></text>
+  </g>
+</svg>
