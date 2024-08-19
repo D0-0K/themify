@@ -22,12 +22,17 @@
 %xl(Player_Status_Black,Player_Status_Black.bmp,4)
 %xl(Player_Status_Backdrop_Short,Player_Status_Backdrop_Short.bmp,52,0,2)
 %xl(Player_Status_Backdrop_Long,Player_Status_Backdrop_Long.bmp,52,0,2)
+#
 %xl(corner_underlay_top,corner_underlay_top.bmp,144,16)
 %xl(corner_underlay_bottom,corner_underlay_bottom.bmp,144,199)
-%xl(sub_status_backdrop,sub_status_backdrop.bmp,16,0,3)
-%xl(sub_status_backdrop_long,sub_status_backdrop_long.bmp,3)
+#
+%xl(Sub_Status_Short_Backdrop_White,Sub_Status_Short_Backdrop_White.bmp,16,0,3)
+%xl(Sub_Status_Long_Backdrop_White,Sub_Status_Long_Backdrop_White.bmp,3)
+%xl(Sub_Status_Short_Backdrop_Black,Sub_Status_Short_Backdrop_Black.bmp,16,0,3)
+%xl(Sub_Status_Long_Backdrop_Black,Sub_Status_Long_Backdrop_Black.bmp,3)
 #Slider Images
-%xl(Slider_Backdrop,Player_Slider_Backdrop.bmp)
+%xl(Slider_Backdrop_B,Player_Slider_Backdrop_B.bmp)
+%xl(Slider_Backdrop_W,Player_Slider_Backdrop_W.bmp)
 %xl(Slider_End,Player_Slider_End.bmp)
 %xl(Cutout_Backdrop,Player_Cutout_Backdrop.bmp)
 %xl(Cutout_End,Player_Cutout_End.bmp)
@@ -42,14 +47,28 @@
 #Show the right background depending on how many icons are on.
 # Gotta run the contrast algorithm for the backdrops, which doubles the code size unfortunately.
 #Background: if only 1 icon is active
-%V(173,14,98,29,-)%VB
-%?and(%if(%ps, =, 1),%if(%mm, =, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%?mh<%xd(sub_status_backdrop_long,1)|%xd(sub_status_backdrop,1)>>%?and(%if(%ps, !=, 1),%if(%mm, >, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%?mh<%xd(sub_status_backdrop_long,1)|%xd(sub_status_backdrop,1)>>%?and(%if(%ps, !=, 1),%if(%mm, =, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(sub_status_backdrop_long,1)|%xd(sub_status_backdrop,1)>>
+#
+%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%Vd(Sub_Status_Backdrop_White)|%Vd(Sub_Status_Backdrop_Black)>
+#
+#-- White Backdrop --#
+%Vl(Sub_Status_Backdrop_White,173,14,98,29,-)%VB
+%?and(%if(%ps, =, 1),%if(%mm, =, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%?mh<%xd(Sub_Status_Long_Backdrop_White,1)|%xd(Sub_Status_Short_Backdrop_White,1)>>%?and(%if(%ps, !=, 1),%if(%mm, >, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%?mh<%xd(Sub_Status_Long_Backdrop_White,1)|%xd(Sub_Status_Short_Backdrop_White,1)>>%?and(%if(%ps, !=, 1),%if(%mm, =, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(Sub_Status_Long_Backdrop_White,1)|%xd(Sub_Status_Short_Backdrop_White,1)>>
 #
 #Background: if only 2 icons active
-%?and(%if(%ps, !=, 1),%if(%mm, >, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(sub_status_backdrop_long,2)|%xd(sub_status_backdrop,2)>>%?and(%if(%ps, =, 1),%if(%mm, =, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(sub_status_backdrop_long,2)|%xd(sub_status_backdrop,2)>>%?and(%if(%ps, =, 1),%if(%mm, >, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%?mh<%xd(sub_status_backdrop_long,2)|%xd(sub_status_backdrop,2)>>
+%?and(%if(%ps, !=, 1),%if(%mm, >, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(Sub_Status_Long_Backdrop_White,2)|%xd(Sub_Status_Short_Backdrop_White,2)>>%?and(%if(%ps, =, 1),%if(%mm, =, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(Sub_Status_Long_Backdrop_White,2)|%xd(Sub_Status_Short_Backdrop_White,2)>>%?and(%if(%ps, =, 1),%if(%mm, >, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%?mh<%xd(Sub_Status_Long_Backdrop_White,2)|%xd(Sub_Status_Short_Backdrop_White,2)>>
 #
 #Background:if all 3 icons active
-%?and(%if(%ps, =, 1),%if(%mm, >, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(sub_status_backdrop_long,3)|%xd(sub_status_backdrop,3)>>
+%?and(%if(%ps, =, 1),%if(%mm, >, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(Sub_Status_Long_Backdrop_White,3)|%xd(Sub_Status_Short_Backdrop_White,3)>>
+#
+#-- Black Backdrop --#
+%Vl(Sub_Status_Backdrop_Black,173,14,98,29,-)%VB
+%?and(%if(%ps, =, 1),%if(%mm, =, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%?mh<%xd(Sub_Status_Long_Backdrop_Black,1)|%xd(Sub_Status_Short_Backdrop_Black,1)>>%?and(%if(%ps, !=, 1),%if(%mm, >, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%?mh<%xd(Sub_Status_Long_Backdrop_Black,1)|%xd(Sub_Status_Short_Backdrop_Black,1)>>%?and(%if(%ps, !=, 1),%if(%mm, =, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(Sub_Status_Long_Backdrop_Black,1)|%xd(Sub_Status_Short_Backdrop_Black,1)>>
+#
+#Background: if only 2 icons active
+%?and(%if(%ps, !=, 1),%if(%mm, >, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(Sub_Status_Long_Backdrop_Black,2)|%xd(Sub_Status_Short_Backdrop_Black,2)>>%?and(%if(%ps, =, 1),%if(%mm, =, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(Sub_Status_Long_Backdrop_Black,2)|%xd(Sub_Status_Short_Backdrop_Black,2)>>%?and(%if(%ps, =, 1),%if(%mm, >, 1),%or(%if(%fc, !=, 4),%if(%fc, !=, 5),%if(%fc, !=, 7),%if(%fc, !=, 11),%if(%fc, !=, 13)))<%?mh<%xd(Sub_Status_Long_Backdrop_Black,2)|%xd(Sub_Status_Short_Backdrop_Black,2)>>
+#
+#Background:if all 3 icons active
+%?and(%if(%ps, =, 1),%if(%mm, >, 1),%or(%if(%fc, =, 4),%if(%fc, =, 5),%if(%fc, =, 7),%if(%fc, =, 11)))<%?mh<%xd(Sub_Status_Long_Backdrop_Black,3)|%xd(Sub_Status_Short_Backdrop_Black,3)>>
 #
 #-- Player Status Backdrops --#
 # Seperated the viewports into Black and White to keep logic mess down.
@@ -86,6 +105,7 @@
 #--- Player Status ---#
 #
 %?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%?if(%pe,!=,1)<%Vd(Player_Status_Long_White_BG)|%Vd(Player_Status_Short_White_BG)>|%?if(%pe,!=,1)<%Vd(Player_Status_Long_Black_BG)|%Vd(Player_Status_Short_Black_BG)>>
+#
 #Don't display volume if fastwarding etc.
 %?if(%pe,!=,1)<%?if(%mp,<=,3)<%?mv(1)<%Vd(Player_Volume_Long)|%Vd(Player_Status_Long)>|%Vd(Player_Status_Long)>|%?if(%mp,<=,3)<%?mv(1)<%Vd(Player_Volume_Short)|%Vd(Player_Status_Short)>|%Vd(Player_Status_Short)>>
 #
@@ -158,7 +178,7 @@
 #
 #Song Position
 %V(18,196,126,5,-)
-%pb(0,0,126,5,Player_Slider_Front.bmp,backdrop,Slider_Backdrop,slider,Slider_End)
+%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%pb(0,0,126,5,Player_Slider_Front.bmp,backdrop,Slider_Backdrop_B,slider,Slider_End)|%pb(0,0,126,5,Player_Slider_Front.bmp,backdrop,Slider_Backdrop_W,slider,Slider_End)>
 #
 %Vl(playlist_pos_single,250,176,68,12,3)%ac%pp %Sx(of) %pe
 #
