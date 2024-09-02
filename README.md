@@ -29,13 +29,13 @@ An ambitious and technically challenging remake of Themify, Themify 2 will be th
 
 | Features | Current State |
 | ----------- | -----------|
-| Music Player | 90% Complete |
-| Main Menus | 85% Complete |
+| Music Player | 95% Complete |
+| Main Menus | 90% Complete |
 | Lockscreen | 75% Complete |
 | Status Bar | 95% Complete |
-| Quickscreen | 75% Complete |
-| Miniplayers | 85% Complete |
-| Icon Set | 50% Complete |
+| Quickscreen | 90% Complete |
+| Miniplayers | 90% Complete |
+| Icon Set | 75% Complete |
 
 ## Notes for Users
 
