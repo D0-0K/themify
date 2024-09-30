@@ -13,7 +13,8 @@
 %Fl(5,16-LeagueSpartan-SemiBold.fnt)#battery icon font
 %Fl(6,10-Large_UI.fnt)
 %Fl(7,1-Blank_Font.fnt)
-%Fl(11,7-14x13_Menu_Icons.fnt)
+%Fl(8,14x13_Compacticons.fnt)
+#%Fl(11,7-14x13_Menu_Icons.fnt)
 %Fl(12,7-14x13_Icons.fnt)
 #--- Icons ---#
 %xl(Battery_Level,Battery_Level.bmp,23)
@@ -122,16 +123,17 @@
 #- Menus with Icons -#
 #always place text last in these as it will not scroll otherwise
 %Vl(Menu_With_Icons,0,0,302,26,6)%?Lc<%Vs(invert)A%arB>
-%Vl(Menu_With_Icons,7,0,20,25,11)%?Lc<%Vs(invert)>3
+%Vl(Menu_With_Icons,7,6,14,14,8)%?Lc<%Vs(invert)>%?if(%LT,=,%Sx(Sound Settings))<8>%?if(%LT,=,%Sx(Playback Settings))<3>%?if(%LT,=,%Sx(General Settings))<4>%?if(%LT,=,%Sx(Theme Settings))<i>%?if(%LT,=,%Sx(Recording Settings))<7>%?if(%LT,=,%Sx(Time & Date))<c>%?if(%LT,=,%Sx(Manage Settings))<4>
 %Vl(Menu_With_Icons,27,5,265,20,-)%?Lc<%Vs(invert)>%s%LT
 #
 %Vl(Home_Menu_With_Icons,0,0,182,26,6)%?Lc<%Vs(invert)A%arB>
-%Vl(Home_Menu_With_Icons,7,0,20,25,11)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
+%Vl(Home_Menu_With_Icons,7,6,14,14,8)%?Lc<%Vs(invert)>%?LI<1|2|3|4|5|6|7|8|5_|6_|11|12|13|14|15|16|16|18|19|4_|7_|22|23|k_|%?if(%LT,=,%Sx(Resume Playback))<r|3>|26|27|9_|1_|30|31|32|0>
+#%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
 %Vl(Home_Menu_With_Icons,27,5,145,20,-)%?Lc<%Vs(invert)>%s%LT
 #
 #- Menus with no Icons -#
 %Vl(Menu_No_Icons,0,0,302,26,6)%?if(%ss(0,1,%LT),=,[)<%?Lc<|%Vs(invert)>%dr(0,0,-,-)|%?Lc<%Vs(invert)A%arB>>
-%Vl(Menu_No_Icons,7,0,20,26,11)%?or(%if(%LT,=,%Sx([All tracks])),%if(%LT,=,%Sx([Random])),%if(%LT,=,%Sx([Untagged])))<%?Lc<|%Vs(invert)>7>
+%Vl(Menu_No_Icons,7,6,14,14,8)%?if(%LT,=,%Sx([All tracks]))<%?Lc<b|%Vs(invert)b>>%?if(%LT,=,%Sx([Random]))<a>%?if(%LT,=,%Sx([Untagged]))<e>
 %Vl(Menu_No_Icons,27,5,265,20,-)%?or(%if(%LT,=,%Sx([All tracks])),%if(%LT,=,%Sx([Random])),%if(%LT,=,%Sx([Untagged])))<%?Lc<|%Vs(invert)>%ss(1,-,%LT)>
 %Vl(Menu_No_Icons,9,5,283,20,-)%?and(%if(%LT,!=,%Sx([All tracks])),%if(%LT,!=,%Sx([Random])),%if(%LT,!=,%Sx([Untagged])))<%?Lc<%Vs(invert)>%s%LT>
 #
@@ -141,11 +143,11 @@
 #-- Menu Drawing without Scrollbar --#
 #- Menus with Icons -#
 %Vl(No_Scroll_Menu_With_Icons,0,0,314,26,6)%?Lc<%Vs(invert)A%arB>
-%Vl(No_Scroll_Menu_With_Icons,7,0,20,25,11)%?Lc<%Vs(invert)>3
+%Vl(No_Scroll_Menu_With_Icons,7,0,20,25,8)%?Lc<%Vs(invert)>3
 %Vl(No_Scroll_Menu_With_Icons,27,5,277,20,-)%?Lc<%Vs(invert)>%s%LT
 #
 %Vl(No_Scroll_Home_Menu_With_Icons,0,0,194,25,6)%?Lc<%Vs(invert)A%arB>
-%Vl(No_Scroll_Home_Menu_With_Icons,7,0,20,25,11)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
+%Vl(No_Scroll_Home_Menu_With_Icons,7,0,20,25,8)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
 %Vl(No_Scroll_Home_Menu_With_Icons,27,5,157,20,-)%?Lc<%Vs(invert)%Vs(invert)>%s%LT
 #
 #- Menus with no Icons -#
@@ -158,7 +160,7 @@
 #-- Menu Aesthetics --#
 #- Sub Menu Header -#
 %Vl(Sub_Menu_Header,33,29,280,18,3)%Vs(invert)%s%Lt
-%Vl(Sub_Menu_Header,10,24,20,31,11)%Vs(invert)1#%Li
+%Vl(Sub_Menu_Header,10,24,20,31,8)%Vs(invert)1#%Li
 #
 #- Rounded Corners on menus -#
 #Draw rounded corners on the menus. Draw on foreground and background to prevent some minor clipping from the menu items.
