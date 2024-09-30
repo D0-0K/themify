@@ -25,8 +25,8 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="1.2399115"
-     inkscape:cx="431.48241"
-     inkscape:cy="-4.839055"
+     inkscape:cx="1035.5578"
+     inkscape:cy="115.33081"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -53,6 +53,28 @@
        width="320.00008"
        height="240.00001"
        id="page1" />
+    <inkscape:page
+       x="1052.1708"
+       y="0"
+       width="320.00012"
+       height="240.00001"
+       id="page43" />
+    <inkscape:grid
+       id="grid43"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="false" />
   </sodipodi:namedview>
   <defs
      id="defs2">
@@ -86,6 +108,12 @@
        width="287.21634"
        height="47.272419"
        id="rect46" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="287.21634"
+       height="47.272419"
+       id="rect43" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -792,6 +820,262 @@
        d="m 713.87411,87.99961 c -1.385,0 -2.5,1.115 -2.5,2.5 v 7 c 0,1.385 1.115,2.5 2.5,2.5 h 7 c 1.385,0 2.5,-1.115 2.5,-2.5 v -7 c 0,-1.385 -1.115,-2.5 -2.5,-2.5 z m 6,2 c 0.82843,0 1.5,0.671573 1.5,1.5 0,0.828427 -0.67157,1.5 -1.5,1.5 -0.82843,0 -1.5,-0.671573 -1.5,-1.5 0,-0.828427 0.67157,-1.5 1.5,-1.5 z m -5,5 c 0.82843,0 1.5,0.671573 1.5,1.5 0,0.828427 -0.67157,1.5 -1.5,1.5 -0.82843,0 -1.5,-0.671573 -1.5,-1.5 0,-0.828427 0.67157,-1.5 1.5,-1.5 z"
        style="fill:#24221c;fill-opacity:1;fill-rule:evenodd;stroke-width:1.7;stroke-linejoin:round"
        id="path140"
+       sodipodi:nodetypes="sssssssssssssssssss" />
+    <path
+       d="m 1042.0759,-124.26746 h -302 v 26 h 302 z"
+       style="fill:#000000;fill-opacity:0.164706;stroke-width:2.03113;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       id="path10" />
+    <path
+       d="m 750.07583,-150.26746 c -5.53999,0 -10,4.6388 -10,10.40039 v 15.59961 h 302.00007 v -15.59961 c 0,-5.76159 -4.46,-10.40039 -10,-10.40039 z"
+       style="fill-opacity:0.2;stroke-width:2.03112;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;fill:#ffffff"
+       id="path9"
+       inkscape:export-filename="../../../../../Tools/rockbox/build_gen5/simdisk/.rockbox/wps/Themify_2/Database_Actions_Top.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#24221c;fill-opacity:1;stroke:none;stroke-width:6.36714;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect8"
+       width="320.00003"
+       height="51.999973"
+       x="1052.1708"
+       y="51.999966" />
+    <rect
+       style="fill:#24221c;fill-opacity:1;stroke:none;stroke-width:6.36714;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect9"
+       width="320.00003"
+       height="51.999973"
+       x="1052.1708"
+       y="0" />
+    <path
+       id="path12"
+       style="fill:#ddff55;stroke-width:15;stroke-linecap:square;stroke-miterlimit:58;stroke-dashoffset:3"
+       d="m 1347.1708,51.999965 v 11 h 1.3848 V 240 h 23.6153 v -177.000035 -6 c 0,-2.77 -2.23,-5 -5,-5 z"
+       sodipodi:nodetypes="ccccccssc" />
+    <rect
+       style="fill:#ddff55;fill-opacity:1;stroke:none;stroke-width:2.46063;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect12"
+       width="308"
+       height="18.943926"
+       x="1052.1708"
+       y="221.05609"
+       inkscape:export-filename="menu.png"
+       inkscape:export-xdpi="287.98947"
+       inkscape:export-ydpi="287.98947" />
+    <rect
+       style="fill:#ddff55;fill-opacity:1;stroke:none;stroke-width:2.6426;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       id="rect13"
+       width="308"
+       height="188.00002"
+       x="1052.1708"
+       y="51.999966"
+       ry="12"
+       rx="11.624998"
+       inkscape:export-filename="../../../Projects/themify/Images/Hi-Res/themify_02.png"
+       inkscape:export-xdpi="216"
+       inkscape:export-ydpi="216" />
+    <rect
+       style="opacity:0.25;fill:#000000;fill-opacity:0.981714;stroke:none;stroke-width:10.7152;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:58;stroke-dashoffset:3;paint-order:stroke fill markers"
+       id="rect14"
+       width="5"
+       height="178.00002"
+       x="1362.1708"
+       y="56.999966"
+       rx="2.5"
+       ry="2.4999998" />
+    <rect
+       style="fill:#24221c;fill-opacity:1;stroke:none;stroke-width:9.83868;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:58;stroke-dashoffset:3;paint-order:stroke fill markers"
+       id="rect15"
+       width="4.9999976"
+       height="24.999971"
+       x="1362.1708"
+       y="64.368469"
+       rx="2.5"
+       ry="2.5" />
+    <circle
+       style="fill:#ddff55;fill-opacity:1;stroke:none;stroke-width:3.77952;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="circle15"
+       cx="1070.5105"
+       cy="12.339112"
+       r="2.5" />
+    <text
+       xml:space="preserve"
+       style="font-size:19px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ddff55;fill-opacity:1;stroke-width:0.999999"
+       x="1084.39"
+       y="19.117676"
+       id="text21"><tspan
+         sodipodi:role="line"
+         id="tspan21"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Bold';fill:#ddff55;fill-opacity:1;stroke-width:0.999999"
+         x="1084.39"
+         y="19.117676">21:00</tspan></text>
+    <g
+       id="g21"
+       style="fill:#ddff55;fill-opacity:1"
+       transform="translate(696.01063,-21.160985)"
+       inkscape:export-filename="../../../../../Pictures/Themify/battery.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:#ddff55;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.65832;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers fill stroke"
+         id="rect21"
+         width="22"
+         height="7"
+         x="14"
+         y="4"
+         rx="0.6875"
+         ry="1"
+         transform="matrix(-1.4545455,0,0,1,694.36363,26)"
+         clip-path="url(#clipPath8283-4-1-1-3-1-8-5)" />
+      <path
+         id="path21"
+         style="color:#000000;fill:#ddff55;fill-opacity:1;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers fill stroke"
+         d="m 642.99999,27 c -2.1987,0 -4,1.8013 -4,4 v 5 c 0,2.1987 1.8013,4 4,4 h 20 c 2.19869,0 4,-1.8013 4,-4 h 1 c 0.55399,0 1,-0.446 1,-1 v -3 c 0,-0.554 -0.44601,-1 -1,-1 h -1 c 0,-2.1987 -1.80131,-4 -4,-4 z m 0,2 h 20 c 1.12529,0 2,0.87471 2,2 v 5 c 0,1.12529 -0.87471,2 -2,2 h -20 c -1.1253,0 -2,-0.87471 -2,-2 v -5 c 0,-1.12529 0.8747,-2 2,-2 z"
+         sodipodi:nodetypes="ssssscsssscsssssssssss" />
+    </g>
+    <rect
+       style="fill:#24221c;fill-opacity:1;stroke:none;stroke-width:2.03112;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect22"
+       width="302"
+       height="78"
+       x="1055.1708"
+       y="54.999992"
+       rx="9.999999"
+       ry="10.4" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';display:inline;fill:#ddff55;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
+       x="1078.7656"
+       y="99.796021"
+       id="text22"
+       inkscape:export-filename="/home/evan/Projects/Theming/Adwaitapodsize.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan22"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#ddff55;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
+         x="1078.7656"
+         y="99.796021">Random</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';display:inline;fill:#ddff55;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
+       x="1078.9056"
+       y="126.40388"
+       id="text23"
+       inkscape:export-filename="/home/evan/Projects/Theming/Adwaitapodsize.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan23"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#ddff55;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
+         x="1078.9056"
+         y="126.40388">Untagged</tspan></text>
+    <path
+       d="m 1064.3718,114 c -1.1046,0 -2,0.89546 -2,2 v 3 l 0.01,-0.008 c -0.04,0.81561 0.2475,1.64396 0.873,2.26953 l 0.7891,0.78906 0.4355,0.4375 -2.3086,2.3086 0.6016,0.60156 0.5996,0.60155 2.3105,-2.31055 6.377,-6.37695 2.1094,-2.10937 -0.5996,-0.60157 -0.6016,-0.60156 -2.1094,2.10938 -0.4414,-0.43946 -0.7891,-0.78906 c -0.6256,-0.62558 -1.4539,-0.91349 -2.2695,-0.87305 l 0.01,-0.008 z m 1.25,2 c 0.078,5.4e-4 0.1558,0.008 0.2324,0.0234 0.175,0.0336 0.3408,0.10414 0.4863,0.20703 0.3322,0.23341 0.5303,0.61359 0.5313,1.01953 0,0.69034 -0.5597,1.25 -1.25,1.25 -0.4059,-0.001 -0.7862,-0.19913 -1.0196,-0.53125 -0.1003,-0.14998 -0.1669,-0.31988 -0.1953,-0.49805 -0.018,-0.0724 -0.03,-0.14623 -0.035,-0.2207 0,-0.10048 0.019,-0.20015 0.047,-0.29687 0.1124,-0.44573 0.4606,-0.79379 0.9063,-0.90625 0.097,-0.0275 0.1963,-0.0432 0.2968,-0.0469 z m 7.6406,2.51367 -6.3789,6.37891 0.4238,0.42383 c 0.01,0.009 0.018,0.0166 0.027,0.0254 l 0.7773,0.77734 c 1.1751,1.17518 3.067,1.17518 4.2422,0 l 2.1387,-2.13867 c 1.1752,-1.17518 1.1752,-3.06701 0,-4.24219 l -0.7773,-0.77734 c 0,-0.002 2e-4,-0.004 -0.01,-0.006 l -0.01,-0.006 c 0,-0.005 -0.01,-0.0107 -0.014,-0.0156 z"
+       style="fill:#ddff55;fill-opacity:1;fill-rule:evenodd;stroke-width:0.02;stroke-linecap:round;stroke-linejoin:round"
+       id="path23" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;line-height:1.25;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';display:inline;fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
+       x="1064.0356"
+       y="151.11523"
+       id="text24"
+       inkscape:export-filename="/home/evan/Projects/Theming/Adwaitapodsize.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan24"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
+         x="1064.0356"
+         y="151.11523">1. Example Text</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';display:inline;fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
+       x="1064.0356"
+       y="178.13794"
+       id="text25"
+       inkscape:export-filename="/home/evan/Projects/Theming/Adwaitapodsize.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan25"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
+         x="1064.0356"
+         y="178.13794">2. Example Text</tspan></text>
+    <rect
+       style="fill:#ddff55;fill-opacity:1;stroke:none;stroke-width:2.03113;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect25"
+       width="298"
+       height="22.000004"
+       x="1057.1708"
+       y="56.999992"
+       rx="8"
+       ry="8" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:18px;line-height:1.25;font-family:sans-serif;display:inline;fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.999999"
+       x="1079.6897"
+       y="73.191833"
+       id="text26"
+       inkscape:export-filename="/home/evan/Projects/Theming/Adwaitapodsize.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan26"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#24221c;fill-opacity:1;stroke-width:0.999999"
+         x="1079.6897"
+         y="73.191833">All Tracks</tspan></text>
+    <path
+       id="path26"
+       style="fill:#ddff55;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.56643;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:128.3;stroke-dasharray:none;stroke-dashoffset:3;stroke-opacity:1"
+       d="m 1064.1708,27.999985 v 1.99999 h 9 v -1.99999 z m 12,1.99999 c -2,0 -3,1 -3,3 v 2.17181 c -0.3212,-0.11361 -0.6594,-0.17171 -1,-0.17181 -1.6569,0 -3,1.34311 -3,3.00001 0,1.6568 1.3431,3 3,3 1.6568,0 3,-1.3432 3,-3 v -4.00001 c 0,-0.43759 0.5625,-1 1,-1 h 2 v -3 z m -12,2 v 2 h 7 v -2 z m 0,4 v 2.00001 h 4 v -2.00001 z"
+       sodipodi:nodetypes="cccccssccsssssccscccccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';display:inline;fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
+       x="1062.9209"
+       y="204.75992"
+       id="text27"
+       inkscape:export-filename="/home/evan/Projects/Theming/Adwaitapodsize.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan27"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
+         x="1062.9209"
+         y="204.75992">3. Example Text</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text29"
+       style="font-weight:bold;font-size:18.6667px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0px;white-space:pre;shape-inside:url(#rect43);display:inline;fill:#ddff55;fill-opacity:1"
+       transform="translate(1071.8956,-163.24337)"><tspan
+         x="12.955078"
+         y="203.72181"
+         id="tspan16"><tspan
+           style="font-family:'League Spartan';-inkscape-font-specification:'League Spartan Bold'"
+           id="tspan14">Favourite Songs</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';display:inline;fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
+       x="1062.9209"
+       y="230.75992"
+       id="text30"
+       inkscape:export-filename="/home/evan/Projects/Theming/Adwaitapodsize.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan30"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
+         x="1062.9209"
+         y="230.75992">4. Example Text</tspan></text>
+    <path
+       d="m 1071.6708,61 c -0.1703,0 -0.3365,0.0158 -0.5,0.0391 -1.7,0.24169 -3,1.69217 -3,3.46094 v 0.44336 0.55664 1.839851 c -0.4687,-0.2231 -0.981,-0.33918 -1.5,-0.33985 -1.933,0 -3.5,1.56703 -3.5,3.5 0,1.93298 1.567,3.5 3.5,3.5 1.9329,0 3.5,-1.56702 3.5,-3.5 -5e-4,-0.0189 0,-0.0378 0,-0.0566 v 0 -1.78125 -1.16211 -2.000001 c 0,-0.83099 0.669,-1.5 1.5,-1.5 h 1 0.5 V 61.3379 61 h -0.5 z"
+       style="fill:#24221c;fill-opacity:1;fill-rule:evenodd;stroke-width:0.02;stroke-linecap:round;stroke-linejoin:round"
+       id="path30"
+       sodipodi:nodetypes="scsccccsscccccsscccccs" />
+    <path
+       d="m 1063.8742,87.99961 c -1.385,0 -2.5,1.115 -2.5,2.5 v 7 c 0,1.385 1.115,2.5 2.5,2.5 h 7 c 1.385,0 2.5,-1.115 2.5,-2.5 v -7 c 0,-1.385 -1.115,-2.5 -2.5,-2.5 z m 6,2 c 0.8284,0 1.5,0.671573 1.5,1.5 0,0.828427 -0.6716,1.5 -1.5,1.5 -0.8284,0 -1.5,-0.671573 -1.5,-1.5 0,-0.828427 0.6716,-1.5 1.5,-1.5 z m -5,5 c 0.8284,0 1.5,0.671573 1.5,1.5 0,0.828427 -0.6716,1.5 -1.5,1.5 -0.8284,0 -1.5,-0.671573 -1.5,-1.5 0,-0.828427 0.6716,-1.5 1.5,-1.5 z"
+       style="fill:#ddff55;fill-opacity:1;fill-rule:evenodd;stroke-width:1.7;stroke-linejoin:round"
+       id="path32"
        sodipodi:nodetypes="sssssssssssssssssss" />
   </g>
 </svg>
