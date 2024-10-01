@@ -35,7 +35,7 @@ An ambitious and technically challenging remake of Themify, Themify 2 will be th
 | Status Bar | 95% Complete |
 | Quickscreen | 90% Complete |
 | Miniplayers | 90% Complete |
-| Icon Set | 75% Complete |
+| Icon Set | 90% Complete |
 
 ## Notes for Users
 

@@ -14,7 +14,6 @@
 %Fl(6,10-Large_UI.fnt)
 %Fl(7,1-Blank_Font.fnt)
 %Fl(8,14x13_Compacticons.fnt)
-#%Fl(11,7-14x13_Menu_Icons.fnt)
 %Fl(12,7-14x13_Icons.fnt)
 #--- Icons ---#
 %xl(Battery_Level,Battery_Level.bmp,23)
@@ -45,7 +44,7 @@
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
-%?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,4)%dr(0,27,10,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,45,-,7)>>
+%?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,4)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,43,-,9)>>
 %?if(%cs, =, 10)<%dr(0,0,-,7)%dr(0,35,-,7)%dr(21,50,10,7)%dr(255,7,30,28)%dr(313,7,7,28)%dr(21,70,10,7)%dr(21,85,9,7)%dr(21,105,9,7)>
 #
 # Quickscreen
@@ -128,13 +127,12 @@
 #
 %Vl(Home_Menu_With_Icons,0,0,182,26,6)%?Lc<%Vs(invert)A%arB>
 %Vl(Home_Menu_With_Icons,7,6,14,14,8)%?Lc<%Vs(invert)>%?LI<1|2|3|4|5|6|7|8|5_|6_|11|12|13|14|15|16|16|18|19|4_|7_|22|23|k_|%?if(%LT,=,%Sx(Resume Playback))<r|3>|26|27|9_|1_|30|31|32|0>
-#%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
 %Vl(Home_Menu_With_Icons,27,5,145,20,-)%?Lc<%Vs(invert)>%s%LT
 #
 #- Menus with no Icons -#
 %Vl(Menu_No_Icons,0,0,302,26,6)%?if(%ss(0,1,%LT),=,[)<%?Lc<|%Vs(invert)>%dr(0,0,-,-)|%?Lc<%Vs(invert)A%arB>>
-%Vl(Menu_No_Icons,7,6,14,14,8)%?if(%LT,=,%Sx([All tracks]))<%?Lc<b|%Vs(invert)b>>%?if(%LT,=,%Sx([Random]))<a>%?if(%LT,=,%Sx([Untagged]))<e>
-%Vl(Menu_No_Icons,27,5,265,20,-)%?or(%if(%LT,=,%Sx([All tracks])),%if(%LT,=,%Sx([Random])),%if(%LT,=,%Sx([Untagged])))<%?Lc<|%Vs(invert)>%ss(1,-,%LT)>
+%Vl(Menu_No_Icons,7,6,14,14,8)%?if(%LT,=,%Sx([All tracks]))<%?Lc<|%Vs(invert)>b>%?if(%LT,=,%Sx([Random]))<%?Lc<|%Vs(invert)>a>%?if(%LT,=,%Sx([Untagged]))<%?Lc<|%Vs(invert)>e>
+%Vl(Menu_No_Icons,27,5,265,20,-)%?Lc<|%Vs(invert)>%?if(%ss(0,7,%St(lang)), =, english)<%?if(%LT,=,[All tracks])<All Tracks>%?if(%LT,=,[Random])<Random>%?if(%LT,=,[Untagged])<Untagged>|%LT>
 %Vl(Menu_No_Icons,9,5,283,20,-)%?and(%if(%LT,!=,%Sx([All tracks])),%if(%LT,!=,%Sx([Random])),%if(%LT,!=,%Sx([Untagged])))<%?Lc<%Vs(invert)>%s%LT>
 #
 %Vl(Home_Menu_No_Icons,0,0,182,26,6)%?Lc<%Vs(invert)A%arB>
@@ -159,8 +157,8 @@
 #
 #-- Menu Aesthetics --#
 #- Sub Menu Header -#
-%Vl(Sub_Menu_Header,33,29,280,18,3)%Vs(invert)%s%Lt
-%Vl(Sub_Menu_Header,10,24,20,31,8)%Vs(invert)1#%Li
+%Vl(Sub_Menu_Header,33,29,280,18,3)%Vs(invert)%s%Lt %Li
+%Vl(Sub_Menu_Header,12,29,14,14,8)%Vs(invert)%?Li<1|2|3|4|5|6|7|8|5_|6_|11|12|13|14|15|16|16|18|19|4_|7_|22|23|k_|%?if(%LT,=,%Sx(Resume Playback))<r|3>|26|27|9_|1_|30|31|32|0>
 #
 #- Rounded Corners on menus -#
 #Draw rounded corners on the menus. Draw on foreground and background to prevent some minor clipping from the menu items.
