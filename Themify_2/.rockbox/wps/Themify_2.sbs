@@ -55,7 +55,7 @@
 #
 %V(0,0,-,-,-)
 #
-%?if(%cs, =, 1)<%?mh<%?mp<|%Vd(miniplayer)>|%?mp<%Vd(Widgets)%?ps<%Vd(Shuffle_Widget)>%?if(%mm, >, 1)<%Vd(Repeat_Widget)>|%Vd(miniplayer)>>>
+%?if(%cs, =, 1)<%?mh<%?mp<%Vd(Lockscreen_Rendering_Fix)|%Vd(miniplayer)>|%?mp<%Vd(Widgets)%?ps<%Vd(Shuffle_Widget)>%?if(%mm, >, 1)<%Vd(Repeat_Widget)>|%Vd(miniplayer)>>>
 #
 #- Home Menu Initialisation -#
 %?if(%cs, =, 1)<%?mh<%Lb(Compressed_Menu,1,1)%Vd(Lockscreen_Display_Flush)|%?if(%St(font),!=,22-LeagueSpartan-Regular)<%VI(Home_Menu_Viewport_Full)|%Vd(Home_Corners)%?St(scrollbar)<%VI(Home_Menu_Viewport_Full)|%VI(Home_Menu_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Home_Menu_Viewport_Left)%Vd(Scrollbar_Home)>%?St(scrollbar)<%?St(show icons)<%Lb(No_Scroll_Home_Menu_With_Icons,182,26)|%Lb(No_Scroll_Home_Menu_No_Icons,182,26)>|%?St(show icons)<%Lb(Home_Menu_With_Icons,182,26)|%Lb(Home_Menu_No_Icons,182,26)>>>>>
@@ -203,6 +203,13 @@
 %Vl(miniplayer,205,25,111,10,12)%?mh<|a%arb>
 %Vl(miniplayer,205,226,111,10,12)%?mh<|c%ard>
 #
+#--- Widget Engine ---#
+#Lockscreen Visual Error Prevention
+%Vl(Lockscreen_Rendering_Fix,205,30,47,62,-)%x(Playback_Status_Lockscreen_Fix,Playback_Status_Lockscreen_Fix.bmp)
+%Vl(Lockscreen_Rendering_Fix,257,28,58,64,-)%x(Calendar_Lockscreen_Fix,Calendar_Lockscreen_Fix.bmp)
+%Vl(Lockscreen_Rendering_Fix,205,97,110,64,-)%x(Battery_Lockscreen_Fix,Battery_Lockscreen_Fix.bmp)
+%Vl(Lockscreen_Rendering_Fix,205,166,110,69,-)%x(Colour_Lockscreen_Fix,Colour_Lockscreen_Fix.bmp)
+#
 #Widget Background
 %Vl(Widgets,205,30,47,62,-)%VB%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(PlayStatus_Widget,2)|%xd(PlayStatus_Widget,1)>
 #
@@ -255,7 +262,12 @@
 %Vl(Widgets,212,173,96,4,12)e%arf#Foreground colour's rounded corners
 %Vl(Widgets,212,193,96,4,12)h%arg
 #
-# Lockscreen Stuff
+#--- Lockscreen ---#
+#- Background Rendering Bug Fixes
+%xl(Scrollbar_Left_Lockscreen_Fix,Scrollbar_Left_Lockscreen_Fix.bmp)
+%xl(Scrollbar_Right_Lockscreen_Fix,Scrollbar_Right_Lockscreen_Fix.bmp)
+%Vl(Lockscreen_Rendering_Fix,190,30,5,207,-)h%?St(scrollbar)<||%xd(Scrollbar_Right_Lockscreen_Fix)>
+%Vl(Lockscreen_Rendering_Fix,5,30,5,207,-)%?St(scrollbar)<|%xd(Scrollbar_Left_Lockscreen_Fix)|h>
 #
 %Vl(lockscreen_battery_numeric,283,16,30,14,12)%VB%Vs(invert)EFG
 %Vl(lockscreen_battery_numeric,283,16,30,14,12)%Vs(invert)EFG
