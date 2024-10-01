@@ -205,6 +205,8 @@
 #
 #--- Widget Engine ---#
 #Lockscreen Visual Error Prevention
+%Vl(Widgets,283,25,30,5,-)%VB%dr(0,0,-,-)
+%Vl(Widgets,283,25,30,5,-)%dr(0,0,-,-)
 %Vl(Lockscreen_Rendering_Fix,205,30,47,62,-)%x(Playback_Status_Lockscreen_Fix,Playback_Status_Lockscreen_Fix.bmp)
 %Vl(Lockscreen_Rendering_Fix,257,28,58,64,-)%x(Calendar_Lockscreen_Fix,Calendar_Lockscreen_Fix.bmp)
 %Vl(Lockscreen_Rendering_Fix,205,97,110,64,-)%x(Battery_Lockscreen_Fix,Battery_Lockscreen_Fix.bmp)
@@ -266,8 +268,8 @@
 #- Background Rendering Bug Fixes
 %xl(Scrollbar_Left_Lockscreen_Fix,Scrollbar_Left_Lockscreen_Fix.bmp)
 %xl(Scrollbar_Right_Lockscreen_Fix,Scrollbar_Right_Lockscreen_Fix.bmp)
-%Vl(Lockscreen_Rendering_Fix,190,30,5,207,-)h%?St(scrollbar)<||%xd(Scrollbar_Right_Lockscreen_Fix)>
-%Vl(Lockscreen_Rendering_Fix,5,30,5,207,-)%?St(scrollbar)<|%xd(Scrollbar_Left_Lockscreen_Fix)|h>
+%Vl(Lockscreen_Rendering_Fix,190,30,5,207,-)%?St(scrollbar)<||%xd(Scrollbar_Right_Lockscreen_Fix)>
+%Vl(Lockscreen_Rendering_Fix,5,30,5,207,-)%?St(scrollbar)<|%xd(Scrollbar_Left_Lockscreen_Fix)|>
 #
 %Vl(lockscreen_battery_numeric,283,16,30,14,12)%VB%Vs(invert)EFG
 %Vl(lockscreen_battery_numeric,283,16,30,14,12)%Vs(invert)EFG
