@@ -22,14 +22,19 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="px"
-     showgrid="false"
+     showgrid="true"
      units="px"
      inkscape:showpageshadow="false"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.415625"
-     inkscape:cx="842.73731"
-     inkscape:cy="526.26932"
-     inkscape:current-layer="layer1">
+     inkscape:cx="963.53201"
+     inkscape:cy="1204.415"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
     <inkscape:page
        x="0"
        y="0"
@@ -65,7 +70,13 @@
        dotted="false"
        gridanglex="30"
        gridanglez="30"
-       visible="false" />
+       visible="true" />
+    <inkscape:page
+       x="201.53125"
+       y="235.21386"
+       width="84.666663"
+       height="63.500001"
+       id="page1" />
   </sodipodi:namedview>
   <defs
      id="defs2">
@@ -177,6 +188,18 @@
        width="187.29594"
        height="52.815346"
        id="rect71" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect22" />
+    <rect
+       x="12.955012"
+       y="187.18465"
+       width="187.29594"
+       height="52.815346"
+       id="rect23" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -224,9 +247,9 @@
        transform="matrix(0.26458333,0,0,0.26458333,73.228014,-48.12665)"><tspan
          x="12.955078"
          y="198.70185"
-         id="tspan12"><tspan
+         id="tspan10"><tspan
            style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
-           id="tspan11">70</tspan></tspan></text>
+           id="tspan9">70</tspan></tspan></text>
     <g
        id="g181"
        transform="matrix(0.26458333,0,0,0.26458333,-827.35208,-514.08123)">
@@ -242,9 +265,9 @@
          transform="translate(3403.6449,1761.0882)"><tspan
            x="12.955078"
            y="198.70185"
-           id="tspan14"><tspan
+           id="tspan12"><tspan
              style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
-             id="tspan13">32</tspan></tspan></text>
+             id="tspan11">32</tspan></tspan></text>
     </g>
     <path
        d="M 3.1749999,6.6145832 C 1.4160588,6.6145832 0,8.030642 0,9.7895832 v 50.5354158 3.175 h 3.1749999 78.3166651 3.175 v -3.175 -50.5354158 c 0,-1.7589412 -1.416058,-3.175 -3.175,-3.175 z"
@@ -292,9 +315,9 @@
        transform="matrix(0.26458333,0,0,0.26458333,173.98022,-48.12665)"><tspan
          x="12.955078"
          y="198.70185"
-         id="tspan16"><tspan
+         id="tspan14"><tspan
            style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
-           id="tspan15">70</tspan></tspan></text>
+           id="tspan13">70</tspan></tspan></text>
     <g
        id="g10"
        transform="matrix(0.26458333,0,0,0.26458333,-726.59988,-514.08123)"
@@ -311,9 +334,9 @@
          transform="translate(3403.6449,1761.0882)"><tspan
            x="12.955078"
            y="198.70185"
-           id="tspan18"><tspan
+           id="tspan16"><tspan
              style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
-             id="tspan17">32</tspan></tspan></text>
+             id="tspan15">32</tspan></tspan></text>
     </g>
     <path
        d="m 103.9272,6.6145832 c -1.75894,0 -3.175,1.4160588 -3.175,3.175 v 50.5354158 3.175 h 3.175 78.31667 3.175 v -3.175 -50.5354158 c 0,-1.7589412 -1.41606,-3.175 -3.175,-3.175 z"
@@ -361,9 +384,9 @@
        transform="matrix(0.26458333,0,0,0.26458333,274.75927,-48.12665)"><tspan
          x="12.955078"
          y="198.70185"
-         id="tspan26"><tspan
+         id="tspan18"><tspan
            style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
-           id="tspan19">70</tspan></tspan></text>
+           id="tspan17">70</tspan></tspan></text>
     <g
        id="g25"
        transform="matrix(0.26458333,0,0,0.26458333,-625.82083,-514.08123)">
@@ -379,9 +402,9 @@
          transform="translate(3403.6449,1761.0882)"><tspan
            x="12.955078"
            y="198.70185"
-           id="tspan35"><tspan
+           id="tspan23"><tspan
              style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
-             id="tspan34">32</tspan></tspan></text>
+             id="tspan19">32</tspan></tspan></text>
     </g>
     <path
        id="rect2-6"
@@ -440,9 +463,9 @@
        transform="matrix(0.26458333,0,0,0.26458333,274.75927,28.000924)"><tspan
          x="12.955078"
          y="198.70185"
-         id="tspan44"><tspan
+         id="tspan25"><tspan
            style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
-           id="tspan36">70</tspan></tspan></text>
+           id="tspan24">70</tspan></tspan></text>
     <g
        id="g32"
        transform="matrix(0.26458333,0,0,0.26458333,-625.82083,-437.95366)">
@@ -458,9 +481,9 @@
          transform="translate(3403.6449,1761.0882)"><tspan
            x="12.955078"
            y="198.70185"
-           id="tspan53"><tspan
+           id="tspan29"><tspan
              style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
-             id="tspan45">32</tspan></tspan></text>
+             id="tspan26">32</tspan></tspan></text>
     </g>
     <path
        id="path32"
@@ -528,9 +551,9 @@
        transform="matrix(0.26458333,0,0,0.26458333,274.75927,103.88611)"><tspan
          x="12.955078"
          y="198.70185"
-         id="tspan62"><tspan
+         id="tspan31"><tspan
            style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
-           id="tspan61">70</tspan></tspan></text>
+           id="tspan30">70</tspan></tspan></text>
     <g
        id="g42"
        transform="matrix(0.26458333,0,0,0.26458333,-625.82083,-362.06847)">
@@ -546,9 +569,9 @@
          transform="translate(3403.6449,1761.0882)"><tspan
            x="12.955078"
            y="198.70185"
-           id="tspan71"><tspan
+           id="tspan34"><tspan
              style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
-             id="tspan70">32</tspan></tspan></text>
+             id="tspan32">32</tspan></tspan></text>
     </g>
     <path
        id="path42"
@@ -625,9 +648,9 @@
        transform="matrix(0.26458333,0,0,0.26458333,375.78133,-48.12665)"><tspan
          x="12.955078"
          y="198.70185"
-         id="tspan73"><tspan
+         id="tspan36"><tspan
            style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
-           id="tspan72">70</tspan></tspan></text>
+           id="tspan35">70</tspan></tspan></text>
     <g
        id="g51"
        transform="matrix(0.26458333,0,0,0.26458333,-524.79877,-514.08123)">
@@ -643,9 +666,9 @@
          transform="translate(3403.6449,1761.0882)"><tspan
            x="12.955078"
            y="198.70185"
-           id="tspan75"><tspan
+           id="tspan40"><tspan
              style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
-             id="tspan74">32</tspan></tspan></text>
+             id="tspan39">32</tspan></tspan></text>
     </g>
     <path
        id="path51"
@@ -704,9 +727,9 @@
        transform="matrix(0.26458333,0,0,0.26458333,375.78133,28.066476)"><tspan
          x="12.955078"
          y="198.70185"
-         id="tspan77"><tspan
+         id="tspan42"><tspan
            style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
-           id="tspan76">70</tspan></tspan></text>
+           id="tspan41">70</tspan></tspan></text>
     <g
        id="g59"
        transform="matrix(0.26458333,0,0,0.26458333,-524.79877,-437.8881)">
@@ -722,9 +745,9 @@
          transform="translate(3403.6449,1761.0882)"><tspan
            x="12.955078"
            y="198.70185"
-           id="tspan79"><tspan
+           id="tspan45"><tspan
              style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
-             id="tspan78">32</tspan></tspan></text>
+             id="tspan44">32</tspan></tspan></text>
     </g>
     <path
        id="path59"
@@ -783,9 +806,9 @@
        transform="matrix(0.26458333,0,0,0.26458333,274.75927,187.08721)"><tspan
          x="12.955078"
          y="198.70185"
-         id="tspan81"><tspan
+         id="tspan49"><tspan
            style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
-           id="tspan80">70</tspan></tspan></text>
+           id="tspan48">70</tspan></tspan></text>
     <g
        id="g68"
        transform="matrix(0.26458333,0,0,0.26458333,-625.82083,-278.86738)">
@@ -801,42 +824,162 @@
          transform="translate(3403.6449,1761.0882)"><tspan
            x="12.955078"
            y="198.70185"
-           id="tspan83"><tspan
+           id="tspan51"><tspan
              style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
-             id="tspan82">32</tspan></tspan></text>
+             id="tspan50">32</tspan></tspan></text>
     </g>
     <path
        id="path68"
        style="fill:#ffffff;stroke-width:5.55628;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:58;stroke-dashoffset:3;paint-order:stroke fill markers"
        d="m 238.30833,252.27948 v 9.26042 h 11.11255 v -9.26042 z m 1.85215,3.70417 h 1.85203 v 1.85209 h -1.85203 z m 5.55616,0 h 1.85215 v 1.85209 h -1.85215 z m -6.48224,7.40833 c -1.53984,0 -2.77817,1.23824 -2.77817,2.77812 v 6.48229 c 0,2.05322 1.65099,3.70417 3.70425,3.70417 h 7.40831 c 2.0532,0 3.70413,-1.65098 3.70413,-3.70417 v -6.48229 c 0,-1.53971 -1.23821,-2.77812 -2.77817,-2.77812 z" />
     <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:0.504673;fill-rule:evenodd;stroke-width:0.00572696;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
+       style="opacity:1;fill:#ffffff;fill-opacity:0.24919598;fill-rule:evenodd;stroke-width:0.00572696;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
        id="rect68"
-       width="68.211456"
-       height="10.583335"
-       x="209.81053"
-       y="281.94308"
-       rx="3.175"
+       width="68.791672"
+       height="10.583323"
+       x="209.46877"
+       y="282.0451"
+       rx="3.1750002"
        ry="3.175" />
     <rect
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.00523888;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
        id="rect69"
-       width="67.153137"
-       height="8.9958334"
-       x="210.33971"
-       y="282.47226"
+       width="67.73333"
+       height="8.9958162"
+       x="209.99792"
+       y="282.57428"
        rx="2.6458333"
        ry="2.6458333" />
+    <path
+       d="m 223.30833,316.44166 c -1.75895,0 -3.175,1.41605 -3.175,3.175 v 4.23333 c 0,1.75895 1.41605,3.175 3.175,3.175 H 285.75 c 1.75894,0 3.175,-1.41605 3.175,-3.175 v -4.23333 c 0,-1.75895 -1.41606,-3.175 -3.175,-3.175 z m 0,0.52917 H 285.75 c 1.46579,0 2.64583,1.18004 2.64583,2.64583 v 3.70417 c 0,1.46579 -1.18004,2.64583 -2.64583,2.64583 h -62.44167 c -1.46579,0 -2.64583,-1.18004 -2.64583,-2.64583 v -3.70417 c 0,-1.46579 1.18004,-2.64583 2.64583,-2.64583 z"
+       style="fill:#000000;fill-opacity:0.24731044;fill-rule:evenodd;stroke-width:0.00572696;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
+       id="path1"
+       inkscape:export-filename="../../../../../Tools/rockbox/build_gen5/simdisk/.rockbox/wps/Themify_2/USB_DIalog_Box.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <text
        xml:space="preserve"
        style="font-size:5.02708px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#24221c;fill-opacity:1;stroke-width:0.264583"
-       x="217.2178"
+       x="216.87602"
        y="288.39609"
        id="text69"><tspan
          sodipodi:role="line"
          id="tspan69"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.02708px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#24221c;fill-opacity:1;stroke-width:0.264583"
-         x="217.2178"
+         x="216.87602"
          y="288.39609">Eject before disconnecting</tspan></text>
+    <rect
+       style="fill:#24221c;fill-opacity:1;stroke:none;stroke-width:0.661458;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect1"
+       width="84.666664"
+       height="63.5"
+       x="314.74985"
+       y="235.21385" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.00572696;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
+       id="rect24"
+       width="68.791672"
+       height="10.583323"
+       x="322.68735"
+       y="282.0451"
+       rx="3.1750002"
+       ry="3.175" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="circle1"
+       cx="319.64462"
+       cy="238.52112"
+       r="0.66145831" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="322.8334"
+       y="240.1203"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.9389px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="322.8334"
+         y="240.1203">9:00</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="333.45557"
+       y="240.15942"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="333.45557"
+         y="240.15942">am</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text4"
+       style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect22);display:inline;fill:#24221c;fill-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,387.97786,187.08721)"><tspan
+         x="12.955078"
+         y="198.70185"
+         id="tspan56"><tspan
+           style="font-weight:500;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium'"
+           id="tspan53">70</tspan></tspan></text>
+    <g
+       id="g9"
+       transform="matrix(0.26458333,0,0,0.26458333,-512.60224,-278.86738)">
+      <path
+         id="path4"
+         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers fill stroke"
+         d="m 3414,1949 c -2.1987,0 -4,1.8013 -4,4 v 5 c 0,2.1987 1.8013,4 4,4 h 20 c 2.1987,0 4,-1.8013 4,-4 h 1 c 0.554,0 1,-0.446 1,-1 v -3 c 0,-0.554 -0.446,-1 -1,-1 h -1 c 0,-2.1987 -1.8013,-4 -4,-4 z"
+         sodipodi:nodetypes="ssssscsssscss" />
+      <text
+         xml:space="preserve"
+         id="text9"
+         style="font-weight:bold;font-size:13px;line-height:1.25;font-family:Waree;-inkscape-font-specification:'Waree Bold';letter-spacing:0.34px;white-space:pre;shape-inside:url(#rect23);display:inline;fill:#24221c;fill-opacity:1"
+         transform="translate(3403.6449,1761.0882)"><tspan
+           x="12.955078"
+           y="198.70185"
+           id="tspan58"><tspan
+             style="font-weight:600;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Semi-Bold'"
+             id="tspan57">32</tspan></tspan></text>
+    </g>
+    <path
+       id="path9"
+       style="fill:#ffffff;stroke-width:5.55628;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:58;stroke-dashoffset:3;paint-order:stroke fill markers"
+       d="m 351.52692,252.27948 v 9.26042 h 11.11255 v -9.26042 z m 1.85215,3.70417 h 1.85203 v 1.85209 h -1.85203 z m 5.55616,0 h 1.85215 v 1.85209 h -1.85215 z m -6.48224,7.40833 c -1.53984,0 -2.77817,1.23824 -2.77817,2.77812 v 6.48229 c 0,2.05322 1.65099,3.70417 3.70425,3.70417 h 7.40831 c 2.0532,0 3.70413,-1.65098 3.70413,-3.70417 v -6.48229 c 0,-1.53971 -1.23821,-2.77812 -2.77817,-2.77812 z" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:0.24919601;fill-rule:evenodd;stroke-width:0.00572696;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
+       id="rect9"
+       width="68.791672"
+       height="10.583323"
+       x="322.68735"
+       y="282.0451"
+       rx="3.1750002"
+       ry="3.175" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.00523888;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
+       id="rect13"
+       width="67.73333"
+       height="8.9958162"
+       x="323.21652"
+       y="282.57428"
+       rx="2.6458333"
+       ry="2.6458333" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.02708px;line-height:1.25;font-family:Barlow;-inkscape-font-specification:Barlow;letter-spacing:0px;fill:#24221c;fill-opacity:1;stroke-width:0.264583"
+       x="330.0946"
+       y="288.39609"
+       id="text22"><tspan
+         sodipodi:role="line"
+         id="tspan22"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.02708px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#24221c;fill-opacity:1;stroke-width:0.264583"
+         x="330.0946"
+         y="288.39609">Eject before disconnecting</tspan></text>
+    <rect
+       style="fill:#ff0000;fill-opacity:0.249196;fill-rule:evenodd;stroke-width:0.330729;stroke-linecap:round;stroke-linejoin:bevel"
+       id="rect28"
+       width="62.970825"
+       height="4.4979072"
+       x="212.37917"
+       y="284.69095" />
   </g>
 </svg>
