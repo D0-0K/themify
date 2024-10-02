@@ -14,6 +14,7 @@
 %Fl(6,10-Large_UI.fnt)
 %Fl(7,1-Blank_Font.fnt)
 %Fl(8,14x13_Compacticons.fnt)
+%Fl(9,36-Large_Graphics.fnt)
 %Fl(12,7-14x13_Icons.fnt)
 #--- Icons ---#
 %xl(Battery_Level,Battery_Level.bmp,23)
@@ -55,7 +56,7 @@
 #
 %V(0,0,-,-,-)
 #
-%?if(%cs, =, 1)<%?mh<%?mp<%Vd(Lockscreen_Rendering_Fix)|%Vd(miniplayer)>|%?mp<%Vd(Widgets)%?ps<%Vd(Shuffle_Widget)>%?if(%mm, >, 1)<%Vd(Repeat_Widget)>|%Vd(miniplayer)>>>
+%?if(%cs, =, 1)<%?mh<%Vd(Lockscreen_Clock)%?mp<%Vd(Lockscreen_Rendering_Fix)|%Vd(miniplayer)>|%?mp<%Vd(Widgets)%?ps<%Vd(Shuffle_Widget)>%?if(%mm, >, 1)<%Vd(Repeat_Widget)>|%Vd(miniplayer)>>>
 #
 #- Home Menu Initialisation -#
 %?if(%cs, =, 1)<%?mh<%Lb(Compressed_Menu,1,1)%Vd(Lockscreen_Display_Flush)|%?if(%St(font),!=,22-LeagueSpartan-Regular)<%VI(Home_Menu_Viewport_Full)|%Vd(Home_Corners)%?St(scrollbar)<%VI(Home_Menu_Viewport_Full)|%VI(Home_Menu_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Home_Menu_Viewport_Left)%Vd(Scrollbar_Home)>%?St(scrollbar)<%?St(show icons)<%Lb(No_Scroll_Home_Menu_With_Icons,182,26)|%Lb(No_Scroll_Home_Menu_No_Icons,182,26)>|%?St(show icons)<%Lb(Home_Menu_With_Icons,182,26)|%Lb(Home_Menu_No_Icons,182,26)>>>>>
@@ -101,7 +102,7 @@
 %?lh<%t(0.1)0;%t(0.1)1;%t(0.1)2;%t(0.1)3;%t(0.1)2;%t(0.1)1|0>
 #
 #
-#--- Menu Engine ---#
+#--- Menu Engine ---# $ME
 #
 %Vi(-,3,28,302,-,-)
 %Vi(Default_Menu_Supression,-65,0,30,30,7)
@@ -208,8 +209,8 @@
 #
 #--- Widget Engine ---#
 #Lockscreen Visual Error Prevention
-%Vl(Widgets,283,25,30,5,-)%VB%dr(0,0,-,-)
-%Vl(Widgets,283,25,30,5,-)%dr(0,0,-,-)
+#%Vl(Widgets,283,25,30,5,-)%VB%dr(0,0,-,-)
+#%Vl(Widgets,283,25,30,5,-)%dr(0,0,-,-)
 %Vl(Lockscreen_Rendering_Fix,205,30,47,62,-)%x(Playback_Status_Lockscreen_Fix,Playback_Status_Lockscreen_Fix.bmp)
 %Vl(Lockscreen_Rendering_Fix,257,28,58,64,-)%x(Calendar_Lockscreen_Fix,Calendar_Lockscreen_Fix.bmp)
 %Vl(Lockscreen_Rendering_Fix,205,97,110,64,-)%x(Battery_Lockscreen_Fix,Battery_Lockscreen_Fix.bmp)
@@ -267,19 +268,18 @@
 %Vl(Widgets,212,173,96,4,12)e%arf#Foreground colour's rounded corners
 %Vl(Widgets,212,193,96,4,12)h%arg
 #
-#--- Lockscreen ---#
+#--- Lockscreen ---# $LS
 #- Background Rendering Bug Fixes
 %xl(Scrollbar_Left_Lockscreen_Fix,Scrollbar_Left_Lockscreen_Fix.bmp)
 %xl(Scrollbar_Right_Lockscreen_Fix,Scrollbar_Right_Lockscreen_Fix.bmp)
 %Vl(Lockscreen_Rendering_Fix,190,30,5,207,-)%?St(scrollbar)<||%xd(Scrollbar_Right_Lockscreen_Fix)>
 %Vl(Lockscreen_Rendering_Fix,5,30,5,207,-)%?St(scrollbar)<|%xd(Scrollbar_Left_Lockscreen_Fix)|>
 #
-%Vl(lockscreen_battery_numeric,283,16,30,14,12)%VB%Vs(invert)EFG
-%Vl(lockscreen_battery_numeric,283,16,30,14,12)%Vs(invert)EFG
+#%Vl(lockscreen_battery_numeric,283,16,30,14,12)%VB%Vs(invert)EFG
 #
-%Vl(lockscreen_battery_graphical,283,16,30,14,12)%VB%Vs(invert)LMG
-%Vl(lockscreen_battery_graphical,283,16,30,14,12)%Vs(invert)LMG
-%Vl(lockscreen_battery_graphical,286,19,22,7,5)%VB%xd(Battery_Level,%bl)
+#%Vl(lockscreen_battery_graphical,283,16,30,14,12)%VB%Vs(invert)LMG
+#%Vl(lockscreen_battery_graphical,283,16,30,14,12)%Vs(invert)LMG
+#%Vl(lockscreen_battery_graphical,286,19,22,7,5)%VB%xd(Battery_Level,%bl)
 #
 %Vl(lockscreen_status_short,260,8,10,29,6)a
 %Vl(lockscreen_status_short,269,8,-,29,-)%dr(0,0,-,8)%dr(0,21,-,8)%dr(0,8,14,13)%dr(44,8,-,13)
@@ -297,9 +297,11 @@
 %Vl(lockscreen_status_long,262,16,13,14,12)%VB%Vs(invert)H
 %Vl(lockscreen_status_long,262,16,13,14,12)%Vs(invert)H
 #
-%Vl(lockscreen_battery_numeric,284,18,26,9,5)%ac%bl
-%Vl(lockscreen_battery_graphical,286,19,22,7,5)%xd(Battery_Level,%bl)
+#%Vl(lockscreen_battery_numeric,284,18,26,9,5)%ac%bl
+#%Vl(lockscreen_battery_graphical,286,19,22,7,5)%xd(Battery_Level,%bl)
 #
+%Vl(Lockscreen_Clock,34,44,132,82,9)%ac%cH
+%Vl(Lockscreen_Clock,34,127,132,82,9)%ac%cM
 #
 #--- USB Screen ---#
 %xl(USB_Dialog_Box,USB_Dialog_Box.bmp)
@@ -384,3 +386,5 @@
 %Vl(Quickscreen_Hold_On,285,7,28,28,6)hi
 %Vl(Quickscreen_Hold_On,292,14,13,14,12)D
 %Vl(Quickscreen_Hold_Off,285,7,28,28,7)%dr(0,0,-,-)
+#
+%Vl(lockscreen_battery_numeric,283,16,30,14,12)%Vs(invert)EFG

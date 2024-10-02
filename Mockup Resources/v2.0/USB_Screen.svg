@@ -26,9 +26,9 @@
      units="px"
      inkscape:showpageshadow="false"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.415625"
-     inkscape:cx="963.53201"
-     inkscape:cy="1204.415"
+     inkscape:zoom="1.000998"
+     inkscape:cx="1068.9332"
+     inkscape:cy="1065.9362"
      inkscape:current-layer="layer1"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
@@ -833,14 +833,14 @@
        style="fill:#ffffff;stroke-width:5.55628;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:58;stroke-dashoffset:3;paint-order:stroke fill markers"
        d="m 238.30833,252.27948 v 9.26042 h 11.11255 v -9.26042 z m 1.85215,3.70417 h 1.85203 v 1.85209 h -1.85203 z m 5.55616,0 h 1.85215 v 1.85209 h -1.85215 z m -6.48224,7.40833 c -1.53984,0 -2.77817,1.23824 -2.77817,2.77812 v 6.48229 c 0,2.05322 1.65099,3.70417 3.70425,3.70417 h 7.40831 c 2.0532,0 3.70413,-1.65098 3.70413,-3.70417 v -6.48229 c 0,-1.53971 -1.23821,-2.77812 -2.77817,-2.77812 z" />
     <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:0.24919598;fill-rule:evenodd;stroke-width:0.00572696;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
+       style="opacity:1;fill:#ffffff;fill-opacity:0.249196;fill-rule:evenodd;stroke-width:0.00572696;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
        id="rect68"
        width="68.791672"
        height="10.583323"
        x="209.46877"
        y="282.0451"
-       rx="3.1750002"
-       ry="3.175" />
+       rx="2.6458333"
+       ry="2.6458333" />
     <rect
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.00523888;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
        id="rect69"
@@ -848,8 +848,8 @@
        height="8.9958162"
        x="209.99792"
        y="282.57428"
-       rx="2.6458333"
-       ry="2.6458333" />
+       rx="2.1166666"
+       ry="2.1166666" />
     <path
        d="m 223.30833,316.44166 c -1.75895,0 -3.175,1.41605 -3.175,3.175 v 4.23333 c 0,1.75895 1.41605,3.175 3.175,3.175 H 285.75 c 1.75894,0 3.175,-1.41605 3.175,-3.175 v -4.23333 c 0,-1.75895 -1.41606,-3.175 -3.175,-3.175 z m 0,0.52917 H 285.75 c 1.46579,0 2.64583,1.18004 2.64583,2.64583 v 3.70417 c 0,1.46579 -1.18004,2.64583 -2.64583,2.64583 h -62.44167 c -1.46579,0 -2.64583,-1.18004 -2.64583,-2.64583 v -3.70417 c 0,-1.46579 1.18004,-2.64583 2.64583,-2.64583 z"
        style="fill:#000000;fill-opacity:0.24731044;fill-rule:evenodd;stroke-width:0.00572696;stroke-miterlimit:44.5;stroke-opacity:0.247059;paint-order:markers fill stroke"
