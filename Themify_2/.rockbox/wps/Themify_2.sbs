@@ -45,7 +45,7 @@
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
-%?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%dr(0,25,-,4)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,43,-,9)>>
+%?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16),%if(%cs, =, 19))<%dr(0,25,-,4)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,43,-,9)>>
 %?if(%cs, =, 10)<%dr(0,0,-,7)%dr(0,35,-,7)%dr(21,50,10,7)%dr(255,7,30,28)%dr(313,7,7,28)%dr(21,70,10,7)%dr(21,85,9,7)%dr(21,105,9,7)>
 #
 # Quickscreen
@@ -62,10 +62,10 @@
 %?if(%cs, =, 1)<%?mh<%Lb(Compressed_Menu,1,1)%Vd(Lockscreen_Display_Flush)|%?if(%St(font),!=,22-LeagueSpartan-Regular)<%VI(Home_Menu_Viewport_Full)|%Vd(Home_Corners)%?St(scrollbar)<%VI(Home_Menu_Viewport_Full)|%VI(Home_Menu_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Home_Menu_Viewport_Left)%Vd(Scrollbar_Home)>%?St(scrollbar)<%?St(show icons)<%Lb(No_Scroll_Home_Menu_With_Icons,182,26)|%Lb(No_Scroll_Home_Menu_No_Icons,182,26)>|%?St(show icons)<%Lb(Home_Menu_With_Icons,182,26)|%Lb(Home_Menu_No_Icons,182,26)>>>>>
 #
 #- Sub Menu Initialisation -#
-%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16))<%Vd(Sub_Menu_Header)%?if(%St(font),!=,22-LeagueSpartan-Regular)<%VI(Sub_Menu_Viewport_Full)|%Vd(Sub_Menu_Corners)%?St(scrollbar)<%VI(Sub_Menu_Viewport_Full)|%VI(Sub_Menu_Viewport_Right)%Vd(Scrollbar_Sub_Left)|%VI(Sub_Menu_Viewport_Left)%Vd(Scrollbar_Sub_Default)>%?St(scrollbar)<%Lb(No_Scroll_Menu_No_Icons,182,26)|%Lb(Menu_No_Icons,182,26)>>>
+%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16),%if(%cs, =, 19))<%Vd(Sub_Menu_Header)%?if(%St(font),!=,22-LeagueSpartan-Regular)<%VI(Sub_Menu_Viewport_Full)|%Vd(Sub_Menu_Corners)%?St(scrollbar)<%VI(Sub_Menu_Viewport_Full)|%VI(Sub_Menu_Viewport_Right)%Vd(Scrollbar_Sub_Left)|%VI(Sub_Menu_Viewport_Left)%Vd(Scrollbar_Sub_Default)>%?St(scrollbar)<%Lb(No_Scroll_Menu_No_Icons,182,26)|%Lb(Menu_No_Icons,182,26)>>>
 #
 #- Main Menu Initialisation -#
-%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 6),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 10),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 14),%if(%cs, !=, 16),%if(%cs, !=, 21))<%?if(%St(font),!=,22-LeagueSpartan-Regular)<%VI(Main_Viewport_Full)|%Vd(Default_Corners)%?St(scrollbar)<%VI(Main_Viewport_Full)|%VI(Main_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Main_Viewport_Left)%Vd(Scrollbar_Default)>%?St(scrollbar)<%?St(show icons)<%Lb(No_Scroll_Menu_With_Icons,182,26)|%Lb(No_Scroll_Menu_No_Icons,182,26)>|%?St(show icons)<%Lb(Menu_With_Icons,182,26)|%Lb(Menu_No_Icons,182,26)>>>>
+%?and(%if(%cs, !=, 1),%if(%cs, !=, 3),%if(%cs, !=, 5),%if(%cs, !=, 6),%if(%cs, !=, 7),%if(%cs, !=, 8),%if(%cs, !=, 10),%if(%cs, !=, 12),%if(%cs, !=, 13),%if(%cs, !=, 14),%if(%cs, !=, 16),%if(%cs, !=, 19),%if(%cs, !=, 21))<%?if(%St(font),!=,22-LeagueSpartan-Regular)<%VI(Main_Viewport_Full)|%Vd(Default_Corners)%?St(scrollbar)<%VI(Main_Viewport_Full)|%VI(Main_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Main_Viewport_Left)%Vd(Scrollbar_Default)>%?St(scrollbar)<%?St(show icons)<%Lb(No_Scroll_Menu_With_Icons,182,26)|%Lb(No_Scroll_Menu_No_Icons,182,26)>|%?St(show icons)<%Lb(Menu_With_Icons,182,26)|%Lb(Menu_No_Icons,182,26)>>>>
 #
 #- Settings Menu Initialisation -#
 %?if(%cs, =, 6)<%?if(%St(font),!=,22-LeagueSpartan-Regular)<%VI(Main_Viewport_Full)|%Vd(Default_Corners)%?St(scrollbar)<%VI(Main_Viewport_Full)|%VI(Main_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Main_Viewport_Left)%Vd(Scrollbar_Default)>%?St(scrollbar)<%?if(%Lt, =, %Sx(Settings))<%?St(show icons)<%Lb(No_Scroll_Menu_With_Icons,302,26)|%Lb(No_Scroll_Menu_No_Icons,302,26)>|%Lb(No_Scroll_Menu_No_Icons,302,26)>|%?if(%Lt, =, %Sx(Settings))<%?St(show icons)<%Lb(Menu_With_Icons,302,26)|%Lb(Menu_No_Icons,302,26)>|%Lb(Menu_No_Icons,302,26)>>>>
@@ -145,11 +145,11 @@
 #-- Menu Drawing without Scrollbar --#
 #- Menus with Icons -#
 %Vl(No_Scroll_Menu_With_Icons,0,0,314,26,6)%?Lc<%Vs(invert)A%arB>
-%Vl(No_Scroll_Menu_With_Icons,7,0,20,25,8)%?Lc<%Vs(invert)>3
+%Vl(No_Scroll_Menu_With_Icons,7,6,20,25,8)%?Lc<%Vs(invert)>%?if(%LT,=,%Sx(Sound Settings))<8>%?if(%LT,=,%Sx(Playback Settings))<3>%?if(%LT,=,%Sx(General Settings))<4>%?if(%LT,=,%Sx(Theme Settings))<i>%?if(%LT,=,%Sx(Recording Settings))<7>%?if(%LT,=,%Sx(Time & Date))<c>%?if(%LT,=,%Sx(Manage Settings))<4>
 %Vl(No_Scroll_Menu_With_Icons,27,5,277,20,-)%?Lc<%Vs(invert)>%s%LT
 #
 %Vl(No_Scroll_Home_Menu_With_Icons,0,0,194,25,6)%?Lc<%Vs(invert)A%arB>
-%Vl(No_Scroll_Home_Menu_With_Icons,7,0,20,25,8)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
+%Vl(No_Scroll_Home_Menu_With_Icons,7,6,20,25,8)%?Lc<%Vs(invert)>%?if(%LI,=,29)<1>%?if(%LI,=,0)<0>%?if(%LI,=,25)<3>%?if(%LI,=,20)<4>%?if(%LI,=,21)<7>%?if(%LI,=,28)<3>%?if(%LI,=,2)<2>%?if(%LI,=,9)<5>%?if(%LI,=,10)<6>%?if(%LI,=,24)<3>
 %Vl(No_Scroll_Home_Menu_With_Icons,27,5,157,20,-)%?Lc<%Vs(invert)%Vs(invert)>%s%LT
 #
 #- Menus with no Icons -#
@@ -174,7 +174,7 @@
 %Vl(Sub_Menu_Corners,0,52,-,12,12)%?St(scrollbar)<J%arT|S%arT|J%arK>
 %Vl(Sub_Menu_Corners,0,52,-,12,12)%VB%?St(scrollbar)<J%arT|S%arT|J%arK>
 #
-#--- Scroll Engine ---#
+#--- Scroll Engine ---# $SE
 # Logic controlling the scrollbars. "Flush" images are used to flush the
 # display when un-rendering the scrollbars. 
 #
@@ -207,7 +207,7 @@
 %Vl(miniplayer,205,25,111,10,12)%?mh<|a%arb>
 %Vl(miniplayer,205,226,111,10,12)%?mh<|c%ard>
 #
-#--- Widget Engine ---#
+#--- Widget Engine ---# $WE
 #Lockscreen Visual Error Prevention
 #%Vl(Widgets,283,25,30,5,-)%VB%dr(0,0,-,-)
 #%Vl(Widgets,283,25,30,5,-)%dr(0,0,-,-)
@@ -297,13 +297,13 @@
 %Vl(lockscreen_status_long,262,16,13,14,12)%VB%Vs(invert)H
 %Vl(lockscreen_status_long,262,16,13,14,12)%Vs(invert)H
 #
-#%Vl(lockscreen_battery_numeric,284,18,26,9,5)%ac%bl
+%Vl(lockscreen_battery_numeric,284,18,26,9,5)%ac%bl
 #%Vl(lockscreen_battery_graphical,286,19,22,7,5)%xd(Battery_Level,%bl)
 #
 %Vl(Lockscreen_Clock,34,44,132,82,9)%ac%cH
 %Vl(Lockscreen_Clock,34,127,132,82,9)%ac%cM
 #
-#--- USB Screen ---#
+#--- USB Screen ---# $US
 %xl(USB_Dialog_Box,USB_Dialog_Box.bmp)
 %Vl(USB_Screen,0,25,-,-,-)%dr(0,0,-,-)
 %Vl(USB_Screen,30,177,260,40,-)%VB
@@ -311,8 +311,7 @@
 %Vl(USB_Screen,41,187,238,18,-)%VB%acEject before Disconnecting
 %Vl(USB_Screen,41,187,238,18,-)%acEject before Disconnecting
 #
-# Quickscreen Stuff
-#
+#--- Quickscreen ---# $QS
 # Volume Slider
 %Vl(Quickscreen,8,50,23,27,6)%t(0.1)k;%t(0.1)k
 %Vl(Quickscreen,31,50,281,27,-)%VB%pv(0,0,281,27,noborder,notouch,slider,Quickscreen_Cutout_End)
