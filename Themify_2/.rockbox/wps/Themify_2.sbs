@@ -46,7 +46,7 @@
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
-%?if(%cs, =, 1)<%dr(200,25,-,-)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16),%if(%cs, =, 19))<%dr(0,25,-,4)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,43,-,9)>
+%?if(%cs, =, 1)<%dr(200,25,-,-)|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16),%if(%cs, =, 19))<%dr(0,25,-,4)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,43,-,9)>>
 %?if(%cs, =, 10)<%dr(0,0,-,7)%dr(0,35,-,7)%dr(21,50,10,7)%dr(255,7,30,28)%dr(313,7,7,28)%dr(21,70,10,7)%dr(21,85,9,7)%dr(21,105,9,7)>
 #
 # Quickscreen
@@ -85,7 +85,7 @@
 %Vl(TopBar,0,0,-,25,-)%dr(0,0,-,5)%dr(0,5,11,17)%dr(25,5,6,17)%dr(160,19,-,3)%dr(160,5,-,1)%dr(160,6,84,13)%dr(258,6,5,13)%dr(277,6,6,13)%dr(313,6,7,13)%dr(0,22,-,3)
 %Vl(TopBar,0,0,-,25,-)%VB%dr(0,0,-,5)%dr(0,5,11,17)%dr(25,5,6,17)%dr(160,19,-,3)%dr(160,5,-,1)%dr(160,6,84,13)%dr(258,6,5,13)%dr(277,6,6,13)%dr(313,6,7,13)%dr(0,22,-,3)
 #
-#Manually set the number for %cl hour on 12-hour time. The %cl tag puts a space at the start and throws off the positioning of the time.
+#Manu\y set the number for %cl hour on 12-hour time. The %cl tag puts a space at the start and throws off the positioning of the time.
 %Vl(TopBar,31,5,129,17,3)%Vs(invert)%?cf<%cH:%cM|%?cl<1|2|3|4|5|6|7|8|9|10|11|12>:%cM%cp>
 %Vl(TopBar,31,5,129,17,3)%VB%Vs(invert)%?cf<%cH:%cM|%?cl<1|2|3|4|5|6|7|8|9|10|11|12>:%cM%cp>
 #
@@ -155,7 +155,7 @@
 %Vl(Home_Menu_With_Icons,27,5,145,20,-)%?Lc<%Vs(invert)>%s%LT
 #
 #- Menus with no Icons -#
-%Vl(Menu_No_Icons,0,0,302,26,6)%?if(%ss(0,1,%LT),=,[)<%?Lc<|%Vs(invert)>%dr(0,0,-,-)|%?Lc<%Vs(invert)A%arB>>
+%Vl(Menu_No_Icons,0,0,302,26,6)%?if(%LT,=,%Sx([All tracks]))<%?Lc<CMMMMMMMMMMD|%Vs(invert)I%arJ>>%?if(%LT,=,%Sx([Random]))<%?Lc<EMMMMMMMMMMF|%?if(%LN,=,7)<%Vs(invert)I%arJ>>>%?if(%LT,=,%Sx([Untagged]))<%?Lc<GMMMMMMMMMMH|%Vs(invert)K%arL>>%?and(%if(%LT,!=,%Sx([All tracks])),%if(%LT,!=,%Sx([Random])),%if(%LT,!=,%Sx([Untagged])))<%?Lc<%Vs(invert)A%arB>>
 %Vl(Menu_No_Icons,7,6,14,14,8)%?if(%LT,=,%Sx([All tracks]))<%?Lc<|%Vs(invert)>b>%?if(%LT,=,%Sx([Random]))<%?Lc<|%Vs(invert)>a>%?if(%LT,=,%Sx([Untagged]))<%?Lc<|%Vs(invert)>e>
 %Vl(Menu_No_Icons,27,5,265,20,-)%?Lc<|%Vs(invert)>%?if(%ss(0,7,%St(lang)), =, english)<%?if(%LT,=,[All tracks])<All Tracks>%?if(%LT,=,[Random])<Random>%?if(%LT,=,[Untagged])<Untagged>|%LT>
 %Vl(Menu_No_Icons,9,5,283,20,-)%?and(%if(%LT,!=,%Sx([All tracks])),%if(%LT,!=,%Sx([Random])),%if(%LT,!=,%Sx([Untagged])))<%?Lc<%Vs(invert)>%s%LT>
