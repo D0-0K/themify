@@ -17,7 +17,8 @@
 %Fl(9,36-Large_Graphics.fnt)
 %Fl(12,7-14x13_Icons.fnt)
 #--- Icons ---#
-%xl(Battery_Level,Battery_Level.bmp,23)
+%xl(Battery_Level_Flush,Battery_Level_Flush.bmp,23)
+%xl(Battery_Level,Battery_Level.bmp,3,3,23)
 %xl(lockscreen,Lockscreen.bmp)
 #--- Scrollbar Images ---#
 %xl(Scrollbar_Track_Default,Scrollbar_Track_Default.bmp,2)
@@ -45,7 +46,7 @@
 #------------ Background Layer ------------#
 # Most elements on the homepage need to be drawn here, or else the lockscreen wallpaper gets overdrawn. They also need to be in a single line or the homepage will get drawing glitches after switching off the lockscreen.
 %V(0,0,-,-,-)%VB
-%?if(%cs, =, 1)<%?mh<%xd(lockscreen)|%dr(200,25,-,-)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16),%if(%cs, =, 19))<%dr(0,25,-,4)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,43,-,9)>>
+%?if(%cs, =, 1)<%dr(200,25,-,-)>|%?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16),%if(%cs, =, 19))<%dr(0,25,-,4)%dr(0,27,12,18)%dr(26,27,7,18)%dr(313,27,-,18)%dr(0,43,-,9)>
 %?if(%cs, =, 10)<%dr(0,0,-,7)%dr(0,35,-,7)%dr(21,50,10,7)%dr(255,7,30,28)%dr(313,7,7,28)%dr(21,70,10,7)%dr(21,85,9,7)%dr(21,105,9,7)>
 #
 # Quickscreen
@@ -56,10 +57,10 @@
 #
 %V(0,0,-,-,-)
 #
-%?if(%cs, =, 1)<%?mh<%Vd(Lockscreen_Clock)%?mp<%Vd(Lockscreen_Rendering_Fix)|%Vd(miniplayer)>|%?mp<%Vd(Widgets)%?ps<%Vd(Shuffle_Widget)>%?if(%mm, >, 1)<%Vd(Repeat_Widget)>|%Vd(miniplayer)>>>
+#%?if(%cs, =, 1)<%?mp<%Vd(Widgets)%?ps<%Vd(Shuffle_Widget)>%?if(%mm, >, 1)<%Vd(Repeat_Widget)>|%Vd(miniplayer>>
 #
 #- Home Menu Initialisation -#
-%?if(%cs, =, 1)<%?mh<%Lb(Compressed_Menu,1,1)%Vd(Lockscreen_Display_Flush)|%?if(%St(font),!=,22-LeagueSpartan-Regular)<%VI(Home_Menu_Viewport_Full)|%Vd(Home_Corners)%?St(scrollbar)<%VI(Home_Menu_Viewport_Full)|%VI(Home_Menu_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Home_Menu_Viewport_Left)%Vd(Scrollbar_Home)>%?St(scrollbar)<%?St(show icons)<%Lb(No_Scroll_Home_Menu_With_Icons,182,26)|%Lb(No_Scroll_Home_Menu_No_Icons,182,26)>|%?St(show icons)<%Lb(Home_Menu_With_Icons,182,26)|%Lb(Home_Menu_No_Icons,182,26)>>>>>
+%?if(%cs, =, 1)<%?if(%St(font),!=,22-LeagueSpartan-Regular)<%VI(Home_Menu_Viewport_Full)|%Vd(Home_Corners)%?St(scrollbar)<%VI(Home_Menu_Viewport_Full)|%VI(Home_Menu_Viewport_Right)%Vd(Scrollbar_Left)|%VI(Home_Menu_Viewport_Left)%Vd(Scrollbar_Home)>%?St(scrollbar)<%?St(show icons)<%Lb(No_Scroll_Home_Menu_With_Icons,182,26)|%Lb(No_Scroll_Home_Menu_No_Icons,182,26)>|%?St(show icons)<%Lb(Home_Menu_With_Icons,182,26)|%Lb(Home_Menu_No_Icons,182,26)>>>>
 #
 #- Sub Menu Initialisation -#
 %?or(%if(%cs, =, 3),%if(%cs, =, 5),%if(%cs, =, 7),%if(%cs, =, 8),%if(%cs, =, 12),%if(%cs, =, 13),%if(%cs, =, 16),%if(%cs, =, 19))<%Vd(Sub_Menu_Header)%?if(%St(font),!=,22-LeagueSpartan-Regular)<%VI(Sub_Menu_Viewport_Full)|%Vd(Sub_Menu_Corners)%?St(scrollbar)<%VI(Sub_Menu_Viewport_Full)|%VI(Sub_Menu_Viewport_Right)%Vd(Scrollbar_Sub_Left)|%VI(Sub_Menu_Viewport_Left)%Vd(Scrollbar_Sub_Default)>%?St(scrollbar)<%Lb(No_Scroll_Menu_No_Icons,182,26)|%Lb(Menu_No_Icons,182,26)>>>
@@ -78,27 +79,48 @@
 #
 #--- Clock Logic ---#
 #fallback top bar drawing function for after the lockscreen is turned off.
-%?if(%cs, =, 1)<%?mh<%?St(battery display)<%Vd(lockscreen_battery_graphical)|%Vd(lockscreen_battery_numeric)>%?bs<%Vd(lockscreen_status_long)|%Vd(lockscreen_status_short)>|%Vd(TopBar)%?St(battery display)<%Vd(Battery_Graphical)|%Vd(Battery_Numeric)>>|%?if(%cs, !=, 10)<%Vd(TopBar)%?St(battery display)<%Vd(Battery_Graphical)|%Vd(Battery_Numeric)>>>
+%?if(%cs, !=, 10)<%Vd(TopBar)%?St(battery display)<%Vd(Battery_Graphical)|%Vd(Battery_Numeric)>>
 #
 #
-%Vl(TopBar,0,0,-,25,-)%dr(0,0,-,6)%dr(0,6,11,13)%dr(25,6,6,13)%dr(160,6,123,13)%dr(313,6,7,13)%dr(0,19,-,6)
+%Vl(TopBar,0,0,-,25,-)%dr(0,0,-,5)%dr(0,5,11,17)%dr(25,5,6,17)%dr(160,19,-,3)%dr(160,5,-,1)%dr(160,6,84,13)%dr(258,6,5,13)%dr(277,6,6,13)%dr(313,6,7,13)%dr(0,22,-,3)
+%Vl(TopBar,0,0,-,25,-)%VB%dr(0,0,-,5)%dr(0,5,11,17)%dr(25,5,6,17)%dr(160,19,-,3)%dr(160,5,-,1)%dr(160,6,84,13)%dr(258,6,5,13)%dr(277,6,6,13)%dr(313,6,7,13)%dr(0,22,-,3)
 #
 #Manually set the number for %cl hour on 12-hour time. The %cl tag puts a space at the start and throws off the positioning of the time.
 %Vl(TopBar,31,5,129,17,3)%Vs(invert)%?cf<%cH:%cM|%?cl<1|2|3|4|5|6|7|8|9|10|11|12>:%cM%cp>
+%Vl(TopBar,31,5,129,17,3)%VB%Vs(invert)%?cf<%cH:%cM|%?cl<1|2|3|4|5|6|7|8|9|10|11|12>:%cM%cp>
 #
 #use the %?mh to flush the icons, text doesn't seem to play well when stuff is redrawn below it.
 #Battery level is drawn in both foreground and background so it renders. Probably %Vs(invert) shenanigans
 #battery background called last to prevent rendering issues.
-%Vl(Battery_Numeric,283,6,30,14,12)%Vs(invert)%?mh<EFG|EFG>
+%Vl(Battery_Numeric,283,6,30,16,12)%Vs(invert)%?mh<EFG|EFG>
+%Vl(Battery_Numeric,283,6,30,16,12)%VB%Vs(invert)%?mh<EFG|EFG>
 %Vl(Battery_Numeric,285,8,24,9,5)%ac%bl
 #
-%Vl(Battery_Graphical,283,6,30,14,12)%Vs(invert)%?mh<LMG|LMG>
-%Vl(Battery_Graphical,286,9,22,7,5)%xd(Battery_Level,%bl)
+#This needs to be rebuilt for drawing the battery icon in segments to prevent UI flashing $!!
+%Vl(Battery_Graphical,283,6,30,16,12)%Vs(invert)%?mh<LMG|LMG>
+%Vl(Battery_Graphical,283,6,30,16,12)%VB%Vs(invert)%?mh<LMG|LMG>
 #
-%Vl(TopBar,263,6,14,13,12)%Vs(invert)%ac%?bs<H|%?mh<D|%dr(0,0,-,-)>>
-%Vl(TopBar,244,6,14,13,12)%Vs(invert)%ac%?bs<%?mh<D|%dr(0,0,-,-)>|%dr(0,0,-,-)>
+%Vl(Battery_Graphical,286,9,22,7,5)%xd(Battery_Level_Flush,%bl)
+%Vl(Battery_Graphical,286,9,22,7,5)%VB%xd(Battery_Level_Flush,%bl)
 #
-%Vl(TopBar,11,5,14,14,12)%Vb(-)%Vf(-)%Vs(invert)
+#Sleep and Hold icons $!!
+# Doesn't work with lockscreen. Will need to see what I can do here.
+%?bs<%?mh<%Vd(Status_Bar_Icon_1_On)%Vd(Status_Bar_Icon_2_On)|%Vd(Status_Bar_Icon_1_On)%Vd(Status_Bar_Icon_2_Off)>|%?mh<%Vd(Status_Bar_Icon_1_On)|%Vd(Status_Bar_Icon_1_Off)>%Vd(Status_Bar_Icon_2_Off)>
+#
+%Vl(Status_Bar_Icon_1_On,263,6,14,13,8)%Vs(invert)%ac%?bs<q|%?mh<o>>
+%Vl(Status_Bar_Icon_1_On,263,6,14,13,8)%VB%Vs(invert)%ac%?bs<q|%?mh<o>>
+%Vl(Status_Bar_Icon_1_Off,263,6,14,13,-)%dr(0,0,-,-)
+%Vl(Status_Bar_Icon_1_Off,263,6,14,13,-)%VB%dr(0,0,-,-)
+#
+%Vl(Status_Bar_Icon_2_On,244,6,14,13,8)%Vs(invert)%aco
+%Vl(Status_Bar_Icon_2_On,244,6,14,13,8)%VB%Vs(invert)%aco
+%Vl(Status_Bar_Icon_2_Off,244,6,14,13,-)%dr(0,0,-,-)
+%Vl(Status_Bar_Icon_2_Off,244,6,14,13,-)%VB%dr(0,0,-,-)
+#
+# Disk Access indicator
+%Vl(TopBar,11,5,14,17,12)%Vb(-)%Vf(-)%Vs(invert)
+%?lh<%t(0.1)0;%t(0.1)1;%t(0.1)2;%t(0.1)3;%t(0.1)2;%t(0.1)1|0>
+%Vl(TopBar,11,5,14,17,12)%VB%Vb(-)%Vf(-)%Vs(invert)
 %?lh<%t(0.1)0;%t(0.1)1;%t(0.1)2;%t(0.1)3;%t(0.1)2;%t(0.1)1|0>
 #
 #
@@ -108,7 +130,6 @@
 %Vi(Default_Menu_Supression,-65,0,30,30,7)
 %Vi(USB_Screen_Supression,-1,-1,1,1,7)
 %Vl(Compressed_Menu,0,0,1,1,-)
-%Vl(Lockscreen_Display_Flush,0,0,-,-,-)
 # No Scrollbar
 %Vi(Main_Viewport_Full,3,28,-3,-,-)
 %Vi(Sub_Menu_Viewport_Full,3,55,-3,-,-)
@@ -161,15 +182,22 @@
 #
 #-- Menu Aesthetics --#
 #- Sub Menu Header -#
+%Vl(Sub_Menu_Header,0,25,-,27,-)%dr(0,0,33,5)%dr(33,0,287,4)%dr(0,5,12,14)%dr(26,5,7,14)%dr(313,4,7,18)%dr(0,19,33,8)%dr(33,22,287,5)
+%Vl(Sub_Menu_Header,0,25,-,27,-)%VB%dr(0,0,33,5)%dr(33,0,287,4)%dr(0,5,12,14)%dr(26,5,7,14)%dr(313,4,7,18)%dr(0,19,33,8)%dr(33,22,287,5)
+#
 %Vl(Sub_Menu_Header,33,29,280,18,3)%Vs(invert)%s%Lt %Li
-%Vl(Sub_Menu_Header,12,29,14,14,8)%Vs(invert)%?Li<1|2|3|4|5|6|7|8|5_|6_|11|12|13|14|15|16|16|18|19|4_|7_|22|23|k_|%?if(%LT,=,%Sx(Resume Playback))<r|3>|26|27|9_|1_|30|31|32|0>
+#%Vl(Sub_Menu_Header,33,29,280,18,3)%VB%Vs(invert)%s%Lt %Li
+%Vl(Sub_Menu_Header,12,30,14,14,8)%Vs(invert)%?Li<1|2|3|4|5|6|7|8|5_|6_|11|12|13|14|15|16|16|18|19|4_|7_|22|23|k_|%?if(%LT,=,%Sx(Resume Playback))<r|3>|26|27|9_|1_|30|31|32|0>
+%Vl(Sub_Menu_Header,12,30,14,14,8)%VB%Vs(invert)%?Li<1|2|3|4|5|6|7|8|5_|6_|11|12|13|14|15|16|16|18|19|4_|7_|22|23|k_|%?if(%LT,=,%Sx(Resume Playback))<r|3>|26|27|9_|1_|30|31|32|0>
 #
 #- Rounded Corners on menus -#
 #Draw rounded corners on the menus. Draw on foreground and background to prevent some minor clipping from the menu items.
 %Vl(Default_Corners,0,25,-,12,12)%?St(scrollbar)<J%arT|S%arT|J%arK>
 %Vl(Default_Corners,0,25,-,12,12)%VB%?St(scrollbar)<J%arT|S%arT|J%arK>
 #
+# These need a fix for the lockscreen $!!
 %Vl(Home_Corners,0,25,200,12,12)%?St(scrollbar)<J%arT|S%arT|J%arK>
+%Vl(Home_Corners,0,25,200,12,12)%VB%?St(scrollbar)<J%arT|S%arT|J%arK>
 #
 %Vl(Sub_Menu_Corners,0,52,-,12,12)%?St(scrollbar)<J%arT|S%arT|J%arK>
 %Vl(Sub_Menu_Corners,0,52,-,12,12)%VB%?St(scrollbar)<J%arT|S%arT|J%arK>
@@ -208,13 +236,6 @@
 %Vl(miniplayer,205,226,111,10,12)%?mh<|c%ard>
 #
 #--- Widget Engine ---# $WE
-#Lockscreen Visual Error Prevention
-#%Vl(Widgets,283,25,30,5,-)%VB%dr(0,0,-,-)
-#%Vl(Widgets,283,25,30,5,-)%dr(0,0,-,-)
-%Vl(Lockscreen_Rendering_Fix,205,30,47,62,-)%x(Playback_Status_Lockscreen_Fix,Playback_Status_Lockscreen_Fix.bmp)
-%Vl(Lockscreen_Rendering_Fix,257,28,58,64,-)%x(Calendar_Lockscreen_Fix,Calendar_Lockscreen_Fix.bmp)
-%Vl(Lockscreen_Rendering_Fix,205,97,110,64,-)%x(Battery_Lockscreen_Fix,Battery_Lockscreen_Fix.bmp)
-%Vl(Lockscreen_Rendering_Fix,205,166,110,69,-)%x(Colour_Lockscreen_Fix,Colour_Lockscreen_Fix.bmp)
 #
 #Widget Background
 %Vl(Widgets,205,30,47,62,-)%VB%?or(%or(%if(%ss(0,1,%St(foreground color)),>,7),%if(%ss(0,1,%St(foreground color)),>=,a)),%or(%if(%ss(2,1,%St(foreground color)),>,7),%if(%ss(2,1,%St(foreground color)),>=,a)),%or(%if(%ss(4,1,%St(foreground color)),>,7),%if(%ss(4,1,%St(foreground color)),>=,a)))<%xd(PlayStatus_Widget,2)|%xd(PlayStatus_Widget,1)>
@@ -267,41 +288,6 @@
 %Vl(Widgets,205,225,110,10,12)c%ard
 %Vl(Widgets,212,173,96,4,12)e%arf#Foreground colour's rounded corners
 %Vl(Widgets,212,193,96,4,12)h%arg
-#
-#--- Lockscreen ---# $LS
-#- Background Rendering Bug Fixes
-%xl(Scrollbar_Left_Lockscreen_Fix,Scrollbar_Left_Lockscreen_Fix.bmp)
-%xl(Scrollbar_Right_Lockscreen_Fix,Scrollbar_Right_Lockscreen_Fix.bmp)
-%Vl(Lockscreen_Rendering_Fix,190,30,5,207,-)%?St(scrollbar)<||%xd(Scrollbar_Right_Lockscreen_Fix)>
-%Vl(Lockscreen_Rendering_Fix,5,30,5,207,-)%?St(scrollbar)<|%xd(Scrollbar_Left_Lockscreen_Fix)|>
-#
-#%Vl(lockscreen_battery_numeric,283,16,30,14,12)%VB%Vs(invert)EFG
-#
-#%Vl(lockscreen_battery_graphical,283,16,30,14,12)%VB%Vs(invert)LMG
-#%Vl(lockscreen_battery_graphical,283,16,30,14,12)%Vs(invert)LMG
-#%Vl(lockscreen_battery_graphical,286,19,22,7,5)%VB%xd(Battery_Level,%bl)
-#
-%Vl(lockscreen_status_short,260,8,10,29,6)a
-%Vl(lockscreen_status_short,269,8,-,29,-)%dr(0,0,-,8)%dr(0,21,-,8)%dr(0,8,14,13)%dr(44,8,-,13)
-#
-%Vl(lockscreen_status_short,266,15,14,14,12)%Vb(-)%Vf(-)%Vs(invert)
-%?lh<%t(0.1)0;%t(0.1)1;%t(0.1)2;%t(0.1)3;%t(0.1)2;%t(0.1)1|0>
-#
-# Display a longer floating statusbar if sleep enabled
-%Vl(lockscreen_status_long,240,8,10,29,6)a
-%Vl(lockscreen_status_long,249,8,-,29,-)%dr(0,0,-,8)%dr(0,21,-,8)%dr(0,8,34,13)%dr(64,8,-,13)
-#
-%Vl(lockscreen_status_long,246,15,14,14,12)%Vb(-)%Vf(-)%Vs(invert)
-%?lh<%t(0.1)0;%t(0.1)1;%t(0.1)2;%t(0.1)3;%t(0.1)2;%t(0.1)1|0>
-#
-%Vl(lockscreen_status_long,262,16,13,14,12)%VB%Vs(invert)H
-%Vl(lockscreen_status_long,262,16,13,14,12)%Vs(invert)H
-#
-%Vl(lockscreen_battery_numeric,284,18,26,9,5)%ac%bl
-#%Vl(lockscreen_battery_graphical,286,19,22,7,5)%xd(Battery_Level,%bl)
-#
-%Vl(Lockscreen_Clock,34,44,132,82,9)%ac%cH
-%Vl(Lockscreen_Clock,34,127,132,82,9)%ac%cM
 #
 #--- USB Screen ---# $US
 %xl(USB_Dialog_Box,USB_Dialog_Box.bmp)
@@ -386,4 +372,3 @@
 %Vl(Quickscreen_Hold_On,292,14,13,14,12)D
 %Vl(Quickscreen_Hold_Off,285,7,28,28,7)%dr(0,0,-,-)
 #
-%Vl(lockscreen_battery_numeric,283,16,30,14,12)%Vs(invert)EFG
