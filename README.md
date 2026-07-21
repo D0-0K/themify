@@ -13,3 +13,5 @@ Main releases of Themify 2 has been moved to the [project's itch storefront](htt
 ---
 
 If you want to learn more about the new update to Themify, consider checking out the [project's website](https://themify.dook.net).
+
+Thank you, Evan aka. Dook
